@@ -1,0 +1,345 @@
+﻿<Page
+    x:Class="Piante_e_Fiori.Views.HomePagePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    Style="{StaticResource PageStyle}"
+    mc:Ignorable="d">
+    <Grid x:Name="ContentArea" >
+        <Grid.Background>
+            <ImageBrush ImageSource="ms-appx:///Assets/Splash_video.jpg"/>
+        </Grid.Background>
+        <Grid
+            Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+            <!--The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
+                Place your content here.-->
+
+            <!--Barra di stato utente-->
+            <Grid Height="100" VerticalAlignment="Top" Background="SteelBlue"  x:Name="background_immagine_utente" Visibility="Visible">
+
+                <Grid Background="Transparent" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="90" Height="90" Margin="10">
+                    <Image x:Name="immagine_utente_standard" Margin="5,5,5,5" HorizontalAlignment="Center" VerticalAlignment="Center" Source="ms-appx:///Assets/spa_flower-512.png" Visibility="Visible"/>
+                    <Image x:Name="immagine_utente_maschile" Margin="5,5,5,5" HorizontalAlignment="Center" VerticalAlignment="Center" Source="ms-appx:///Assets/Person_male_1600.png" Visibility="Collapsed"/>
+                    <Image x:Name="immagine_utente_femminile" Margin="5,5,5,5" HorizontalAlignment="Center" VerticalAlignment="Center" Source="ms-appx:///Assets/Person_female_1600.png" Visibility="Collapsed"/>
+                </Grid>
+
+                <StackPanel Margin="130,0,0,0" VerticalAlignment="Center">
+                    <TextBlock x:Name="bentornato_socio_txthome" HorizontalAlignment="Left" Margin="0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="PIANTE E FIORI"/>
+                    <TextBlock x:Name="nome_socio_txthome" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Text="NOME UTENTE" FontSize="18" Foreground="Green" FontWeight="Bold"/>
+                    <TextBlock x:Name="tipo_socio_txthome" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Text="Livello"  Foreground="Green" />
+                    <StackPanel Orientation="Horizontal">
+                    <ToggleButton Name="modifica_dati" ToolTipService.ToolTip="Modifica le tue info" Background="Green" Checked="modifica_dati_Checked" Unchecked="modifica_dati_UnCecked">
+                        <TextBlock Text="&#xE104;" FontFamily="Segoe MDL2 Assets"/>
+                    </ToggleButton>
+                    <Button  Name="duplica_finestra_btn"   Margin="10,5" ToolTipService.ToolTip="Apri in una nuova finestra" Background="Green" Click="duplica_finestra_btn_Click">
+                        <TextBlock Text="" FontFamily="Segoe MDL2 Assets"/>
+                    </Button>
+                    </StackPanel>
+                </StackPanel>
+                <Border BorderBrush="Green" BorderThickness="5" HorizontalAlignment="Left" Height="100" Margin="333,0,0,0" VerticalAlignment="Top" Width="3" Visibility="Collapsed"/>
+
+
+
+            </Grid>
+
+
+            <ScrollViewer HorizontalAlignment="Center" Margin="0,100,0,0" VerticalAlignment="Top">
+            <StackPanel>
+                <!--MENU UTENTE-->
+                    <controls:Expander x:Name="menu_utente_expander" VerticalAlignment="Top" Margin="10" Header="AZIONI UTENTE" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" IsExpanded="True">
+                        <GridView x:Name="menu_utente" Margin="20" HorizontalAlignment="Center" Visibility="Visible"  VerticalAlignment="Top">
+
+
+
+
+
+
+
+                            <Button x:Name="gestione_trattamenti_btn" Background="Green" Height="100" Width="100" VerticalAlignment="Top" Margin="10,0" Click="gestione_trattamenti_btn_Click" Visibility="Visible" >
+                                <StackPanel>
+                                    <TextBlock Text="&#xEADF;"  Margin="0,5" FontSize="30" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Center"/>
+                                    <TextBlock TextWrapping="Wrap"   Text="GESTIONE OPERAZIONI"   HorizontalAlignment="Center"  VerticalAlignment="Bottom" FontSize="13px"  TextAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+
+
+
+                            <Button x:Name="calendario_lunare_btn" Background="Green" Height="100" Width="100" VerticalAlignment="Top" Margin="10,0" Click="calendario_lunare_btn_Click" Visibility="Visible" >
+                                <StackPanel>
+                                    <TextBlock Text="&#xE909;"  Margin="0,5" FontSize="30" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Center"/>
+                                    <TextBlock TextWrapping="Wrap"   Text="CALENDARIO LUNARE"   HorizontalAlignment="Center"  VerticalAlignment="Bottom" FontSize="13px"  TextAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+
+                            <Button x:Name="riconoscimento_pianta_btn" Background="Green" Height="100" Width="100" VerticalAlignment="Top" Margin="10,0" Click="riconoscimento_pianta_btn_Click" Visibility="Visible" >
+                                <StackPanel>
+                                    <TextBlock Text="&#xE960;"  Margin="0,5" FontSize="30" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Center"/>
+                                    <TextBlock TextWrapping="Wrap"   Text="IDENTIFICA PIANTA"   HorizontalAlignment="Center"  VerticalAlignment="Bottom" FontSize="13px"  TextAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+
+                            <Button x:Name="progettazione_giardino_btn" Background="Green" Height="100" Width="100" VerticalAlignment="Top" Margin="10,0" Click="progettazione_giardino_btn_Click" Visibility="Visible" >
+                                <StackPanel>
+                                    <TextBlock Text="&#xEDC6;"  Margin="0,5" FontSize="30" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Center"/>
+                                    <TextBlock TextWrapping="Wrap"   Text="DISEGNA IL GIARDINO"   HorizontalAlignment="Center"  VerticalAlignment="Bottom" FontSize="13px"  TextAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+
+                            <Button x:Name="glossario_termini_btn" Background="Green" Height="100" Width="100" VerticalAlignment="Top" Margin="10,0" Click="glossario_termini_btn_Click" Visibility="Visible" >
+                                <StackPanel>
+                                    <TextBlock Text=""  Margin="0,5" FontSize="30" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Center"/>
+                                    <TextBlock TextWrapping="Wrap"   Text="TERMINI UTILI"   HorizontalAlignment="Center"  VerticalAlignment="Bottom" FontSize="13px"  TextAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+
+                            <Button x:Name="guida_area_utente_btn" Background="Green" Height="100" Width="100" VerticalAlignment="Top" Margin="10,0" Click="guida_area_utente_btn_Click">
+                                <StackPanel>
+                                    <TextBlock Text="&#xE897;"  Margin="0,5" FontSize="30" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Center" />
+                                    <TextBlock TextWrapping="Wrap"   Text="CONSULTA LA GUIDA"   HorizontalAlignment="Center"  VerticalAlignment="Bottom" FontSize="13px"  TextAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+
+                        </GridView>
+                    </controls:Expander>
+
+                    <controls:Expander x:Name="categorie_piante" VerticalAlignment="Top" Margin="10" Header="SCHEDE BOTANICHE" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" IsExpanded="True">
+                    <GridView Name="Menu_categorie_piante"  HorizontalAlignment="Center" VerticalAlignment="Top" HorizontalContentAlignment="Center" Visibility="Visible"  Margin="10">
+
+
+
+                        <Grid Name="ALBERIbtn" Height="116" Width="116"  VerticalAlignment="Top" Margin="10" Tapped="ALBERIbtn_Tapped">
+                            <Grid.Background>
+                                <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Immagini/Targhette/Alberi.jpg"/>
+                            </Grid.Background>
+                            <StackPanel Background="Orange" VerticalAlignment="Bottom">
+                                <TextBlock TextWrapping="WrapWholeWords" Text="ALBERI"   HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Grid>
+
+                        <Grid Name="ARBUSTIbtn" Height="116" Width="116"  VerticalAlignment="Top" Margin="10" Tapped="ARBUSTIbtn_Tapped" >
+                            <Grid.Background>
+                                <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Immagini/Targhette/Arbusti.jpg"/>
+                            </Grid.Background>
+                            <StackPanel Background="Coral" VerticalAlignment="Bottom">
+                                <TextBlock TextWrapping="WrapWholeWords" Text="ARBUSTI"   HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Grid>
+
+                        <Grid Name="PIANTE_AROMATICHEbtn" Height="116" Width="116"  VerticalAlignment="Top" Margin="10" Tapped="PIANTE_AROMATICHEbtn_Tapped" >
+                            <Grid.Background>
+                                <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Immagini/Targhette/Aromatiche.jpg"/>
+                            </Grid.Background>
+                            <StackPanel Background="LawnGreen" VerticalAlignment="Bottom">
+                                <TextBlock TextWrapping="WrapWholeWords" Text="AROMATICHE"   HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Grid>
+
+                        <Grid Name="RAMPICANTIbtn" Height="116" Width="116"  VerticalAlignment="Top" Margin="10" Tapped="RAMPICANTIbtn_Tapped" >
+                            <Grid.Background>
+                                <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Immagini/Targhette/Rampicanti.jpg"/>
+                            </Grid.Background>
+                            <StackPanel Background="SteelBlue" VerticalAlignment="Bottom">
+                                <TextBlock TextWrapping="WrapWholeWords" Text="RAMPICANTI"   HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Grid>
+
+                        <Grid Name="PIANTE_GRASSEbtn" Height="116" Width="116"  VerticalAlignment="Top" Margin="10" Tapped="PIANTE_GRASSEbtn_Tapped" >
+                            <Grid.Background>
+                                <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Immagini/Targhette/Grasse.jpg"/>
+                            </Grid.Background>
+                            <StackPanel Background="#BF5834" VerticalAlignment="Bottom">
+                                <TextBlock TextWrapping="WrapWholeWords" Text="GRASSE"   HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Grid>
+
+                        <Grid Name="ROSAIbtn" Height="116" Width="116"  VerticalAlignment="Top" Margin="10" Tapped="ROSAIbtn_Tapped" >
+                            <Grid.Background>
+                                <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Immagini/Targhette/Rosai.jpg"/>
+                            </Grid.Background>
+                            <StackPanel Background="#FF9898" VerticalAlignment="Bottom">
+                                <TextBlock TextWrapping="WrapWholeWords" Text="ROSAI"   HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Grid>
+
+                        <Grid Name="PIANTE_ACQUATICHEbtn" Height="116" Width="116"  VerticalAlignment="Top" Margin="10" Tapped="PIANTE_ACQUATICHEbtn_Tapped" >
+                            <Grid.Background>
+                                <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Immagini/Targhette/Piante acquatiche.jpg"/>
+                            </Grid.Background>
+                            <StackPanel Background="LightBlue" VerticalAlignment="Bottom">
+                                <TextBlock TextWrapping="WrapWholeWords" Text="ACQUATICHE"   HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Grid>
+
+                        <Grid Name="PIANTE_ESOTICHEbtn" Height="116" Width="116"  VerticalAlignment="Top" Margin="10" Tapped="PIANTE_ESOTICHEbtn_Tapped" >
+                            <Grid.Background>
+                                <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Immagini/Targhette/piante-tropicali.jpg"/>
+                            </Grid.Background>
+                            <StackPanel Background="#A62F2F" VerticalAlignment="Bottom">
+                                <TextBlock TextWrapping="WrapWholeWords" Text="ESOTICHE"   HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Grid>
+
+                        <Grid Name="PIANTE_ANNUALIIbtn" Height="116" Width="116"  VerticalAlignment="Top" Margin="10" Tapped="PIANTE_ANNUALIbtn_Tapped" >
+                            <Grid.Background>
+                                <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Immagini/Targhette/Piante annuali.jpg"/>
+                            </Grid.Background>
+                            <StackPanel Background="#334AA6" VerticalAlignment="Bottom">
+                                <TextBlock TextWrapping="WrapWholeWords" Text="ANNUALI"   HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Grid>
+
+                        <Grid Name="PIANTE_PERENNIbtn" Height="116" Width="116"  VerticalAlignment="Top" Margin="10" Tapped="PIANTE_PERENNIbtn_Tapped" >
+                            <Grid.Background>
+                                <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Immagini/Targhette/piante-perenni.jpg"/>
+                            </Grid.Background>
+                            <StackPanel Background="#B57EDC " VerticalAlignment="Bottom">
+                                <TextBlock TextWrapping="WrapWholeWords" Text="PERENNI"   HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Grid>
+
+                        <Grid Name="PIANTE_BULBOSEbtn" Height="116" Width="116"  VerticalAlignment="Top" Margin="10" Tapped="PIANTE_BULBOSEbtn_Tapped" >
+                            <Grid.Background>
+                                <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Immagini/Targhette/Bulbose.jpg"/>
+                            </Grid.Background>
+                            <StackPanel Background="#806635" VerticalAlignment="Bottom">
+                                <TextBlock TextWrapping="WrapWholeWords" Text="BULBOSE"   HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Grid>
+
+                        <Grid Name="PIANTE_ORTObtn" Height="116" Width="116"  VerticalAlignment="Top" Margin="10" Tapped="PPIANTE_ORTObtn_Tapped" >
+                            <Grid.Background>
+                                <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Immagini/Targhette/Orto.jpg"/>
+                            </Grid.Background>
+                            <StackPanel Background="Green" VerticalAlignment="Bottom">
+                                <TextBlock TextWrapping="WrapWholeWords" Text="ORTO"   HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Grid>
+
+                        <Grid Name="PIANTE_FRUTTETObtn" Height="116" Width="116"  VerticalAlignment="Top" Margin="10" Tapped="PIANTE_FRUTTETObtn_Tapped" >
+                            <Grid.Background>
+                                <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Immagini/Targhette/Frutteto.jpg"/>
+                            </Grid.Background>
+                            <StackPanel Background="#ffb366" VerticalAlignment="Bottom">
+                                <TextBlock TextWrapping="WrapWholeWords" Text="FRUTTETO"   HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Grid>
+
+                        <Grid Name="ALTRI_FRUTTIbtn" Height="116" Width="116"  VerticalAlignment="Top" Margin="10" Tapped="FRUTTI_BOSCObtn_Tapped" >
+                            <Grid.Background>
+                                <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Immagini/Targhette/Altrifrutti.jpg"/>
+                            </Grid.Background>
+                            <StackPanel Background="#ce4e4e" VerticalAlignment="Bottom">
+                                <TextBlock TextWrapping="WrapWholeWords" Text="FRUTTI BOSCO"   HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Grid>
+
+                        <Grid Name="PIANTE_APPARTAMENTObtn" Height="116" Width="116"  VerticalAlignment="Top" Margin="10" Tapped="PIANTE_APPARTAMENTObtn_Tapped" >
+                            <Grid.Background>
+                                <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Immagini/Targhette/Appartamento.jpg"/>
+                            </Grid.Background>
+                            <StackPanel Background="Gray" VerticalAlignment="Bottom">
+                                <TextBlock TextWrapping="WrapWholeWords" Text="APPARTAMENTO"   HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Grid>
+
+                    </GridView>
+                </controls:Expander>
+
+            </StackPanel>
+
+            </ScrollViewer>
+
+
+            <!--  BOX MODIFICA DATI  -->
+            <Grid Name="Dati_grid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,100,0,0" Visibility="Collapsed" HorizontalAlignment="Right" Width="360">
+                <Border Background="Green" Width="10" HorizontalAlignment="Left"></Border>
+                <ScrollViewer HorizontalContentAlignment="Left" VerticalScrollBarVisibility="Auto" Margin="10,0,0,0">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal"  VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10" >
+                            <TextBlock Text="&#xE104;"  FontSize="22" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center"/>
+                            <TextBlock Margin="6,0,0,0" FontSize="16" Text="Modifica i tuoi dati" VerticalAlignment="Center"/>
+                        </StackPanel>
+
+                        <StackPanel>
+
+                            <TextBox x:Name="nome" PlaceholderText="Nome e Cognome Utente"  Margin="10,10,10,0"/>
+
+                            <StackPanel Margin="10,20,0,0" x:Name="sesso_socio">
+                                <TextBlock Text="Sesso" Margin="0,0,0,10" FontSize="16" Foreground="Green"/>
+                                <RadioButton x:Name="sesso_maschile" Content="Maschile" Checked="sesso_maschile_Checked"/>
+                                <RadioButton x:Name="sesso_femminile" Content="Femminile" Checked="sesso_femminile_Checked" />
+                                <RadioButton x:Name="sesso_indefinito" Content="Non specificato" Checked="sesso_indefinito_Checked" />
+                            </StackPanel>
+
+                            <StackPanel Margin="10,20,0,10" x:Name="tipologia_socio">
+                                <TextBlock Text="Scegli un livello" Margin="0,0,0,10" FontSize="16" Foreground="Green"/>
+                                <RadioButton x:Name="pollice_biancobtn" Content="Pollice Bianco" Checked="pollice_biancobtn_Checked"/>
+                                <RadioButton x:Name="pollice_verde_basebtn" Content="Pollice Verde - Base" Checked="pollice_verde_basebtn_Checked"/>
+                                <RadioButton x:Name="pollice_verde_mediobtn" Content="Pollice Verde - Medio" Checked="pollice_verde_mediobtn_Checked"/>
+                                <RadioButton x:Name="pollice_verde_espertobtn" Content="Pollice - Esperto" Checked="pollice_verde_espertobtn_Checked"/>
+                                <RadioButton x:Name="pollice_verde_avanzatobtn" Content="Pollice Verde - Avanzato" Checked="pollice_verde_avanzatobtn_Checked"/>
+                            </StackPanel>
+
+                            <StackPanel Margin="10,20,0,10" x:Name="pianta_preferita" Visibility="Collapsed">
+                                <TextBlock Text="La tua pianta preferita" Margin="0,0,0,10" FontSize="16" Foreground="Green"/>
+                                <TextBox x:Name="nome_pianta_preferita" PlaceholderText="Pianta preferita"  Margin="0,0,10,0"/>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal">
+
+                                <Button x:Name="New" Margin="10" Width="90" Height="50" VerticalAlignment="Top" Click="New_Click">
+                                    <StackPanel>
+                                        <TextBlock Text="&#xE74D;" FontSize="20"  FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        <TextBlock>Cancella </TextBlock>
+                                    </StackPanel>
+                                </Button>
+
+                                <Button x:Name="Save"  Width="90" Margin="10" Height="50" VerticalAlignment="Top" Click="Save_Click">
+                                    <StackPanel>
+                                        <TextBlock Text="&#xE10B;"   FontFamily="Segoe MDL2 Assets" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        <TextBlock Text="Salva"/>
+                                    </StackPanel>
+                                </Button>
+
+                            </StackPanel>
+
+                            <StackPanel x:Name="StatusPanel" Orientation="Vertical" Margin="10">
+                                <TextBlock x:Name="StatusLabel" Margin="10,0,0,10" TextWrapping="Wrap" Text="" />
+                                <Border x:Name="StatusBorder" Margin="0,0,0,0">
+                                    <ScrollViewer VerticalScrollMode="Auto"  VerticalScrollBarVisibility="Auto" MaxHeight="200">
+                                        <TextBlock x:Name="StatusBlock" FontWeight="Bold" 
+                            MaxWidth="{Binding ActualWidth, ElementName=Splitter}" Margin="10,10,10,20" TextWrapping="Wrap"  />
+                                    </ScrollViewer>
+                                </Border>
+                            </StackPanel>
+
+                        </StackPanel>
+
+
+
+
+
+
+
+
+
+
+
+
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+
+
+
+
+
+
+            <MediaElement Height="150" Margin="338,48,0,0" VerticalAlignment="Top" IsLooping="True" Stretch="UniformToFill" IsMuted="True" RealTimePlayback="True" AreTransportControlsEnabled="True" Source="ms-appx:///Assets/TimeLapse Watch Flowers Bloom Before Your Eyes  Short Film Showcase.mp4" Visibility="Collapsed"/>
+
+
+        </Grid>
+    </Grid>
+</Page>

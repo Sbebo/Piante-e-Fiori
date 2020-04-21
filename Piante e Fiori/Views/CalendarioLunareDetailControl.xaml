@@ -1,0 +1,106 @@
+﻿<UserControl
+    x:Class="Piante_e_Fiori.Views.CalendarioLunareDetailControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    mc:Ignorable="d">
+
+    <ScrollViewer Name="ForegroundElement" VerticalScrollMode="Enabled" HorizontalAlignment="Stretch" Padding="12,0">
+        <Grid>
+            <StackPanel HorizontalAlignment="Left">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="0,8,0,0">
+                    <TextBlock FontSize="40" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center" HorizontalAlignment="Center" Text="&#xE163;"/>
+                    <TextBlock Margin="12,0,0,0" Text="{x:Bind MasterMenuItem.Mese, Mode=OneWay}" Style="{StaticResource SubheaderTextBlockStyle}" />
+
+                    <ToggleButton x:Name="posizione_luna_btn" Background="Green" VerticalAlignment="Top" Margin="10" Visibility="Visible" Checked="posizione_luna_btn_Checked" Unchecked="posizione_luna_btn_UnChecked" >
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="&#xE909;"  Margin="0,0,5,0"  FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <TextBlock TextWrapping="Wrap"   Margin="5,0,0,0" Text="POSIZIONE LUNARE"   HorizontalAlignment="Center"  VerticalAlignment="Center"   TextAlignment="Center"/>
+                        </StackPanel>
+                    </ToggleButton>
+                </StackPanel>
+                <StackPanel Name="block" Padding="0,15,0,0">
+
+
+                    <StackPanel Orientation="Horizontal" Background="Green" Height="40">
+                        <Image VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10" Source="ms-appx:///Assets/Grass-1600.png" Height="30"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="IN GIARDINO" Style="{StaticResource SubtitleTextBlockStyle}"/>
+                    </StackPanel>
+                    <TextBlock Text="{x:Bind MasterMenuItem.Giardino1, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
+                    <TextBlock Text="{x:Bind MasterMenuItem.Giardino2, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" Margin="0,20"/>
+
+
+                    <StackPanel Orientation="Horizontal" Background="Green" Height="40">
+                        <Image VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10" Source="ms-appx:///Assets/Eggplant-1600.png" Height="30"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="NELL'ORTO" Style="{StaticResource SubtitleTextBlockStyle}"/>
+                    </StackPanel>
+                    <TextBlock Text="{x:Bind MasterMenuItem.Orto1, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
+                    <TextBlock Text="{x:Bind MasterMenuItem.Orto2, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" Margin="0,20"/>
+
+                    <StackPanel Orientation="Horizontal" Background="Green" Height="40">
+                        <Image VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10" Source="ms-appx:///Assets/cherry-1600.png" Height="30"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="NEL FRUTTETO" Style="{StaticResource SubtitleTextBlockStyle}"/>
+                    </StackPanel>
+                    <TextBlock Text="{x:Bind MasterMenuItem.Frutteto1, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
+                    <TextBlock Text="{x:Bind MasterMenuItem.Frutteto2, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" Margin="0,20"/>
+
+                    <StackPanel Orientation="Horizontal" Background="Green" Height="40">
+                        <Image VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10" Source="ms-appx:///Assets/real_estate-512.png" Height="30"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="IN CASA E SUL BALCONE" Style="{StaticResource SubtitleTextBlockStyle}"/>
+                    </StackPanel>
+                    <TextBlock Text="{x:Bind MasterMenuItem.CasaEBalcone1, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
+                    <TextBlock Text="{x:Bind MasterMenuItem.CasaEBalcone2, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" Margin="0,20"/>
+
+                    <StackPanel Orientation="Horizontal" Background="Green" Height="40">
+                        <Image VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10" Source="ms-appx:///Assets/Flowers_1600.png" Height="30"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="I FIORI E LA LUNA" Style="{StaticResource SubtitleTextBlockStyle}"/>
+                    </StackPanel>
+                    <TextBlock Text="{x:Bind MasterMenuItem.FiorieLuna, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
+                    <TextBlock Text="{x:Bind MasterMenuItem.FiorieLuna1, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
+                    <TextBlock Text="{x:Bind MasterMenuItem.FiorieLuna2, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" Margin="0,20"/>
+
+
+                    <StackPanel Orientation="Horizontal" Background="Green" Height="40">
+                        <Image VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10" Source="ms-appx:///Assets/LunaPienaTrasparente.gif" Height="30"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="LO SAPEVI?" Style="{StaticResource SubtitleTextBlockStyle}"/>
+                    </StackPanel>
+                    <TextBlock Style="{StaticResource BodyTextBlockStyle}" Text="Il nostro satellite influisce su molti fenomeni ai quali assistiamo quotidianamente, dalle maree alla crescita delle piante. Osservare i ritmi della luna può comportare significativi miglioramenti nella germinazione dei semi, nella produzione di orto e frutteto e nello sviluppo delle piante ornamentali." />
+                    <TextBlock Style="{StaticResource BodyTextBlockStyle}">
+                    <Run Text="La capacità della Luna di influenzare la produzione agricola è nota da tempo immemorabile. L'effetto è facilmente verificabile a livello amatoriale, grazie alla semplice osservazione statistica dei diversi risultati che si possono ottenere seminando la stessa specie in diversi momenti del mese, o verificando il grado di attecchimento di piante messe a dimora con fasi lunari diverse."/><LineBreak/><LineBreak/>
+                    <Run Text="Così come è in grado di muovere gli oceani, provocando le maree, fenomeno strettamente collegato alle fasi lunari, anche nelle attività di coltivazione delle piante è opportuno tener conto del momento, consultando un calendario dell'anno in corso dotato delle indicazioni delle quattro fasi lunari, che si ripetono ogni 29 giorni "/><LineBreak/><LineBreak/>
+                    <Run Text="Tali fasi, che mutano nell'arco di circa 7 giorni in funzione della posizione nel cielo rispetto alla Terra, e quindi dell'illuminazione del satellite da parte del Sole, sono: primo quarto o luna crescente con la parte arrotondata dell'astro rivolta a ovest; luna piena, interamente visibile; ultimo quarto o luna calante con la parte arrotondata rivolta a est; luna nuova (non visibile perché non illuminata dal Sole). "/><LineBreak/>
+                    </TextBlock>
+
+                </StackPanel>
+            </StackPanel>
+
+            <Grid Name="posizione_luna_grid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"  Visibility="Collapsed" HorizontalAlignment="Right" Width="400">
+                <Border Background="Green" Width="10" HorizontalAlignment="Left"></Border>
+                <ScrollViewer HorizontalContentAlignment="Left" VerticalScrollBarVisibility="Auto" Margin="10,0,0,0">
+                    <Grid>
+                        <WebView x:Name="UltimeNewsWebView" Visibility="Collapsed" Margin="0,48,0,0" NavigationFailed="Navigation_Failed" NavigationCompleted="Navigation_Completed" NavigationStarting="Navigation_Starting" LoadCompleted="Load_Completed"/>
+                        <StackPanel x:Name="internet_status" Visibility="Visible" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Coral" Width="344" Height="48" Orientation="Horizontal">
+                            <TextBlock  FontSize="32" FontFamily="Segoe MDL2 Assets"  Foreground="Green" Height="35" Width="33" Margin="10,5,5,5">
+            	<Run Text="&#xEB5E;"/>
+                            </TextBlock>
+                            <TextBlock  Margin="5" FontSize="20" HorizontalAlignment="Center" FontWeight="Bold" Foreground="Green" Text="CONNESSIONE ASSENTE" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel x:Name="pr1" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed">
+                            <ProgressRing Visibility="Visible"  HorizontalAlignment="Center" VerticalAlignment="Center" IsActive="True"  Margin="0" Foreground="Green" RequestedTheme="Light" Height="100" Width="100" />
+                            <TextBlock x:Name="pr1_text" Foreground="Green" FontWeight="Bold" HorizontalAlignment="Center" />
+                        </StackPanel>
+                        <Button x:Name="refreshButton"  HorizontalAlignment="Right"  VerticalAlignment="Top" Width="48" Height="48" Click="RefreshButton_Click"  Background="Green">
+                            <StackPanel Orientation="Horizontal"  VerticalAlignment="Top" >
+                                <TextBlock Text="&#xE117;"  FontSize="22" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center" FontWeight="Bold"/>
+                            </StackPanel>
+                        </Button>
+
+
+                    </Grid>
+                </ScrollViewer>
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+</UserControl>

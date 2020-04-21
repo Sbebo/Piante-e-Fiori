@@ -1,0 +1,84 @@
+﻿<Page
+    x:Class="Piante_e_Fiori.Views.Changelog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Piante_e_Fiori.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid x:Name="MyHeaderGrid" Height="100" Background="{ThemeResource SystemControlAcrylicWindowBrush}" VerticalAlignment="Top" >
+            <StackPanel Orientation="Horizontal"  VerticalAlignment="Center" HorizontalAlignment="Center" >
+                <TextBlock Text="&#xECC5;"  FontSize="80" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center" Margin="10,0,10,0"/>
+                <TextBlock Margin="6,0,0,0" FontSize="25" VerticalAlignment="Center" TextWrapping="WrapWholeWords" HorizontalAlignment="Center">
+                    <Run Text="CHANGELOG DELLE"/>
+                    <LineBreak/>
+                    <Run Text="VERSIONI PRECEDENTI"/>
+                </TextBlock>
+            </StackPanel>
+        </Grid>
+
+        <ScrollViewer Margin="0,100" VerticalScrollBarVisibility="Auto">
+            <TextBlock Margin="10" LineHeight="24" TextWrapping="Wrap">
+                    
+                    <Run Foreground="Green" FontWeight="Bold" Text="VERSIONE 1.1.21.0 [MAGGIO 2020]"/>
+                    <LineBreak/>
+                    <Run Text="- Risolto un bug che impediva la corretta visualizzazione della homepage"/><LineBreak/>
+                    <Run Text="- Le immagini dell'account (M,F, non specificato) sono correttamente visualizzate"/><LineBreak/>
+                    <Run Text="- I testi delle schede botaniche sono ora tutti allineati a sinistra"/><LineBreak/>
+                    <Run Text="- Modificato il messaggio toast di benvenuto all'avvio dell'app"/><LineBreak/>
+                    <Run Text="- Aggiunta la sezione 'Lavori nell'orto' con il calendario della semina e del raccolto degli ortaggi"/><LineBreak/>
+                    <Run Text="- Nuova homepage che integra ora la sezione 'Schede Botaniche'"/><LineBreak/>
+                    <Run Text="- Nuova sezione 'Frutti di bosco'"/><LineBreak/>
+                    <Run Text="- Modifica del colore tema della sezione Frutteto"/><LineBreak/>
+                    <Run Text="- Aggiunto il supporto all'esecuzione automatica dell'app all'avvio di windows"/><LineBreak/>
+                    <Run Text="- Modificata l'icona delle schede botaniche nel menù hamburger"/><LineBreak/>
+                    <Run Text="- Nuova sezione 'Progettazione giardino' con supporto a Windows Ink per creare bozze preparatorie. La finestra può essere dublicata per migliorare la produttività"/><LineBreak/>
+                    <Run Text="- Migliorata l'affidabilità nella ricezione delle notifiche da parte dello sviluppatore"/><LineBreak/>
+                    <Run Text="- Nuova immagine per l'Actinidia Kolomikta"/><LineBreak/>
+                    <Run Text="- Ridotto lo spessore del bordo dell'elenco piante nelle sezioni schede botaniche"/><LineBreak/>
+                    <Run Text="- Lo sfondo del pannello verde oliva in impostazioni, glossario, calendario lunare... è ora  acrilico"/><LineBreak/>
+                    <Run Text="- La maggior parte dei controlli e degli elementi ha i bordi arrotondati (Microsoft.UI.Xaml 2.2)"/><LineBreak/><LineBreak/>
+
+                    <Run Foreground="Green" FontWeight="Bold" Text="VERSIONE 1.1.19.0 [AGOSTO 2018]"/>
+                    <LineBreak/>
+                    <Run Text="- Risolto un bug che in alcuni casi impedeva l'avvio dell'app"/><LineBreak/>
+
+                    <LineBreak/>
+                    <Run Foreground="Green" FontWeight="Bold" Text="VERSIONE 1.1.18.0 [MAGGIO 2018]"/><LineBreak/>
+                    <Run Text="- Riscrittura completa del codice sorgente che permetterà di rilasciare più rapidamente nuove funzionalità"/><LineBreak/>
+                    <Run Text="- Supporto alle finestre multiple (multiple-view) per le sezioni delle schede botaniche"/><LineBreak/>
+                    <Run Text="- Sono ora disponibili le schede botaniche per le 14 categorie di piante (per un totale di 400 schede botaniche)"/><LineBreak/>
+                    <Run Text="- Supporto alla ricezione di notifiche dallo sviluppatore"/><LineBreak/>
+                    <Run Text="- Nuova sezione 'Identificazione Pianta' (è richiesta una connessione a internet)"/><LineBreak/>
+                    <Run Text="- Nuova sezione 'Glossario' che coprende una serie di termini utili nel giardinaggio"/><LineBreak/>
+                    <Run Text="- Nuova grafica per la sezione 'Calendario lunare'"/><LineBreak/>
+                    <Run Text="- La sezione 'Controllo Fitosanitario' è in fase di aggiornamento: sarà nuovamente introdotta nelle successive versioni"/><LineBreak/>
+                    <Run Text="- La sezione 'News' è stata deprecata"/><LineBreak/>
+                    <Run Text="- Supporto al Fluent Design"/><LineBreak/>
+                    <Run Text="- Avvio più rapido dell'app"/><LineBreak/>
+                    <Run Text="- Bugfix generali"/><LineBreak/>
+                    
+                    <LineBreak/>
+                    <Run Foreground="Green" FontWeight="Bold" Text="VERSIONE 1.1.17.0 [SETTEMBRE 2017]"/>
+                    <LineBreak/>
+                    <Run Text="- Sezione News"/>
+                    <LineBreak/>
+                    <Run Text="- Nuova sezione Controllo sanitario"/>
+                    <LineBreak/>
+                    <LineBreak/>
+                    <Run Foreground="Green" FontWeight="Bold" Text="VERSIONE 1.1.16.0 [AGOSTO 2017]"/>
+                    <LineBreak/>
+                    <Run Text="- Nuova grafica per la modifica dati Account"/>
+                    <LineBreak/>
+                    <Run Text="- Nuova sezione calendario lunare"/>
+                    <LineBreak/>
+                    <Run Text="- E' ora possibile aggiungere correttamente eventi al calendario nella sezione Gestione Trattamenti"/>
+                    <LineBreak/>
+                    <Run Text="- Prima versione di Beta PUBBLICA"/>
+            </TextBlock>
+        </ScrollViewer>
+
+    </Grid>
+</Page>

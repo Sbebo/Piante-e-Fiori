@@ -1,0 +1,103 @@
+﻿<Page
+    x:Class="Piante_e_Fiori.Views.SegnalazioneErrori"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Piante_e_Fiori.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid Name="Grid_principale" >
+            <ScrollViewer  HorizontalContentAlignment="Left" VerticalScrollBarVisibility="Auto" >
+                <Grid>
+                    <Grid x:Name="MyHeaderGrid" Height="100" Background="{ThemeResource SystemControlAcrylicWindowBrush}" VerticalAlignment="Top">
+                        <StackPanel Orientation="Horizontal"  VerticalAlignment="Center" HorizontalAlignment="Center" >
+                            <TextBlock Text=""  FontSize="80" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center" Margin="10,0,10,0"/>
+                            <TextBlock Margin="6,0,0,0" FontSize="25" VerticalAlignment="Center" TextWrapping="WrapWholeWords" HorizontalAlignment="Center">
+                    <Run Text="SEGNALAZIONE"/>
+                    <LineBreak/>
+                    <Run Text="ERRORI"/>
+                            </TextBlock>
+                        </StackPanel>
+
+                    </Grid>
+                    <!-- OPZIONI SEGNALAZIONE ERRORI-->
+                    <StackPanel Margin="10,103,10,10">
+                        <StackPanel Orientation="Horizontal"  VerticalAlignment="Top" >
+                            <TextBlock Text="&#xE0A2;"  FontSize="22" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center"/>
+                            <TextBlock Margin="6,0,0,0" FontSize="16" Text="Seleziona la categoria" VerticalAlignment="Center"/>
+                        </StackPanel>
+                       
+
+                        <RadioButton Name="errore_informazioni_schede_botaniche_radiobutton" Margin="5" Content="Informazioni schede botaniche" Checked="errore_informazioni_schede_botaniche_radiobutton_Checked"/>
+                        <RadioButton Name="errore_immagini_piante_radiobutton" Margin="5" Content="Immagini presenti nelle schede botaniche" Checked="errore_immagini_piante_radiobutton_Checked"/>
+                        <RadioButton Name="errore_testi_descrittivi_immagini_radiobutton" Margin="5" Content="Testi descrittivi immagini" Checked="errore_testi_descrittivi_immagini_radiobutton_Checked" Visibility="Collapsed"/>
+                        <RadioButton Name="errore_battitura_testo" Margin="5" Content="Errori di battitura" Checked="Errore_battitura_testo_radioButton_Checked"/>
+                        <RadioButton Name="errore_riproduzione_sintetizzatore_vocale_radiobutton"  Margin="5" Content="Riproduzione sintetizzatore vocale" Checked="errore_riproduzione_sintetizzatore_vocale_radiobutton_Checked"/>
+                        <RadioButton Name="errore_audio_sottofondo_schede_botaniche_radiobutton" Margin="5" Content="Audio di sottofondo schede botaniche" Checked="errore_audio_sottofondo_schede_botaniche_radiobutton_Checked"/>
+                        <RadioButton  Name="errore_interfaccia_grafica_radiobutton" Margin="5" Content="Interfaccia grafica" Checked="errore_interfaccia_grafica_radiobutton_Checked"/>
+                        <RadioButton Name="errore_informazioni_altri_problemi_radiobutton" Margin="5" Content="Tutti gli altri problemi" Checked="errore_informazioni_altri_problemi_radiobutton_Checked"/>
+                        <!--  TESTO DI SUGGERIMENTO  -->
+                        <Border Height="3" Background="Green" Margin="0,10"/>
+                        <StackPanel Orientation="Horizontal"  VerticalAlignment="Top" >
+                            <TextBlock Text="&#xE134;"  FontSize="22" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center"/>
+                            <TextBlock Margin="6,0,0,0" FontSize="16" Text="Informazioni utili" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <TextBlock Name="msg_box" Margin="0,10" TextWrapping="WrapWholeWords" Foreground="Red"/>
+                        <Button x:Name="sendmail1"  HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="0,10" Click="sendmail1_Click" Visibility="Collapsed">
+                            <StackPanel Orientation="Horizontal"  VerticalAlignment="Top" >
+                                <TextBlock Text="&#xE119;"  FontSize="22" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center"/>
+                                <TextBlock Margin="6,0,0,0" FontSize="16" Text="Contattaci" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="sendmail2"  HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="0,10" Click="sendmail2_Click" Visibility="Collapsed">
+                            <StackPanel Orientation="Horizontal"  VerticalAlignment="Top" >
+                                <TextBlock Text="&#xE119;"  FontSize="22" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center"/>
+                                <TextBlock Margin="6,0,0,0" FontSize="16" Text="Contattaci" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="sendmail3"  HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="0,10" Click="sendmail3_Click" Visibility="Collapsed">
+                            <StackPanel Orientation="Horizontal"  VerticalAlignment="Top" >
+                                <TextBlock Text="&#xE119;"  FontSize="22" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center"/>
+                                <TextBlock Margin="6,0,0,0" FontSize="16" Text="Contattaci" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="sendmail4"  HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="0,10" Click="sendmail4_Click" Visibility="Collapsed">
+                            <StackPanel Orientation="Horizontal"  VerticalAlignment="Top" >
+                                <TextBlock Text="&#xE119;"  FontSize="22" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center"/>
+                                <TextBlock Margin="6,0,0,0" FontSize="16" Text="Contattaci" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="sendmail5"  HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="0,10" Click="sendmail5_Click" Visibility="Collapsed">
+                            <StackPanel Orientation="Horizontal"  VerticalAlignment="Top" >
+                                <TextBlock Text="&#xE119;"  FontSize="22" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center"/>
+                                <TextBlock Margin="6,0,0,0" FontSize="16" Text="Contattaci" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="sendmail6"  HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="0,10" Click="sendmail6_Click" Visibility="Collapsed">
+                            <StackPanel Orientation="Horizontal"  VerticalAlignment="Top" >
+                                <TextBlock Text="&#xE119;"  FontSize="22" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center"/>
+                                <TextBlock Margin="6,0,0,0" FontSize="16" Text="Contattaci" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="sendmail7"  HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="0,10" Click="sendmail7_Click" Visibility="Collapsed">
+                            <StackPanel Orientation="Horizontal"  VerticalAlignment="Top" >
+                                <TextBlock Text="&#xE119;"  FontSize="22" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center"/>
+                                <TextBlock Margin="6,0,0,0" FontSize="16" Text="Contattaci" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="sendmail8"  HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="0,10" Click="sendmail8_Click" Visibility="Collapsed">
+                            <StackPanel Orientation="Horizontal"  VerticalAlignment="Top" >
+                                <TextBlock Text="&#xE119;"  FontSize="22" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center"/>
+                                <TextBlock Margin="6,0,0,0" FontSize="16" Text="Contattaci" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </ScrollViewer>
+        </Grid>
+
+
+    </Grid>
+</Page>

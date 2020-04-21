@@ -1,0 +1,55 @@
+﻿<Page
+    x:Class="Piante_e_Fiori.Views.TrattamentiPianteHomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Piante_e_Fiori.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid Name="Grid_principale">
+            <ScrollViewer  HorizontalContentAlignment="Left" VerticalScrollBarVisibility="Auto" >
+                <Grid>
+                    <Grid x:Name="MyHeaderGrid" Height="100" Background="Olive" VerticalAlignment="Top">
+                        <StackPanel Orientation="Horizontal"  VerticalAlignment="Center" HorizontalAlignment="Center" >
+                            <TextBlock Text="&#xEADF;"  FontSize="80" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center" Margin="10,0,10,0"/>
+                            <TextBlock TextWrapping="WrapWholeWords"   Text="ORGANIZZA I TRATTAMENTI" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="25px"  TextAlignment="Center" Width="200"/>
+                        </StackPanel>
+                    </Grid>
+
+                    <GridView x:Name="menu_utente" Margin="0,180,0,0" HorizontalAlignment="Center" Visibility="Visible"  VerticalAlignment="Top">
+
+
+                        <Button x:Name="gestione_trattamenti_btn_btn" Background="Green" Height="100" Width="100" VerticalAlignment="Top" Margin="10" Click="gestione_trattamenti_btn_Click" Visibility="Visible" >
+                            <StackPanel>
+                                <TextBlock Text="&#xEE93;"  Margin="0,5" FontSize="30" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Center"/>
+                                <TextBlock TextWrapping="Wrap"   Text="GESTIONE OPERAZIONI" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="13px"  TextAlignment="Center" />
+                            </StackPanel>
+                        </Button>
+
+                        
+
+
+                        <Button x:Name="gestione_irrigazione_btn" Background="Green" Height="100" Width="100" VerticalAlignment="Top" Margin="10,0" Click="gestione_irrigazione_btn_Click" Visibility="Visible" >
+                            <StackPanel>
+                                <TextBlock Text="&#xEDA8;"  Margin="0,5" FontSize="30" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Center"/>
+                                <TextBlock TextWrapping="Wrap"   Text="GESTIONE IRRIGAZIONE"   HorizontalAlignment="Center"  VerticalAlignment="Bottom" FontSize="13px"  TextAlignment="Center"/>
+                            </StackPanel>
+                        </Button>
+
+                       
+
+                        <Button x:Name="glossario_termini_btn" Background="Green" Height="100" Width="100" VerticalAlignment="Top" Margin="10"  Visibility="Visible" >
+                            <StackPanel>
+                                <TextBlock Text=""  Margin="0,5" FontSize="30" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Center"/>
+                                <TextBlock TextWrapping="Wrap"   Text="CREA NOTE RAPIDE"   HorizontalAlignment="Center"  VerticalAlignment="Bottom" FontSize="13px"  TextAlignment="Center"/>
+                            </StackPanel>
+                        </Button>
+
+                    </GridView>
+                </Grid>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,334 @@
+﻿<Page
+    x:Class="Piante_e_Fiori.Views.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Style="{StaticResource PageStyle}"
+    xmlns:helper="using:Piante_e_Fiori.Helpers"
+    xmlns:xaml="using:Windows.UI.Xaml"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <helper:EnumToBooleanConverter x:Key="EnumToBooleanConverter" EnumType="ElementTheme" />
+    </Page.Resources>
+    <Grid   Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <!--ok Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" grigio chiaro/grigio scuro Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}"-->
+        <StackPanel x:Name="ContentArea">
+
+            <Grid x:Name="MyHeaderGrid" Height="100" Background="{ThemeResource SystemControlAcrylicWindowBrush}" VerticalAlignment="Top" >
+                
+                <StackPanel Orientation="Horizontal"  VerticalAlignment="Center" HorizontalAlignment="Center" >
+                    <TextBlock Text=""  FontSize="80" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center" Margin="10,0,10,0"/>
+                    <TextBlock Margin="6,0,0,0" FontSize="25" VerticalAlignment="Center" TextWrapping="WrapWholeWords" HorizontalAlignment="Center">
+                    <Run Text="IMPOSTAZIONI E"/>
+                    <LineBreak/>
+                    <Run Text="PREFEERENZE"/>
+                    </TextBlock>
+                </StackPanel>
+            </Grid>
+           
+                <Pivot x:Name="MyPivot"
+               RelativePanel.AlignBottomWithPanel="True"
+               RelativePanel.AlignLeftWithPanel="True"
+               RelativePanel.AlignRightWithPanel="True"
+               RelativePanel.Below="pageHeader" ScrollViewer.VerticalScrollBarVisibility="Auto">
+
+                    <!--  GENERALI  -->
+                    <PivotItem DataContext="{Binding SettingsPartViewModel}" Header="GENERALI">
+                        <ScrollViewer VerticalScrollBarVisibility="Auto">
+                            <StackPanel Width="330" HorizontalAlignment="Left" >
+                                <TextBlock Text="FEEDBACK E SEGNALAZIONI ERRORI" FontSize="18" Margin="0,0,0,10" />
+                                <TextBlock Text="Se riscontri errori durante l'uso dell'applicazione contattaci e riportaci il problema. Non segnalare bug tramite recensione sullo Store in quanto risulta maggiormente difficoltoso rispondervi direttamente." TextWrapping="WrapWholeWords"/>
+                                <Button x:Name="x" HorizontalAlignment="Stretch" VerticalAlignment="Top" Click="Button_Click" Margin="0,10"  >
+                                    <StackPanel Orientation="Horizontal"  VerticalAlignment="Top" >
+                                        <TextBlock Text="&#xED15;"  FontSize="22" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center"/>
+                                        <TextBlock Margin="6,0,0,0" FontSize="16" Text="Invia il tuo Feedback" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </Button>
+                                <Button x:Name="sendmail"  HorizontalAlignment="Stretch" VerticalAlignment="Top" Click="sendmail_Click" Margin="0,10" >
+                                    <StackPanel Orientation="Horizontal"  VerticalAlignment="Top" >
+                                        <TextBlock Text="&#xE119;"  FontSize="22" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center"/>
+                                        <TextBlock Margin="6,0,0,0" FontSize="16" Text="Segnala un problema" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </Button>
+                                <Border  BorderBrush="Green" BorderThickness="1" Margin="0,10"/>
+                                <TextBlock Text="CONDIVIDI L'APP" FontSize="18" Margin="0,0,0,10" />
+                                <TextBlock Text="Se l'applicazione e' di tuo gradimento falla conoscere ai tuoi amici e parenti! Puoi inoltre aggiungere facilmente il riquadro dell'app alla schermata Start" TextWrapping="WrapWholeWords"/>
+                                <Button x:Name="share_appbtn"  HorizontalAlignment="Stretch" VerticalAlignment="Top" Click="ShareButton_Click" Margin="0,10">
+                                    <StackPanel Orientation="Horizontal"  VerticalAlignment="Top" >
+                                        <TextBlock Text="&#xE72D;"  FontSize="22" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center"/>
+                                        <TextBlock Margin="6,0,0,0" FontSize="16" Text="Condividi l'app" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </Button>
+
+                                <Button x:Name="btnSecTile"  HorizontalAlignment="Stretch" VerticalAlignment="Top" Click="btnSecTile_Click" Margin="0,10">
+                                    <StackPanel Orientation="Horizontal"  VerticalAlignment="Top" >
+                                        <TextBlock Text="&#xE141;"  FontSize="22" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center"/>
+                                        <TextBlock Margin="6,0,0,0" FontSize="16" Text="Aggiungi tile a start" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </Button>
+                                <Border  BorderBrush="Green" BorderThickness="1" Margin="0,10"/>
+
+                                <TextBlock Text="RESET" FontSize="18" Margin="0,0,0,10" />
+                                <TextBlock Text="Puoi facilmente reinstallare Piante e Fiori usando questa opzione. Attenzione: tutti i dati inseriti e le preferenze salvate saranno eliminati. L'app si chiuderà." TextWrapping="WrapWholeWords"/>
+                                <Button x:Name="clear_databtn" HorizontalAlignment="Stretch" VerticalAlignment="Top" Visibility="Visible" Margin="0,10" Click="clear_databtn_Click">
+                                    <StackPanel Orientation="Horizontal"  VerticalAlignment="Top" >
+                                        <TextBlock Text="&#xE107;"  FontSize="22" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center"/>
+                                        <TextBlock Margin="6,0,0,0" FontSize="16" Text="Cancella dati app" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </Button>
+                                <TextBlock x:Name="clear_data_ok" HorizontalAlignment="Left" Visibility="Collapsed"  TextWrapping="Wrap" FontSize="30" FontFamily="Segoe MDL2 Assets" Text="&#xE73E;" VerticalAlignment="Top" FontWeight="Bold" Foreground="Green"/>
+
+
+                                <TextBlock Text="PREFERENZE HOMEPAGE" FontSize="18" Margin="0,0,0,10" Visibility="Collapsed" />
+                                <TextBlock Text="Personalizza la grafica e la disposizione degli elementi della HomePage" TextWrapping="WrapWholeWords" Visibility="Collapsed"/>
+                                <Button x:Name="preferenze_home_page" HorizontalAlignment="Stretch" VerticalAlignment="Top" Visibility="Collapsed" Margin="0,10"  >
+                                    <StackPanel Orientation="Horizontal"  VerticalAlignment="Top" >
+                                        <TextBlock Text="&#xE76E;"  FontSize="22" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center"/>
+                                        <TextBlock Margin="6,0,0,0" FontSize="16" Text="Preferenze HomePage" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </Button>
+
+
+
+
+
+                            </StackPanel>
+                        </ScrollViewer>
+                    </PivotItem>
+
+                    <!--  GRAFICA  -->
+                    <PivotItem DataContext="{Binding SettingsPartViewModel}" Header="GRAFICA">
+                        <ScrollViewer VerticalScrollBarVisibility="Auto">
+                            <StackPanel Width="330" HorizontalAlignment="Left" >
+                                <TextBlock Text="TEMA APPLICAZIONE" FontSize="18" Margin="0,0,0,10" />
+                                <TextBlock Text="Scegli il tema che preferisci per l'interfaccia grafica" TextWrapping="WrapWholeWords"/>
+
+                                <StackPanel Margin="{StaticResource EightTopMargin}">
+                                    <RadioButton 
+                        x:Uid="Settings_Theme_Light"
+                        Content="Chiaro"
+                        GroupName="AppTheme" 
+                        Checked="ThemeChanged_CheckedAsync" 
+                        IsChecked="{x:Bind ElementTheme, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Light, Mode=OneWay}">
+                                        <RadioButton.CommandParameter>
+                                            <xaml:ElementTheme>Light</xaml:ElementTheme>
+                                        </RadioButton.CommandParameter>
+                                    </RadioButton>
+                                    <RadioButton 
+                        x:Uid="Settings_Theme_Dark"
+                                     Content="Scuro"
+                        GroupName="AppTheme"
+                        Checked="ThemeChanged_CheckedAsync" 
+                        IsChecked="{x:Bind ElementTheme, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Dark, Mode=OneWay}">
+                                        <RadioButton.CommandParameter>
+                                            <xaml:ElementTheme>Dark</xaml:ElementTheme>
+                                        </RadioButton.CommandParameter>
+                                    </RadioButton>
+                                    <RadioButton 
+                        x:Uid="Settings_Theme_Default"
+                        GroupName="AppTheme"
+                                     Content="Predefinito di Windows"
+                        Checked="ThemeChanged_CheckedAsync"
+                        IsChecked="{x:Bind ElementTheme, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Default, Mode=OneWay}">
+                                        <RadioButton.CommandParameter>
+                                            <xaml:ElementTheme>Default</xaml:ElementTheme>
+                                        </RadioButton.CommandParameter>
+                                    </RadioButton>
+                                </StackPanel>
+
+
+                            </StackPanel>
+                        </ScrollViewer>
+                    </PivotItem>
+
+
+                    <!--  INFO APP  -->
+                    <PivotItem Header="INFO APP">
+                        <ScrollViewer VerticalScrollBarVisibility="Auto">
+                            <StackPanel Width="330" HorizontalAlignment="Left" >
+                                <StackPanel Orientation="Horizontal">
+                                    <Border x:Name="LogoImage" HorizontalAlignment="Left" Width="120" Height="120"
+                            VerticalAlignment="Top" BorderBrush="DimGray"
+                            BorderThickness="1" IsHitTestVisible="False"
+                            RelativePanel.AlignRightWithPanel="False"
+                            RelativePanel.AlignTopWithPanel="True">
+                                        <Border.Background>
+                                            <SolidColorBrush Color="{ThemeResource SystemAccentColor}" />
+                                        </Border.Background>
+                                        <Image Margin="6" Source="ms-appx:///Assets/spa_flower-512.png"
+                               Stretch="Uniform" />
+                                    </Border>
+                                    <TextBlock Margin="10" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="20">
+                                    <Run Text="Piante e Fiori"/><LineBreak/>
+                                    <Run FontSize="16" Text="Simone Raspagni"/><LineBreak/>
+                                    <Run FontSize="16" Text="{x:Bind VersionDescription, Mode=OneWay}"/><LineBreak/>
+                                    <Run FontSize="16" Text="VERSIONE PUBBLICA" Foreground="Green"/>
+                                    </TextBlock>
+                                </StackPanel>
+                                <TextBlock  Visibility="Collapsed" Text="Anteprima di sviluppo: le funzionalità correnti potrebbero non essere presenti nella versione pubblica" TextWrapping="WrapWholeWords" Foreground="red"/>
+                                <Border  BorderBrush="Green" BorderThickness="1" Margin="0,10"/>
+                                <TextBlock Text="VALUTA L'APP" FontSize="18" Margin="0,10,0,10" />
+                                <TextBlock Text="Se ti piace Piante e Fiori valutala 5 stelle sul Windows Store. Se vuoi lasciarci un feedback puoi contattarci via mail o tramite Hub di Feedback" TextWrapping="WrapWholeWords"/>
+
+                                <Button x:Name="votaecommentabtn" HorizontalAlignment="Stretch"  VerticalAlignment="Top" Click="votaecommentabtn_Click" Margin="0,10">
+                                    <StackPanel Orientation="Horizontal"  VerticalAlignment="Top" >
+                                        <TextBlock Text="&#xE11D;"  FontSize="22" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center"/>
+                                        <TextBlock Margin="6,0,0,0" FontSize="16" Text="Valuta l'app" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </Button>
+
+                                <Button x:Name="le_nostre_app"  HorizontalAlignment="Stretch" VerticalAlignment="Top" Click="le_nostre_app_Click" Margin="0,10">
+                                    <StackPanel Orientation="Horizontal"  VerticalAlignment="Top" >
+                                        <TextBlock Text="&#xE118;"  FontSize="22" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center"/>
+                                        <TextBlock Margin="6,0,0,0" FontSize="16" Text="Scopri le nostre app" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </Button>
+                                <Border  BorderBrush="Green" BorderThickness="1" Margin="0,10"/>
+                                <TextBlock Text="SUPPORTACI" FontSize="18" Margin="0,0,0,10" />
+                                <TextBlock Text="L'app non ospita annunci pubblicitari: puoi supportare lo sviluppo con una piccola donazione tramite PayPal :-) " TextWrapping="WrapWholeWords"/>
+                                <Button x:Name="supportaci1_btn"  HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,10" Click="supportaci1_btn_Click">
+                                    <StackPanel Orientation="Horizontal"  VerticalAlignment="Top" >
+                                        <Image Source="ms-appx:///Assets/icons8-paypal-96.png" Width="25"/>
+                                        <TextBlock Margin="6,0,0,0" FontSize="16" Text="Supportaci con un caffè" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </Button>
+                                <Button x:Name="supportaci2_btn"  HorizontalAlignment="Stretch" VerticalAlignment="Top"  Margin="0,10" Click="supportaci2_btn_Click">
+                                    <StackPanel Orientation="Horizontal"  VerticalAlignment="Top" >
+                                        <Image Source="ms-appx:///Assets/icons8-paypal-96.png" Width="25"/>
+                                        <TextBlock Margin="6,0,0,0" FontSize="16" Text="Supportaci con un cappuccino" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </Button>
+                                <Button x:Name="supportaci3_btn"  HorizontalAlignment="Stretch" VerticalAlignment="Top"  Margin="0,10" Click="supportaci3_btn_Click">
+                                    <StackPanel Orientation="Horizontal"  VerticalAlignment="Top" >
+                                        <Image Source="ms-appx:///Assets/icons8-paypal-96.png" Width="25"/>
+                                        <TextBlock Margin="6,0,0,0" FontSize="16" Text="Invia una somma a piacere" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </Button>
+                                <Border  BorderBrush="Green" BorderThickness="1" Margin="0,10"/>
+                                <TextBlock Text="CHANGELOG" FontSize="18" Margin="0,0,0,10" />
+                                <TextBlock Text="Scopri le novità e i bugfix contenuti nell'ultimo aggiornamento." TextWrapping="WrapWholeWords"/>
+                                <Button x:Name="changelog_btn"  HorizontalAlignment="Stretch" VerticalAlignment="Top" Click="changelog_btn_Click" Margin="0,10">
+                                    <StackPanel Orientation="Horizontal"  VerticalAlignment="Top" >
+                                        <TextBlock Text="&#xE206;"  FontSize="22" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center"/>
+                                        <TextBlock Margin="6,0,0,0" FontSize="16" Text="Changelog" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </Button>
+
+                            </StackPanel>
+                        </ScrollViewer>
+                    </PivotItem>
+
+                    <!--  PERMESSI  -->
+                    <PivotItem Header="PERMESSI">
+                        <ScrollViewer VerticalScrollBarVisibility="Auto">
+                            <StackPanel Width="330" HorizontalAlignment="Left" >
+
+                                <TextBlock Text="AUTORIZZAZIONI" FontSize="18" Margin="0,0,0,10" />
+                                <TextBlock Margin="0" TextWrapping="WrapWholeWords">
+                            <Run Text="Per funzionare correttamente l'applicazione deve accedere alle seguenti funzionalità di Windows:"/><LineBreak/><LineBreak/>
+                            <Run Foreground="Green" Text="" FontFamily="Segoe MDL2 Assets"/>   
+                            <Run Foreground="Green" Text="Connessione a internet "/><LineBreak/>
+                            <Run Text="Usato per l'identificazione delle piante"/><LineBreak/> <LineBreak/>
+
+                             <Run Foreground="Green" Text="" FontFamily="Segoe MDL2 Assets"/>
+                            <Run Foreground="Green" Text="Microfono"/><LineBreak/>
+                            <Run Text="Usato per la riproduzione delle schede botaniche tramite sintetizzatore vocale"/> <LineBreak/> <LineBreak/>
+
+                            <Run Foreground="Green" Text="" FontFamily="Segoe MDL2 Assets"/>
+                            <Run Foreground="Green" Text="Creazione di appuntamenti nel calendario"/> <LineBreak/>
+                            <Run Text="Usato per la sezione gestione trattamenti piante"/><LineBreak/><LineBreak/>
+
+                            
+                            
+                            <Run Text="Puoi revocare i permessi recandoti nelle Impostazioni di Windows > Privacy"/>
+                                </TextBlock>
+
+                                <Border  BorderBrush="Green" BorderThickness="1" Margin="0,10"/>
+                                <TextBlock Text="ESECUZIONE AUTOMATICA" FontSize="18" Margin="0,0,0,10" />
+                                <TextBlock Text="Piante e Fiori può avviarsi automaticamente all'avvio di windows. Per la prima volta puoi autorizzare l'app da qui. Per disabilitare l'avvio automatico apri Gestione Attività > avvio" TextWrapping="WrapWholeWords"/>
+
+                                <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,10">
+
+                                    <TextBlock Text="Tipologia di attivazione:" HorizontalAlignment="Left" />
+
+                                    <TextBlock x:Name="activationText"  FontWeight="Bold" HorizontalAlignment="Left" Margin="8,0,0,0" Text="Avviata dall'utente"/>
+
+                                </StackPanel>
+
+
+
+
+
+                                <Button x:Name="requestButton" HorizontalAlignment="Stretch"  VerticalAlignment="Top" Click="requestButton_Click" Margin="0,10">
+                                    <StackPanel Orientation="Horizontal"  VerticalAlignment="Top" >
+                                        <TextBlock Text="&#xE18C;"  FontSize="22" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center"/>
+                                        <TextBlock Margin="6,0,0,0" FontSize="16" Text="Abilita l'avvio automatico" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </Button>
+
+                                <StackPanel Grid.Row="3" Orientation="Horizontal">
+
+                                    <TextBlock x:Name="requestPrompt" Text="Modalità di avvio:" HorizontalAlignment="Left"/>
+
+                                    <TextBlock x:Name="requestResult" Width="120" FontWeight="Bold" HorizontalAlignment="Left" Margin="8,0,0,0" Text=""/>
+
+                                </StackPanel>
+
+
+
+
+                            </StackPanel>
+                        </ScrollViewer>
+                    </PivotItem>
+
+
+
+                    <!--  BETA TEST  -->
+                    <PivotItem Header="BETA TEST">
+                        <ScrollViewer VerticalScrollBarVisibility="Auto">
+                            <StackPanel Width="300" HorizontalAlignment="Left" >
+
+                                <TextBlock Text="RICEVI LE BUILD INSIDER" FontSize="18" Margin="0,10,0,10" TextWrapping="WrapWholeWords" />
+                                <TextBlock TextWrapping="WrapWholeWords">
+                            <Run Text="Partecipando al programma Piante e Fiori Insider acconsenti a ricevere aggiornamenti in anteprima e inviarci commenti sul nostro lavoro più recente. "/>
+                            <LineBreak/>
+                            <Run/>
+                            <LineBreak/>
+                            <Run Foreground="#FFD61111" Text="ATTENZIONE: Gli aggiornamenti per il programma Insider non sono rilasciati con cadenza fissa e possono essere soggetti a gravi bug e problemi che possono compromettere la normale esperienza dell'app."/>
+                            <LineBreak/>
+                            <Run/>
+                            <LineBreak/>
+                            <Run Text="Possono essere necessari fino a 2 giorni per ricevere le build in anteprima o per tornare al ramo di sviluppo pubblico."/>
+                            <LineBreak/>
+                            <Run/>
+                                </TextBlock>
+                                <Button x:Name="start_BETA_TESTbtn" HorizontalAlignment="Stretch"  VerticalAlignment="Top" Click="start_BETA_TESTbtn_Click" Margin="0,10">
+                                    <StackPanel Orientation="Horizontal"  VerticalAlignment="Top" >
+                                        <TextBlock Text=""  FontSize="22" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center"/>
+                                        <TextBlock Margin="6,0,0,0" FontSize="16" Text="Ricevi le build in anteprima" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </Button>
+
+                                <Button x:Name="end_BETA_TESTbtn"  HorizontalAlignment="Stretch" VerticalAlignment="Top" Click="end_BETA_TESTbtn_Click" Margin="0,10">
+                                    <StackPanel Orientation="Horizontal"  VerticalAlignment="Top" >
+                                        <TextBlock Text="&#xE118;"  FontSize="22" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center"/>
+                                        <TextBlock Margin="6,0,0,0" FontSize="16" Text="TORNA AL RAMO PUBBLICO" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </Button>
+
+
+
+                            </StackPanel>
+                        </ScrollViewer>
+                    </PivotItem>
+
+
+                </Pivot>
+
+
+            
+        </StackPanel>
+            
+    </Grid>
+</Page>

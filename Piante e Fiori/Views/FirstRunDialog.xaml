@@ -1,0 +1,97 @@
+﻿<ContentDialog 
+    x:Class="PianteEFiori.Views.FirstRunDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    
+    PrimaryButtonText="Iniziamo!">
+    <ContentDialog.TitleTemplate>
+        <DataTemplate>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="ms-appx:///Assets/StoreLogo.scale-100.png" Width="40" Height="40" Margin="0"/>
+                <TextBlock x:Uid="FirstRun_Title" Text="Benvenuti in Piante e Fiori" Margin="10,5,0,0"/>
+            </StackPanel>
+        </DataTemplate>
+    </ContentDialog.TitleTemplate>
+    <ScrollViewer>
+        <StackPanel>
+            <TextBlock  TextWrapping="WrapWholeWords">
+                <Run>Schede botaniche, consigli sulla coltivazione e avversità delle piante per appassionati e professionisti del verde</Run><LineBreak/>
+                <Run>Disponibile in tutti i tuoi dispositivi Windows 10</Run><LineBreak/>
+                
+                <Run>Principali caratteristiche:</Run><LineBreak/>
+            </TextBlock>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,10">
+                <Image Source="ms-appx:///Assets/PottedPlant.png" Width="50"/>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                    <TextBlock Text="SCHEDE BOTANICHE INTERATTIVE"/>
+                    <TextBlock Text="Visualizza e nascondi con un tap le differenti sezioni" />
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,10">
+                <Image Source="ms-appx:///Assets/Photos.png" Width="50"/>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                    <TextBlock Text="IMMAGINI IN HD E IN 4K"/>
+                    <TextBlock Text="Immagini identificative delle piante in alta definizione" />
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,10">
+                <Image Source="ms-appx:///Assets/ChangeTheme.png" Width="50"/>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                    <TextBlock Text="USA IL TEMA CHE PREFERISCI"/>
+                    <TextBlock Text="Chiaro, scuro oppure usa il tema di sistema" />
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,10">
+                <Image Source="ms-appx:///Assets/podium-with-speaker.png" Width="50"/>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                    <TextBlock Text="LETTURA AUTOMATICA"/>
+                    <TextBlock Text="Fai leggere le schede botaniche al tuo PC o Tablet" />
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,10">
+                <Image Source="ms-appx:///Assets/MultipleDevice1600.png" Width="50"/>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                    <TextBlock Text="1 LICENZA = 10 DISPOSITIVI"/>
+                    <TextBlock TextWrapping="WrapWholeWords" Text="Installa l'app nei dispositivi associati al tuo account Microsoft" />
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,10" Visibility="Collapsed">
+                <Image Source="ms-appx:///Assets/trial_version1600.png" Width="50"/>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                    <TextBlock Text="PROVA GRATUITA"/>
+                    <TextBlock Text="Prova gratis per 1 giorno le funzionalità. Acquista poi la licenza :)" />
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,10">
+                <Image Source="ms-appx:///Assets/icons8-get-cash-96.png" Width="50"/>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                    <TextBlock Text="NESSUN ANNUNCIO PUBBLICITARIO"/>
+                    <TextBlock TextWrapping="WrapWholeWords" Text="Supporta lo sviluppo con una piccola donazione" />
+                </StackPanel>
+            </StackPanel>
+
+            <Button x:Name="supportaci1_btn"  HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,10" Click="supportaci1_btn_Click">
+                <StackPanel Orientation="Horizontal"  VerticalAlignment="Top" >
+                    <Image Source="ms-appx:///Assets/icons8-paypal-96.png" Width="25"/>
+                    <TextBlock Margin="6,0,0,0" FontSize="16" Text="Supportaci con un caffè" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+
+
+
+
+
+
+        </StackPanel>
+    </ScrollViewer>
+</ContentDialog>

@@ -1,0 +1,5 @@
+LAVORI IN CORSO:
+
+istanze multiple (da inserire yes nel manifesto manda in crash l'app)
+continuare icone annuali e biennali necessità irrigue ed esposizione
+implementare la grid view (da lanciare solo dalla homepage, mentre il master detail si lancia dal menù hamburger)

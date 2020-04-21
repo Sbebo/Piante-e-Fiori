@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="Piante_e_Fiori.Views.AddAlarmPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Piante_e_Fiori.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ScrollViewer>
+            <StackPanel Margin="20">
+
+                <TextBox
+                    x:Name="TextBoxName"
+                    Header="Pianta"
+                    Text="Es: Irrigare Abelia"/>
+
+                <TimePicker
+                    x:Name="TimePickerTime"
+                    Header="Ora"
+                    Margin="0,20,0,0"/>
+
+                <ComboBox
+                    x:Name="ComboBoxRepeats"
+                    Header="Ripetizione"
+                    SelectedIndex="0"
+                    Margin="0,20,0,0">
+                    <ComboBox.Items>
+                        <x:String>Ogni Giorno</x:String>
+                        <x:String>Daily</x:String>
+                    </ComboBox.Items>
+                </ComboBox>
+
+                <Button x:Name="New" Margin="0,10" Width="90" Height="60" VerticalAlignment="Top" Click="ButtonSave_Click">
+                    <StackPanel>
+                        <TextBlock Text="&#xE105;" FontSize="20"  FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBlock>Salva</TextBlock>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

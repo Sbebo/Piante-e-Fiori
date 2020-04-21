@@ -1,0 +1,70 @@
+﻿<Page
+    x:Class="Piante_e_Fiori.Views.Gestione_Irrigazione"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Piante_e_Fiori.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid Name="Grid_principale">
+            <ScrollViewer  HorizontalContentAlignment="Left" VerticalScrollBarVisibility="Auto" >
+                <Grid>
+                    <Grid x:Name="MyHeaderGrid" Height="100" Background="Olive" VerticalAlignment="Top">
+                        <StackPanel Orientation="Horizontal"  VerticalAlignment="Center" HorizontalAlignment="Center" >
+                            <TextBlock Text="&#xEDA8;"  FontSize="80" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center" Margin="10,0,10,0"/>
+                            <TextBlock TextWrapping="WrapWholeWords"   Text="GESTIONE IRRIGAZIONE" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="25px"  TextAlignment="Center" Width="200"/>
+                        </StackPanel>
+
+                    </Grid>
+
+                    <StackPanel Margin="0,100,0,0" >
+                        <StackPanel  VerticalAlignment="Top" >
+
+                            <TextBlock TextWrapping="WrapWholeWords" Margin="10" HorizontalAlignment="Left" Width="320">                        
+                                        <Run Text="Gestisci con semplicità l'annaffiamento delle piante impostando delle  sveglie. "/><LineBreak/>                               
+                                        
+                            </TextBlock>
+                            <StackPanel Orientation="Horizontal">
+                                <Button x:Name="ButtonAddAlarm" Margin="10" Width="90" Height="60" VerticalAlignment="Top" Click="ButtonAddAlarm_Click">
+                                    <StackPanel>
+                                        <TextBlock Text="&#xE109;" FontSize="20"  FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        <TextBlock>Nuovo</TextBlock>
+                                    </StackPanel>
+                                </Button>
+
+                                <Button x:Name="ButtonViewScheduled"  Width="90" Margin="10" Height="60" VerticalAlignment="Top" Click="ButtonViewScheduled_Click">
+                                    <StackPanel>
+                                        <TextBlock Text="&#xE10B;"   FontFamily="Segoe MDL2 Assets" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        <TextBlock Text="Programma"/>
+                                    </StackPanel>
+                                </Button>
+
+                            </StackPanel>
+                            
+                            <ListView x:Name="ListViewAlarms" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" IsItemClickEnabled="True" ItemClick="ListViewAlarms_ItemClick">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Margin="10,5">
+                                            <TextBlock Text="{Binding TimeOfDay}"  Style="{ThemeResource SubtitleTextBlockStyle}"/>
+                                            <TextBlock Text="{Binding Name}" Style="{ThemeResource BaseTextBlockStyle}"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+
+                        </StackPanel>
+                        
+                        
+
+                    </StackPanel>
+
+            
+                </Grid>
+            </ScrollViewer>
+        </Grid>
+
+
+    </Grid>
+</Page>

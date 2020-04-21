@@ -1,0 +1,62 @@
+﻿<ContentDialog 
+    x:Class="Piante_e_Fiori.Views.WhatsNewDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    PrimaryButtonText="Ok">
+    <ContentDialog.TitleTemplate>
+        <DataTemplate>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="ms-appx:///Assets/spa_flower-512.png" Width="40" Height="40" Margin="0"/>
+                <TextBlock Text="Novità di questo aggiornamento" Margin="10,5,0,0"/>
+            </StackPanel>
+        </DataTemplate>
+    </ContentDialog.TitleTemplate>
+    <ScrollViewer>
+        <StackPanel>
+            <StackPanel  Name="info_versione_stackpanel" Orientation="Horizontal"  VerticalAlignment="Center" Background="Green"  Height="30" ToolTipService.ToolTip="Mostra/Nascondi sezione">
+                <TextBlock Margin="10,0,4,0" Text="&#xE82D;"  FontSize="22" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center"/>
+                <TextBlock Margin="6,0,0,0" FontSize="16" Text="INFO VERSIONE" VerticalAlignment="Center"/>
+            </StackPanel>
+            <TextBlock TextWrapping="WrapWholeWords">
+                <Run>Versione PUBBLICA</Run><LineBreak/>
+                <Run>1.1.21.0 [Maggio 2020]</Run><LineBreak/>
+                <Run>Il changelog completo è disponibile da impostazioni > informazioni su</Run><LineBreak/>
+            </TextBlock>
+
+            <StackPanel  Name="nuove_funzioni_stackpanel" Orientation="Horizontal"  VerticalAlignment="Center" Background="Green"  Height="30" ToolTipService.ToolTip="Mostra/Nascondi sezione">
+                <TextBlock Margin="10,0,4,0" Text="&#xF0E2;"  FontSize="22" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center"/>
+                <TextBlock Margin="6,0,0,0" FontSize="16" Text="NUOVE FUNZIONI" VerticalAlignment="Center"/>
+            </StackPanel>
+            <TextBlock x:Uid="AfterUpdate_Body1" TextWrapping="WrapWholeWords">
+                    <Run Text="- I testi delle schede botaniche sono ora tutti allineati a sinistra"/><LineBreak/>
+                    <Run Text="- Modificato il messaggio toast di benvenuto all'avvio dell'app"/><LineBreak/>
+                    <Run Text="- Aggiunta la sezione 'Lavori nell'orto' con il calendario della semina e del raccolto degli ortaggi"/><LineBreak/>
+                    <Run Text="- Nuova homepage che integra ora la sezione 'Schede Botaniche'"/><LineBreak/>
+                    <Run Text="- Nuova sezione 'Frutti di bosco'"/><LineBreak/>
+                    <Run Text="- Modifica del colore tema della sezione Frutteto"/><LineBreak/>
+                    <Run Text="- Supporto all'esecuzione automatica dell'app all'avvio di Windows"/><LineBreak/>
+                    <Run Text="- Modificata l'icona delle schede botaniche nel menù hamburger"/><LineBreak/>
+                    <Run Text="- Nuova sezione 'Progettazione giardino' con supporto a Windows Ink per creare bozze preparatorie. La finestra può essere dublicata per migliorare la produttività"/><LineBreak/>
+                   
+                    
+            </TextBlock>
+
+            <StackPanel  Name="bugfix_stackpanel" Orientation="Horizontal"  VerticalAlignment="Center" Background="Green"  Height="30" ToolTipService.ToolTip="Mostra/Nascondi sezione">
+                <TextBlock Margin="10,0,4,0" Text=""  FontSize="22" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center"/>
+                <TextBlock Margin="6,0,0,0" FontSize="16" Text="CORREZIONI" VerticalAlignment="Center"/>
+            </StackPanel>
+            <TextBlock x:Uid="AfterUpdate_Body1" TextWrapping="WrapWholeWords">
+                <Run Text="- Risolto un bug che impediva la corretta visualizzazione della homepage e delle immagini dell'account (M,F, non specificato)"/><LineBreak/>
+                <Run Text="- I testi delle schede botaniche sono ora tutti allineati a sinistra"/><LineBreak/>
+                <Run Text="- Migliorata l'affidabilità nella ricezione delle notifiche da parte dello sviluppatore"/><LineBreak/>
+                <Run Text="- Nuova immagine per l'Actinidia Kolomikta"/><LineBreak/>
+                <Run Text="- Ridotto lo spessore del bordo dell'elenco piante nelle sezioni schede botaniche"/><LineBreak/>
+                <Run Text="- La maggior parte dei controlli e degli elementi ha i bordi arrotondati (Microsoft.UI.Xaml 2.2)"/><LineBreak/><LineBreak/>
+            </TextBlock>
+            
+        </StackPanel>
+    </ScrollViewer>
+</ContentDialog>

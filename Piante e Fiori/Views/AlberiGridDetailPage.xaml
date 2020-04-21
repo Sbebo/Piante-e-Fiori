@@ -1,0 +1,95 @@
+﻿<Page
+    x:Class="Piante_e_Fiori.Views.AlberiGridDetailPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:animations="using:Microsoft.Toolkit.Uwp.UI.Animations"
+    xmlns:models="using:Piante_e_Fiori.Models" xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    Style="{StaticResource PageStyle}"
+    mc:Ignorable="d">
+
+    <Grid
+        x:Name="ContentArea"
+        Margin="{StaticResource MediumLeftRightMargin}"
+        animations:Connected.AnchorElement="{x:Bind LogoImage}">
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <!--641 is the default CompactModeThresholdWidth in NavigationView -->
+                        <AdaptiveTrigger MinWindowWidth="641" />
+                    </VisualState.StateTriggers>
+                    
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <StackPanel
+            x:Name="contentPanel">
+
+            <Grid Name="Container">
+
+
+                <ScrollViewer Name="ForegroundElement" VerticalScrollMode="Enabled" HorizontalAlignment="Stretch" Padding="12,0">
+                    <StackPanel Name="Principale">
+
+
+                        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="10">
+                            <StackPanel Name="Informazioni_header">
+                                <StackPanel.Background>
+                                    <ImageBrush Stretch="UniformToFill" ImageSource="{Binding FotoPianta}" Opacity="0.2"/>
+                                </StackPanel.Background>
+                                <StackPanel Orientation="Horizontal">
+                                    <Border x:Name="LogoImage" HorizontalAlignment="Left" Width="200" Height="200" Background="Green">
+                                        <Grid >
+                                            <Image Margin="6" Source="{Binding FotoPianta}" Stretch="UniformToFill" Name="LogoPianta" ToolTipService.ToolTip="Click per ingrandire l'immagine"/>
+                                        </Grid>
+                                    </Border>
+
+                                    <StackPanel Orientation="Vertical">
+                                        <TextBlock Margin="10,0" Name="Informazionitxt">
+                                <Run Foreground="Green" Text="NOME COMUNE"/><LineBreak/>
+                                <Run Text="{x:Bind Item.NomeComunePianta, Mode=OneWay}"/><LineBreak/>
+                                <Run/><LineBreak/>
+                                <Run Foreground="Green" Text="FAMIGLIA"/><LineBreak/>
+                                <Run Text="{x:Bind Item.NomeFamiglia, Mode=OneWay}"/><LineBreak/>
+                                <Run/><LineBreak/>
+                                <Run Foreground="Green" Text="NOME SCIENTIFICO"/><LineBreak/>
+                                <Run Text="{x:Bind Item.NomeScientificoPianta, Mode=OneWay}"/>
+                                        </TextBlock>
+                                        <StackPanel Orientation="Horizontal">
+                                            
+
+                                            
+
+
+                                        </StackPanel>
+
+
+                                    </StackPanel>
+
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" Margin="0,5" >
+
+                                    <Image Source="{Binding SimboloFogliame}" Stretch="UniformToFill" Width="30" Height="30" Margin="5" ToolTipService.ToolTip="Fogliame"/>
+                                    <Image Source="{Binding SimboloDurata}" Stretch="UniformToFill" Width="30" Height="30" Margin="5" ToolTipService.ToolTip="Durata esemplare"/>
+                                    <Image Source="{Binding SimboloAcqua}" Stretch="UniformToFill" Width="30" Height="30" Margin="5" ToolTipService.ToolTip="Esigenze irrigue"/>
+                                    <Image Source="{Binding SimboloPosizione}" Stretch="UniformToFill" Width="30" Height="30" Margin="5" ToolTipService.ToolTip="Esposizione"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+
+
+
+
+
+
+        </StackPanel>
+    </Grid>
+</Page>

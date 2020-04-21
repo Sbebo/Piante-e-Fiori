@@ -1,0 +1,1314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{F09A5B65-95C4-40E7-A66D-EBCA05C71A8B}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Piante_e_Fiori</RootNamespace>
+    <AssemblyName>Piante_e_Fiori</AssemblyName>
+    <DefaultLanguage>it-it</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.18362.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
+    <PackageCertificateKeyFile>Piante_e_Fiori_StoreKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateThumbprint>
+    </PackageCertificateThumbprint>
+    <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
+    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>x86|x64</AppxBundlePlatforms>
+    <AppInstallerUpdateFrequency>0</AppInstallerUpdateFrequency>
+    <AppInstallerCheckForUpdateFrequency>OnApplicationRun</AppInstallerCheckForUpdateFrequency>
+    <AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
+    <GenerateTestArtifacts>True</GenerateTestArtifacts>
+    <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>NU1603;2008;</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>NU1603;2008;</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>NU1603;2008;</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>NU1603;2008;</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>NU1603;2008;</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>NU1603;2008;</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.10</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.UI.Xaml">
+      <Version>2.3.200213001</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Uwp.Managed">
+      <Version>2.0.1</Version>
+    </PackageReference>
+    <!-- Nuget package references -->
+    <PackageReference Include="Microsoft.Services.Store.Engagement">
+      <Version>10.1901.28001</Version>
+    </PackageReference>
+    <SDKReference Include="Microsoft.Services.Store.Engagement, Version=10.0">
+      <Name>Microsoft Engagement Framework</Name>
+    </SDKReference>
+    <SDKReference Include="Microsoft.VCLibs, Version=14.0">
+      <Name>Visual C++ 2015 Runtime for Universal Windows Platform Apps</Name>
+    </SDKReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp">
+      <Version>6.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Services.Store.SDK">
+      <Version>10.1705.16001</Version>
+    </PackageReference>
+    <SDKReference Include="Microsoft.Services.Store.Engagement, Version=10.0">
+      <Name>Microsoft Engagement Framework</Name>
+    </SDKReference>
+    <SDKReference Include="Microsoft.VCLibs, Version=14.0">
+      <Name>Visual C++ 2015 Runtime for Universal Windows Platform Apps</Name>
+    </SDKReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications">
+      <Version>6.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="AdaptiveCards">
+      <Version>1.2.4</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.UI.Controls">
+      <Version>6.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Win2D.uwp">
+      <Version>1.25.0</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.UI.Controls.DataGrid">
+      <Version>6.0.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activation\ActivationHandler.cs" />
+    <Compile Include="Activation\SchemeActivationConfig.cs" />
+    <Compile Include="Activation\SchemeActivationData.cs" />
+    <Compile Include="Activation\SchemeActivationHandler.cs" />
+    <Compile Include="BackgroundTasks\BackgroundTask.cs" />
+    <Compile Include="BackgroundTasks\BackgroundTask1.cs" />
+    <Compile Include="Controls\CameraControl.xaml.cs">
+      <DependentUpon>CameraControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EventHandlers\CameraControlEventArgs.cs" />
+    <Compile Include="EventHandlers\Ink\AddStrokeEventArgs.cs" />
+    <Compile Include="EventHandlers\Ink\CopyPasteStrokesEventArgs.cs" />
+    <Compile Include="EventHandlers\Ink\MoveStrokesEventArgs.cs" />
+    <Compile Include="EventHandlers\Ink\RemoveEventArgs.cs" />
+    <Compile Include="Helpers\AlarmHelper.cs" />
+    <Compile Include="Helpers\CameraOrientationExtensions.cs" />
+    <Compile Include="Helpers\DataRequestExtensions.cs" />
+    <Compile Include="Helpers\EnumToBooleanConverter.cs" />
+    <Compile Include="Helpers\Json.cs" />
+    <Compile Include="Helpers\NavHelper.cs" />
+    <Compile Include="Helpers\SettingsStorageExtensions.cs" />
+    <Compile Include="Helpers\TaskExtensions.cs" />
+    <Compile Include="Models\Alberi.cs" />
+    <Compile Include="Models\Tabella.cs" />
+    <Compile Include="Models\AltriFrutti.cs" />
+    <Compile Include="Models\Arbusti.cs" />
+    <Compile Include="Models\Aromatiche.cs" />
+    <Compile Include="Models\Bulbose.cs" />
+    <Compile Include="Models\CalendarioLunare.cs" />
+    <Compile Include="Models\DataModel.cs" />
+    <Compile Include="Models\ErbaceePerenni.cs" />
+    <Compile Include="Models\Frutteto.cs" />
+    <Compile Include="Models\Glossario.cs" />
+    <Compile Include="Models\MyAlarms.cs" />
+    <Compile Include="Models\Orto.cs" />
+    <Compile Include="Models\PianteAcquatiche.cs" />
+    <Compile Include="Models\PianteAnnuali.cs" />
+    <Compile Include="Models\PianteAppartamento.cs" />
+    <Compile Include="Models\PianteEsotiche.cs" />
+    <Compile Include="Models\PianteGrasse.cs" />
+    <Compile Include="Models\Rampicanti.cs" />
+    <Compile Include="Models\Rosai.cs" />
+    <Compile Include="Models\SampleImage.cs" />
+    <Compile Include="Models\SampleOrder.cs" />
+    <Compile Include="Models\ShareSourceData.cs" />
+    <Compile Include="Models\ShareSourceItem.cs" />
+    <Compile Include="Services\ActivationService.cs" />
+    <Compile Include="Activation\DefaultLaunchActivationHandler.cs" />
+    <Compile Include="Services\BackgroundTaskService.cs" />
+    <Compile Include="Services\CalendarService.cs" />
+    <Compile Include="Services\DevCenterNotificationsService.cs" />
+    <Compile Include="Services\FirstRunDisplayService.cs" />
+    <Compile Include="Services\Ink\InkCopyPasteService.cs" />
+    <Compile Include="Services\Ink\InkFileService.cs" />
+    <Compile Include="Services\Ink\InkLassoSelectionService.cs" />
+    <Compile Include="Services\Ink\InkPointerDeviceService.cs" />
+    <Compile Include="Services\Ink\InkSelectionRectangleService.cs" />
+    <Compile Include="Services\Ink\InkStrokesService.cs" />
+    <Compile Include="Services\Ink\InkUndoRedoService.cs" />
+    <Compile Include="Services\Ink\InkZoomService.cs" />
+    <Compile Include="Services\Ink\UndoRedo\AddStrokeUndoRedoOperation.cs" />
+    <Compile Include="Services\Ink\UndoRedo\IUndoRedoOperation.cs" />
+    <Compile Include="Services\Ink\UndoRedo\MoveStrokesUndoRedoOperation.cs" />
+    <Compile Include="Services\Ink\UndoRedo\RemoveStrokeUndoRedoOperation.cs" />
+    <Compile Include="Services\Library1.cs" />
+    <Compile Include="Services\NavigationService.cs" />
+    <Compile Include="Services\SampleDataService.cs" />
+    <Compile Include="Services\ThemeSelectorService.cs" />
+    <Compile Include="Services\ToastNotificationsService.cs" />
+    <Compile Include="Services\ToastNotificationsService.Samples.cs" />
+    <Compile Include="Services\UserActivityData.cs" />
+    <Compile Include="Services\UserActivityService.cs" />
+    <Compile Include="Services\UserActivityService.Sample.cs" />
+    <Compile Include="Services\ViewLifetimeControl.cs" />
+    <Compile Include="Services\WhatsNewDisplayService.cs" />
+    <Compile Include="Services\WindowManagerService.cs" />
+    <Compile Include="Views\AddAlarmPage.xaml.cs">
+      <DependentUpon>AddAlarmPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AgrumiDetailControl.xaml.cs">
+      <DependentUpon>AgrumiDetailControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AgrumiPage.xaml.cs">
+      <DependentUpon>AgrumiPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AlberiDetailControl.xaml.cs">
+      <DependentUpon>AlberiDetailControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AlberiGridDetailPage.xaml.cs">
+      <DependentUpon>AlberiGridDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AlberiGridPage.xaml.cs">
+      <DependentUpon>AlberiGridPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AlberiPage.xaml.cs">
+      <DependentUpon>AlberiPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AltriFruttiDetailControl.xaml.cs">
+      <DependentUpon>AltriFruttiDetailControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AltriFruttiPage.xaml.cs">
+      <DependentUpon>AltriFruttiPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ArbustiDetailControl.xaml.cs">
+      <DependentUpon>ArbustiDetailControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ArbustiPage.xaml.cs">
+      <DependentUpon>ArbustiPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AromaticheDetailControl.xaml.cs">
+      <DependentUpon>AromaticheDetailControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AromatichePage.xaml.cs">
+      <DependentUpon>AromatichePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BlankPage.xaml.cs">
+      <DependentUpon>BlankPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BotanicaAgrariaDetailControl.xaml.cs">
+      <DependentUpon>BotanicaAgrariaDetailControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BotanicaAgrariaPage.xaml.cs">
+      <DependentUpon>BotanicaAgrariaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BulboseDetailControl.xaml.cs">
+      <DependentUpon>BulboseDetailControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BulbosePage.xaml.cs">
+      <DependentUpon>BulbosePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CalendarioLunareDetailControl.xaml.cs">
+      <DependentUpon>CalendarioLunareDetailControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CalendarioLunarePage.xaml.cs">
+      <DependentUpon>CalendarioLunarePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CameraPage.xaml.cs">
+      <DependentUpon>CameraPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Categorie Piante.xaml.cs">
+      <DependentUpon>Categorie Piante.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Changelog.xaml.cs">
+      <DependentUpon>Changelog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ControlloSanitarioDetailControl.xaml.cs">
+      <DependentUpon>ControlloSanitarioDetailControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ControlloSanitarioPage.xaml.cs">
+      <DependentUpon>ControlloSanitarioPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ErbaceePerenniDetailControl.xaml.cs">
+      <DependentUpon>ErbaceePerenniDetailControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ErbaceePerenniPage.xaml.cs">
+      <DependentUpon>ErbaceePerenniPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FirstRunDialog.xaml.cs">
+      <DependentUpon>FirstRunDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FruttetoDetailControl.xaml.cs">
+      <DependentUpon>FruttetoDetailControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FruttetoPage.xaml.cs">
+      <DependentUpon>FruttetoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GalleryFotograficaDetailPage.xaml.cs">
+      <DependentUpon>GalleryFotograficaDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GalleryFotograficaPage.xaml.cs">
+      <DependentUpon>GalleryFotograficaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Gestione Irrigazione.xaml.cs">
+      <DependentUpon>Gestione Irrigazione.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GlossarioDetailControl.xaml.cs">
+      <DependentUpon>GlossarioDetailControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GlossarioPage.xaml.cs">
+      <DependentUpon>GlossarioPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GuidaPage.xaml.cs">
+      <DependentUpon>GuidaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HomePagePage.xaml.cs">
+      <DependentUpon>HomePagePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\IdentificazionePiantaPage.xaml.cs">
+      <DependentUpon>IdentificazionePiantaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ImageGalleryDetailPage.xaml.cs">
+      <DependentUpon>ImageGalleryDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ImageGalleryPage.xaml.cs">
+      <DependentUpon>ImageGalleryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InkDrawPage.xaml.cs">
+      <DependentUpon>InkDrawPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MediaPlayerPage.xaml.cs">
+      <DependentUpon>MediaPlayerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrtoDetailControl.xaml.cs">
+      <DependentUpon>OrtoDetailControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrtoPage.xaml.cs">
+      <DependentUpon>OrtoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PianteAcquaticheeRivaDetailControl.xaml.cs">
+      <DependentUpon>PianteAcquaticheeRivaDetailControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PianteAcquaticheeRivaPage.xaml.cs">
+      <DependentUpon>PianteAcquaticheeRivaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PianteAnnualiDetailControl.xaml.cs">
+      <DependentUpon>PianteAnnualiDetailControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PianteAnnualiPage.xaml.cs">
+      <DependentUpon>PianteAnnualiPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PianteAppartamentoDetailControl.xaml.cs">
+      <DependentUpon>PianteAppartamentoDetailControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PianteAppartamentoPage.xaml.cs">
+      <DependentUpon>PianteAppartamentoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PianteEsoticheDetailControl.xaml.cs">
+      <DependentUpon>PianteEsoticheDetailControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PianteEsotichePage.xaml.cs">
+      <DependentUpon>PianteEsotichePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PianteGrasseDetailControl.xaml.cs">
+      <DependentUpon>PianteGrasseDetailControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PianteGrassePage.xaml.cs">
+      <DependentUpon>PianteGrassePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RampicantiDetailControl.xaml.cs">
+      <DependentUpon>RampicantiDetailControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RampicantiPage.xaml.cs">
+      <DependentUpon>RampicantiPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RosaiDetailControl.xaml.cs">
+      <DependentUpon>RosaiDetailControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RosaiPage.xaml.cs">
+      <DependentUpon>RosaiPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SchemeActivationSamplePage.xaml.cs">
+      <DependentUpon>SchemeActivationSamplePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SegnalazioneErrori.xaml.cs">
+      <DependentUpon>SegnalazioneErrori.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShellPage.xaml.cs">
+      <DependentUpon>ShellPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SintesiPage.xaml.cs">
+      <DependentUpon>SintesiPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Tabella.xaml.cs">
+      <DependentUpon>Tabella.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Trattamenti Piante.xaml.cs">
+      <DependentUpon>Trattamenti Piante.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TrattamentiPianteHomePage.xaml.cs">
+      <DependentUpon>TrattamentiPianteHomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewScheduledToastsPage.xaml.cs">
+      <DependentUpon>ViewScheduledToastsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WhatsNewDialog.xaml.cs">
+      <DependentUpon>WhatsNewDialog.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Controls\CameraControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Image.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Page.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\_Colors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\_FontSizes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\_Thickness.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\TextBlock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddAlarmPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AgrumiDetailControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AgrumiPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AlberiDetailControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AlberiGridDetailPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AlberiGridPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AlberiPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AltriFruttiDetailControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AltriFruttiPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ArbustiDetailControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ArbustiPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AromaticheDetailControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AromatichePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\BlankPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\BotanicaAgrariaDetailControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\BotanicaAgrariaPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\BulboseDetailControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\BulbosePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CalendarioLunareDetailControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CalendarioLunarePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CameraPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Categorie Piante.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Changelog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ControlloSanitarioDetailControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ControlloSanitarioPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ErbaceePerenniDetailControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ErbaceePerenniPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\FirstRunDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\FruttetoDetailControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\FruttetoPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\GalleryFotograficaDetailPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\GalleryFotograficaPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Gestione Irrigazione.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\GlossarioDetailControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\GlossarioPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\GuidaPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\HomePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\HomePagePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\IdentificazionePiantaPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ImageGalleryDetailPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ImageGalleryPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\InkDrawPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MediaPlayerPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\OrtoDetailControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\OrtoPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PianteAcquaticheeRivaDetailControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PianteAcquaticheeRivaPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PianteAnnualiDetailControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PianteAnnualiPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PianteAppartamentoDetailControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PianteAppartamentoPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PianteEsoticheDetailControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PianteEsotichePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PianteGrasseDetailControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PianteGrassePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\RampicantiDetailControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\RampicantiPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\RosaiDetailControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\RosaiPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SchemeActivationSamplePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SegnalazioneErrori.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SettingsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ShellPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SintesiPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Tabella.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Trattamenti Piante.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TrattamentiPianteHomePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ViewScheduledToastsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\WhatsNewDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helpers\ResourceExtensions.cs" />
+    <Compile Include="Helpers\Singleton.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Immagini\SimboliSchedeBotaniche\Annuale.png" />
+    <Content Include="Assets\BadgeLogo.scale-200.png" />
+    <Content Include="Assets\Batteri.jpg" />
+    <Content Include="Immagini\SimboliSchedeBotaniche\Biennale.png" />
+    <Content Include="Assets\cactus_1600.png" />
+    <Content Include="Assets\ChangeTheme.png" />
+    <Content Include="Assets\cherry-1600.png" />
+    <Content Include="Assets\Crittogame.jpg" />
+    <Content Include="Immagini\SimboliSchedeBotaniche\Decidua.png" />
+    <Content Include="Assets\Eggplant-1600.png" />
+    <Content Include="Assets\EPPO_400x400.png" />
+    <Content Include="Assets\Flower-1600.png" />
+    <Content Include="Assets\Flowers_1600.png" />
+    <Content Include="Assets\Flower_bouquet_1600.png" />
+    <Content Include="Assets\full-moon-.jpg" />
+    <Content Include="Assets\Garden_gloves_1600.png" />
+    <Content Include="Assets\Grass-1600.png" />
+    <Content Include="Assets\iconaCOMMESTIBILE OFFICINALE.jpg" />
+    <Content Include="Assets\iconaCOMMESTIBILE.jpg" />
+    <Content Include="Assets\iconaOFFICINALE.jpg" />
+    <Content Include="Assets\icons8-get-cash-96.png" />
+    <Content Include="Assets\icons8-paypal-96.png" />
+    <Content Include="Assets\Insecticide-1600.png" />
+    <Content Include="Assets\Insetti.jpg" />
+    <Content Include="Assets\Interno.png" />
+    <Content Include="Assets\Logo.png" />
+    <Content Include="Assets\lotus_1600.png" />
+    <Content Include="Assets\LunaPienaTrasparente.gif" />
+    <Content Include="Assets\MultipleDevice1600.png" />
+    <Content Include="Assets\Nematodi.jpg" />
+    <Content Include="Immagini\SimboliSchedeBotaniche\Ombreggiato.png" />
+    <Content Include="Assets\online_payment-512.png" />
+    <Content Include="Immagini\SimboliSchedeBotaniche\Perenne.png" />
+    <Content Include="Assets\Person_female_1600.png" />
+    <Content Include="Assets\Person_male_1600.png" />
+    <Content Include="Assets\Photos.png" />
+    <Content Include="Assets\PlaceholderImage.png" />
+    <Content Include="Assets\podium-with-speaker.png" />
+    <Content Include="Assets\PottedPlant.png" />
+    <Content Include="Assets\real_estate-512.png" />
+    <Content Include="Assets\rose-1600.png" />
+    <Content Include="Assets\SampleData\SamplePhoto1.png" />
+    <Content Include="Assets\SampleData\SamplePhoto10.png" />
+    <Content Include="Assets\SampleData\SamplePhoto2.png" />
+    <Content Include="Assets\SampleData\SamplePhoto3.png" />
+    <Content Include="Assets\SampleData\SamplePhoto4.png" />
+    <Content Include="Assets\SampleData\SamplePhoto5.png" />
+    <Content Include="Assets\SampleData\SamplePhoto6.png" />
+    <Content Include="Assets\SampleData\SamplePhoto7.png" />
+    <Content Include="Assets\SampleData\SamplePhoto8.png" />
+    <Content Include="Assets\SampleData\SamplePhoto9.png" />
+    <None Include="Immagini\Targhette\Thumbs.db" />
+    <None Include="Package.StoreAssociation.xml" />
+    <Content Include="Immagini\SimboliSchedeBotaniche\Sempreverde.png" />
+    <Content Include="Assets\spa_flower-512.png" />
+    <Content Include="Assets\Splash_video.jpg" />
+    <Content Include="Assets\Spring2_1600.png" />
+    <Content Include="Assets\Spring_1600.png" />
+    <Content Include="Assets\Square310x310Logo.png" />
+    <Content Include="Assets\Square310x310Logo.scale-100.png" />
+    <Content Include="Assets\Square44x44Logo.scale-125.png" />
+    <Content Include="Immagini\SimboliSchedeBotaniche\Sun&amp;Cloud.png" />
+    <Content Include="Immagini\SimboliSchedeBotaniche\Sun.png" />
+    <Content Include="Immagini\SimboliSchedeBotaniche\Tree_1600.png" />
+    <Content Include="Assets\trial_version1600.png" />
+    <Content Include="Assets\Virus.jpg" />
+    <Content Include="Immagini\SimboliSchedeBotaniche\Acqua.png" />
+    <Content Include="Immagini\ACQUATICHE\Astilbe\ASTILBE.jpg" />
+    <Content Include="Immagini\ACQUATICHE\Butomus\BUTOMUS.jpg" />
+    <Content Include="Immagini\ACQUATICHE\Calla\CALLA.jpg" />
+    <Content Include="Immagini\ACQUATICHE\Caltha\CALTHA.jpg" />
+    <Content Include="Immagini\ACQUATICHE\CastagnaAcqua\CASTAGNAACQUA.jpg" />
+    <Content Include="Immagini\ACQUATICHE\Elodea\ELODEA.jpg" />
+    <Content Include="Immagini\ACQUATICHE\GiacintoAcqua\GIACINTOACQUA.jpg" />
+    <Content Include="Immagini\ACQUATICHE\Gunnera\GUNNERA.jpg" />
+    <Content Include="Immagini\ACQUATICHE\Hottuynia\HOUTTUYNIA.jpg" />
+    <Content Include="Immagini\ACQUATICHE\Ibisco Palustre\IBISCO PALUSTRE.jpg" />
+    <Content Include="Immagini\ACQUATICHE\Iris\IRIS.jpg" />
+    <Content Include="Immagini\ACQUATICHE\Lemna\LEMNA.jpg" />
+    <Content Include="Immagini\ACQUATICHE\Lisichyton\LISICHYTON.jpg" />
+    <Content Include="Immagini\ACQUATICHE\Loto\LOTO.jpg" />
+    <Content Include="Immagini\ACQUATICHE\Lythrum\LYTHRUM.jpg" />
+    <Content Include="Immagini\ACQUATICHE\Myriophyllum\MYRIOPHYLLUM.jpg" />
+    <Content Include="Immagini\ACQUATICHE\Ninfee\NINFEE.jpg" />
+    <Content Include="Immagini\ACQUATICHE\Papiro\PAPIRO.jpg" />
+    <Content Include="Immagini\ACQUATICHE\Pontederia\PONTEDERIA.jpg" />
+    <Content Include="Immagini\ACQUATICHE\Sagittaria\SAGITTARIA.jpg" />
+    <Content Include="Immagini\ACQUATICHE\Tifa\TIFA.jpg" />
+    <Content Include="Immagini\ACQUATICHE\Victoria Amazonica\VICTORIA AMAZONICA.jpg" />
+    <Content Include="Immagini\ALBERI\Abete\ABETE.jpg" />
+    <Content Include="Immagini\ALBERI\Acacia\ACACIA%28MIMOSA%29.jpg" />
+    <Content Include="Immagini\ALBERI\Acero\ACERO.jpg" />
+    <Content Include="Immagini\ALBERI\Agrifoglio\AGRIFOGLIO.jpg" />
+    <Content Include="Immagini\ALBERI\Ailanto\AILANTO.jpg" />
+    <Content Include="Immagini\ALBERI\Albero di Giuda\ALBERO DI GIUDA.jpg" />
+    <Content Include="Immagini\ALBERI\Albizzia\ALBIZZIA.jpg" />
+    <Content Include="Immagini\ALBERI\Bagolaro\BAGOLARO.jpg" />
+    <Content Include="Immagini\ALBERI\Betulla\BETULLA.jpg" />
+    <Content Include="Immagini\ALBERI\Carpino Bianco\CARPINO BIANCO.jpg" />
+    <Content Include="Immagini\ALBERI\Catalpa\CATALPA.jpg" />
+    <Content Include="Immagini\ALBERI\Cedro\CEDRO.jpg" />
+    <Content Include="Immagini\ALBERI\Cipresso\CIPRESSO.jpg" />
+    <Content Include="Immagini\ALBERI\Davidia\DAVIDIA.jpg" />
+    <Content Include="Immagini\ALBERI\Eucalipto\EUCALIPTO.jpg" />
+    <Content Include="Immagini\ALBERI\Faggio\FAGGIO.jpg" />
+    <Content Include="Immagini\ALBERI\Frassino\FRASSINO.jpg" />
+    <Content Include="Immagini\ALBERI\Ginkgo Biloba\GINKGO BILOBA.jpg" />
+    <Content Include="Immagini\ALBERI\Ippocastano\IPPOCASTANO.jpg" />
+    <Content Include="Immagini\ALBERI\Lagerstroemia\LAGERSTROEMIA.jpg" />
+    <Content Include="Immagini\ALBERI\Liquidambar\LIQUIDAMBAR.jpg" />
+    <Content Include="Immagini\ALBERI\Liriodendro\LIRIODENDRO.jpg" />
+    <Content Include="Immagini\ALBERI\Magnolia\MAGNOLIA.jpg" />
+    <Content Include="Immagini\ALBERI\Melo da Fiore\MELO DA FIORE.jpg" />
+    <Content Include="Immagini\ALBERI\Olmo\OLMO.jpg" />
+    <Content Include="Immagini\ALBERI\Ontano\ONTANO.jpg" />
+    <Content Include="Immagini\ALBERI\Paulonia\PAULONIA.jpg" />
+    <Content Include="Immagini\ALBERI\Pero da Fiore\PERO DA FIORE.jpg" />
+    <Content Include="Immagini\ALBERI\Pino\PINO.jpg" />
+    <Content Include="Immagini\ALBERI\Pioppo\PIOPPO.jpg" />
+    <Content Include="Immagini\ALBERI\Platano\PLATANO.jpg" />
+    <Content Include="Immagini\ALBERI\Prunus da Fiore\PRUNUS DA FIORE.jpg" />
+    <Content Include="Immagini\ALBERI\Quercia\QUERCIA.jpg" />
+    <Content Include="Immagini\ALBERI\Robinia\ROBINIA.jpg" />
+    <Content Include="Immagini\ALBERI\Salice\SALICE.jpg" />
+    <Content Include="Immagini\ALBERI\Sorbo\SORBO.jpg" />
+    <Content Include="Immagini\ALBERI\Tamerice\TAMERICE.jpg" />
+    <Content Include="Immagini\ALBERI\Tasso\TASSO.jpg" />
+    <Content Include="Immagini\ALBERI\Tiglio\TIGLIO.jpg" />
+    <Content Include="Immagini\ALBERI\Tuia\TUIA.jpg" />
+    <Content Include="Immagini\ALTRIFRUTTI\Castagno\CASTAGNO.jpg" />
+    <Content Include="Immagini\ALTRIFRUTTI\Fico d%27India\FICO D%27INDIA.jpg" />
+    <Content Include="Immagini\ALTRIFRUTTI\Lampone\LAMPONE.jpg" />
+    <Content Include="Immagini\ALTRIFRUTTI\Nocciolo\NOCCIOLO.jpg" />
+    <Content Include="Immagini\ALTRIFRUTTI\Noce\NOCE.jpg" />
+    <Content Include="Immagini\ALTRIFRUTTI\Ribes\RIBES.jpg" />
+    <Content Include="Immagini\ALTRIFRUTTI\Uva Spina\UVA SPINA.jpg" />
+    <Content Include="Immagini\ANNUALI\Bocca di Leone\BOCCA DI LEONE.jpg" />
+    <Content Include="Immagini\ANNUALI\Calceolaria\CALCEOLARIA.jpg" />
+    <Content Include="Immagini\ANNUALI\Coleus\COLEUS.jpg" />
+    <Content Include="Immagini\ANNUALI\Cresta di Gallo\CRESTA DI GALLO.jpg" />
+    <Content Include="Immagini\ANNUALI\Diascia\DIASCIA.jpg" />
+    <Content Include="Immagini\ANNUALI\Dimorfoteca\DIMORFOTECA.jpg" />
+    <Content Include="Immagini\ANNUALI\Escolzia\ESCOLZIA.jpg" />
+    <Content Include="Immagini\ANNUALI\Gazania\GAZANIA.jpg" />
+    <Content Include="Immagini\ANNUALI\Glossinia\GLOSSINIA.jpg" />
+    <Content Include="Immagini\ANNUALI\Impatiens\IMPATIENS.jpg" />
+    <Content Include="Immagini\ANNUALI\Lantana\LANTANA.jpg" />
+    <Content Include="Immagini\ANNUALI\Lobelia\LOBELIA.jpg" />
+    <Content Include="Immagini\ANNUALI\Nasturzio\NASTURZIO.jpg" />
+    <Content Include="Immagini\ANNUALI\Petunia\PETUNIA.jpg" />
+    <Content Include="Immagini\ANNUALI\Portulaca\PORTULACA.jpg" />
+    <Content Include="Immagini\ANNUALI\Primula\PRIMULA.jpg" />
+    <Content Include="Immagini\ANNUALI\Salvia da Fiore\SALVIA DA FIORE.jpg" />
+    <Content Include="Immagini\ANNUALI\Scaevola\SCAEVOLA.jpg" />
+    <Content Include="Immagini\ANNUALI\Tagete\TAGETE.jpg" />
+    <Content Include="Immagini\ANNUALI\Verbena\VERBENA.jpg" />
+    <Content Include="Immagini\ANNUALI\Zinnia\ZINNIA.jpg" />
+    <Content Include="Immagini\APPARTAMENTO\Aechmea\AECHMEA.jpg" />
+    <Content Include="Immagini\APPARTAMENTO\Alocasia\ALOCASIA.jpg" />
+    <Content Include="Immagini\APPARTAMENTO\Anturio\ANTURIO.jpg" />
+    <Content Include="Immagini\APPARTAMENTO\Asparagina\ASPARAGINA.jpg" />
+    <Content Include="Immagini\APPARTAMENTO\Aspidistra\ASPIDISTRA.jpg" />
+    <Content Include="Immagini\APPARTAMENTO\Calatea\CALATEA.jpg" />
+    <Content Include="Immagini\APPARTAMENTO\Clivia\CLIVIA.jpg" />
+    <Content Include="Immagini\APPARTAMENTO\Croton\CROTON.jpg" />
+    <Content Include="Immagini\APPARTAMENTO\Diffembachia\DIFFEMBACHIA.jpg" />
+    <Content Include="Immagini\APPARTAMENTO\Dracena\DRACENA.jpg" />
+    <Content Include="Immagini\APPARTAMENTO\Falangio\FALANGIO.jpg" />
+    <Content Include="Immagini\APPARTAMENTO\Felci\FELCI.jpg" />
+    <Content Include="Immagini\APPARTAMENTO\Ficus\FICUS.jpg" />
+    <Content Include="Immagini\APPARTAMENTO\Filodendri\FILODENDRI.jpg" />
+    <Content Include="Immagini\APPARTAMENTO\Hoya\HOYA.jpg" />
+    <Content Include="Immagini\APPARTAMENTO\Kenzia\KENZIA.jpg" />
+    <Content Include="Immagini\APPARTAMENTO\Orchidee\ORCHIDEE.jpg" />
+    <Content Include="Immagini\APPARTAMENTO\Pachira\PACHIRA.jpg" />
+    <Content Include="Immagini\APPARTAMENTO\Papiro\PAPIRO.jpg" />
+    <Content Include="Immagini\APPARTAMENTO\Potos\POTOS.jpg" />
+    <Content Include="Immagini\APPARTAMENTO\Scefflera\SCEFFLERA.jpg" />
+    <Content Include="Immagini\APPARTAMENTO\Spatifillo\SPATIFILLO.jpg" />
+    <Content Include="Immagini\APPARTAMENTO\Stella di Natale\STELLA DI NATALE.jpg" />
+    <Content Include="Immagini\APPARTAMENTO\Tillandsia\TILLANDSIA.jpg" />
+    <Content Include="Immagini\APPARTAMENTO\Tradescanzia\TRADESCANZIA.jpg" />
+    <Content Include="Immagini\APPARTAMENTO\Violetta Africana\VIOLETTA AFRICANA.jpg" />
+    <Content Include="Immagini\APPARTAMENTO\Zamia\ZAMIA.jpg" />
+    <Content Include="Immagini\ARBUSTI\Abelia\ABELIA.jpg" />
+    <Content Include="Immagini\ARBUSTI\Arancio Trifogliato\ARANCIO TRIFOGLIATO.jpg" />
+    <Content Include="Immagini\ARBUSTI\Azalea e Rododendro\AZALEA E RODODENDRO.jpg" />
+    <Content Include="Immagini\ARBUSTI\Berberis\BERBERIS.jpg" />
+    <Content Include="Immagini\ARBUSTI\Biancospino\BIANCOSPINO.jpg" />
+    <Content Include="Immagini\ARBUSTI\Bosso\BOSSO.jpg" />
+    <Content Include="Immagini\ARBUSTI\Buddleia\BUDDLEIA.jpg" />
+    <Content Include="Immagini\ARBUSTI\Calicanto\CALICANTO.jpg" />
+    <Content Include="Immagini\ARBUSTI\Callistemon\CALLISTEMON.jpg" />
+    <Content Include="Immagini\ARBUSTI\Camelia\CAMELIA.jpg" />
+    <Content Include="Immagini\ARBUSTI\Ceanoto\CEANOTO.jpg" />
+    <Content Include="Immagini\ARBUSTI\Cisto\CISTO.jpg" />
+    <Content Include="Immagini\ARBUSTI\Corbezzolo\CORBEZZOLO.jpg" />
+    <Content Include="Immagini\ARBUSTI\Cornus\CORNUS.jpg" />
+    <Content Include="Immagini\ARBUSTI\Cotogno Giapponese\COTOGNO GIAPPONESE.jpg" />
+    <Content Include="Immagini\ARBUSTI\Cotoneaster\COTONEASTER.jpg" />
+    <Content Include="Immagini\ARBUSTI\Dafne\DAFNE.jpg" />
+    <Content Include="Immagini\ARBUSTI\Deutzia\DEUTZIA.jpg" />
+    <Content Include="Immagini\ARBUSTI\Eleagno\ELEAGNO.jpg" />
+    <Content Include="Immagini\ARBUSTI\Escallonia\ESCALLONIA.jpg" />
+    <Content Include="Immagini\ARBUSTI\Filadelfo\FILADELFO.jpg" />
+    <Content Include="Immagini\ARBUSTI\Forsizia\FORSIZIA.jpg" />
+    <Content Include="Immagini\ARBUSTI\Fotinia\FOTINIA.jpg" />
+    <Content Include="Immagini\ARBUSTI\Ginepro\GINEPRO.jpg" />
+    <Content Include="Immagini\ARBUSTI\Ginestre\GINESTRE.jpg" />
+    <Content Include="Immagini\ARBUSTI\Hebe\HEBE.jpg" />
+    <Content Include="Immagini\ARBUSTI\Ibisco\IBISCO.jpg" />
+    <Content Include="Immagini\ARBUSTI\Iperico\IPERICO.jpg" />
+    <Content Include="Immagini\ARBUSTI\Kalmia\KALMIA.jpg" />
+    <Content Include="Immagini\ARBUSTI\Kerria\KERRIA.jpg" />
+    <Content Include="Immagini\ARBUSTI\Lauroceraso\LAUROCERASO.jpg" />
+    <Content Include="Immagini\ARBUSTI\Ligustro\LIGUSTRO.jpg" />
+    <Content Include="Immagini\ARBUSTI\Lillà\LILLA%27.jpg" />
+    <Content Include="Immagini\ARBUSTI\Maggiociondolo\MAGGIOCIONDOLO.jpg" />
+    <Content Include="Immagini\ARBUSTI\Mahonia\MAHONIA.jpg" />
+    <Content Include="Immagini\ARBUSTI\Nandina\NANDINA.jpg" />
+    <Content Include="Immagini\ARBUSTI\Oleandro\OLEANDRO.jpg" />
+    <Content Include="Immagini\ARBUSTI\Ortensia\ORTENSIA.jpg" />
+    <Content Include="Immagini\ARBUSTI\Osmanthus\OSMANTHUS.jpg" />
+    <Content Include="Immagini\ARBUSTI\Peonia\PEONIA.jpg" />
+    <Content Include="Immagini\ARBUSTI\Pieris\PIERIS.jpg" />
+    <Content Include="Immagini\ARBUSTI\Piracanta\PIRACANTA.jpg" />
+    <Content Include="Immagini\ARBUSTI\Pittosforo\PITTOSFORO.jpg" />
+    <Content Include="Immagini\ARBUSTI\Plumbago\PLUMBAGO.jpg" />
+    <Content Include="Immagini\ARBUSTI\Skimmia\SKIMMIA.jpg" />
+    <Content Include="Immagini\ARBUSTI\Sommacco\SOMMACCO.jpg" />
+    <Content Include="Immagini\ARBUSTI\Spirea\SPIREA.jpg" />
+    <Content Include="Immagini\ARBUSTI\Viburni\VIBURNI.jpg" />
+    <Content Include="Immagini\ARBUSTI\Weigela\WEIGELA.jpg" />
+    <Content Include="Immagini\AROMATICHE\Alloro\ALLORO.jpg" />
+    <Content Include="Immagini\AROMATICHE\Aneto\ANETO.jpg" />
+    <Content Include="Immagini\AROMATICHE\Angelica\ANGELICA.jpg" />
+    <Content Include="Immagini\AROMATICHE\Anice\ANICE.jpg" />
+    <Content Include="Immagini\AROMATICHE\Basilico\BASILICO.jpg" />
+    <Content Include="Immagini\AROMATICHE\Borragine\BORRAGINE.jpg" />
+    <Content Include="Immagini\AROMATICHE\Calendula\CALENDULA.jpg" />
+    <Content Include="Immagini\AROMATICHE\Camomilla\CAMOMILLA.jpg" />
+    <Content Include="Immagini\AROMATICHE\Cappero\CAPPERO.jpg" />
+    <Content Include="Immagini\AROMATICHE\Cedrina\CEDRINA.jpg" />
+    <Content Include="Immagini\AROMATICHE\Cerfoglio\CERFOGLIO.jpg" />
+    <Content Include="Immagini\AROMATICHE\Consolida\CONSOLIDA.jpg" />
+    <Content Include="Immagini\AROMATICHE\Coriandolo\CORIANDOLO.jpg" />
+    <Content Include="Immagini\AROMATICHE\Cumino\CUMINO.jpg" />
+    <Content Include="Immagini\AROMATICHE\Erba Cipollina\ERBA CIPOLLINA.jpg" />
+    <Content Include="Immagini\AROMATICHE\Finocchio Selvatico\Finocchio Selvatico-fiori.jpg" />
+    <Content Include="Immagini\AROMATICHE\Finocchio Selvatico\FINOCCHIO SELVATICO.jpg" />
+    <Content Include="Immagini\AROMATICHE\Issopo\ISSOPO.jpg" />
+    <Content Include="Immagini\AROMATICHE\Lavanda\LAVANDA.jpg" />
+    <Content Include="Immagini\AROMATICHE\Maggiorana\MAGGIORANA.jpg" />
+    <Content Include="Immagini\AROMATICHE\Malva\MALVA.jpg" />
+    <Content Include="Immagini\AROMATICHE\Melissa\MELISSA.jpg" />
+    <Content Include="Immagini\AROMATICHE\Menta\MENTA.jpg" />
+    <Content Include="Immagini\AROMATICHE\Mirto\MIRTO.jpg" />
+    <Content Include="Immagini\AROMATICHE\Origano\ORIGANO.jpg" />
+    <Content Include="Immagini\AROMATICHE\Peperoncino\PEPERONCINO.jpg" />
+    <Content Include="Immagini\AROMATICHE\Prezzemolo\PREZZEMOLO.jpg" />
+    <Content Include="Immagini\AROMATICHE\Rafano\RAFANO.jpg" />
+    <Content Include="Immagini\AROMATICHE\Rosmarino\ROSMARINO.jpg" />
+    <Content Include="Immagini\AROMATICHE\Rumex\RUMEX.jpg" />
+    <Content Include="Immagini\AROMATICHE\Ruta\RUTA.jpg" />
+    <Content Include="Immagini\AROMATICHE\Salvia\SALVIA.jpg" />
+    <Content Include="Immagini\AROMATICHE\Santoreggia\SANTOREGGIA.jpg" />
+    <Content Include="Immagini\AROMATICHE\Tarassaco\TARASSACO.jpg" />
+    <Content Include="Immagini\AROMATICHE\Timo\TIMO.jpg" />
+    <Content Include="Immagini\BULBOSE\Agapanto\AGAPANTO.jpg" />
+    <Content Include="Immagini\BULBOSE\Allium\ALLIUM.jpg" />
+    <Content Include="Immagini\BULBOSE\Alstroemeria\ALSTROEMERIA.jpg" />
+    <Content Include="Immagini\BULBOSE\Amarillis\AMARILLIS.jpg" />
+    <Content Include="Immagini\BULBOSE\Anemone\ANEMONE.jpg" />
+    <Content Include="Immagini\BULBOSE\Arum\ARUM.jpg" />
+    <Content Include="Immagini\BULBOSE\Begonia\BEGONIA.jpg" />
+    <Content Include="Immagini\BULBOSE\Bucaneve\BUCANEVE.jpg" />
+    <Content Include="Immagini\BULBOSE\Canna\CANNA.jpg" />
+    <Content Include="Immagini\BULBOSE\Chionodoxa\CHIONODOXA.jpg" />
+    <Content Include="Immagini\BULBOSE\Ciclamino\CICLAMINO.jpg" />
+    <Content Include="Immagini\BULBOSE\Colchico\COLCHICO.jpg" />
+    <Content Include="Immagini\BULBOSE\Crocosmia\CROCOSMIA.jpg" />
+    <Content Include="Immagini\BULBOSE\Croco\CROCO.jpg" />
+    <Content Include="Immagini\BULBOSE\Dalia\DALIA.jpg" />
+    <Content Include="Immagini\BULBOSE\Erantis\ERANTIS.jpg" />
+    <Content Include="Immagini\BULBOSE\Eremurus\EREMURUS.jpg" />
+    <Content Include="Immagini\BULBOSE\Eucomis\EUCOMIS.jpg" />
+    <Content Include="Immagini\BULBOSE\Fresia\FRESIA.jpg" />
+    <Content Include="Immagini\BULBOSE\Fritillaria\FRITILLARIA.jpg" />
+    <Content Include="Immagini\BULBOSE\Giacinto\GIACINTO.jpg" />
+    <Content Include="Immagini\BULBOSE\Gladiolo\GLADIOLO.jpg" />
+    <Content Include="Immagini\BULBOSE\Gloriosa\GLORIOSA.jpg" />
+    <Content Include="Immagini\BULBOSE\Iris\IRIS.jpg" />
+    <Content Include="Immagini\BULBOSE\Lilium\LILIUM.jpg" />
+    <Content Include="Immagini\BULBOSE\Mughetto\MUGHETTO.jpg" />
+    <Content Include="Immagini\BULBOSE\Muscari\MUSCARI.jpg" />
+    <Content Include="Immagini\BULBOSE\Ornitogalo\ORNITOGALO.jpg" />
+    <Content Include="Immagini\BULBOSE\Scilla\SCILLA.jpg" />
+    <Content Include="Immagini\BULBOSE\Tulbaghia\TULBAGHIA.jpg" />
+    <Content Include="Immagini\BULBOSE\Tulipano\TULIPANO.jpg" />
+    <Content Include="Immagini\ERBACEE\Achillea\ACHILLEA.jpg" />
+    <Content Include="Immagini\ERBACEE\Alchemilla\ALCHEMILLA.jpg" />
+    <Content Include="Immagini\ERBACEE\Anemone\ANEMONE.jpg" />
+    <Content Include="Immagini\ERBACEE\Aquilegia\AQUILEGIA.jpg" />
+    <Content Include="Immagini\ERBACEE\Aster\ASTER.jpg" />
+    <Content Include="Immagini\ERBACEE\Aubrezia\AUBREZIA.jpg" />
+    <Content Include="Immagini\ERBACEE\Bergenia\BERGENIA.jpg" />
+    <Content Include="Immagini\ERBACEE\Campanula\CAMPANULA.jpg" />
+    <Content Include="Immagini\ERBACEE\Centaurea\CENTAUREA.jpg" />
+    <Content Include="Immagini\ERBACEE\Cosmea\COSMEA.jpg" />
+    <Content Include="Immagini\ERBACEE\Delfinium\DELFINIUM.jpg" />
+    <Content Include="Immagini\ERBACEE\Dicentra\DICENTRA.jpg" />
+    <Content Include="Immagini\ERBACEE\Digitale\DIGITALE.jpg" />
+    <Content Include="Immagini\ERBACEE\Echinacea\ECHINACEA.jpg" />
+    <Content Include="Immagini\ERBACEE\Elleboro\ELLEBORO.jpg" />
+    <Content Include="Immagini\ERBACEE\Enotera\ENOTERA.jpg" />
+    <Content Include="Immagini\ERBACEE\Erica\ERICA.jpg" />
+    <Content Include="Immagini\ERBACEE\Eringio\ERINGIO.jpg" />
+    <Content Include="Immagini\ERBACEE\Euchera\EUCHERA.jpg" />
+    <Content Include="Immagini\ERBACEE\Euforbia\EUFORBIA.jpg" />
+    <Content Include="Immagini\ERBACEE\Garofanino\GAROFANINO.jpg" />
+    <Content Include="Immagini\ERBACEE\Hemerocallis\HEMEROCALLIS.jpg" />
+    <Content Include="Immagini\ERBACEE\Hosta\HOSTA.jpg" />
+    <Content Include="Immagini\ERBACEE\Knifofia\KNIFOFIA.jpg" />
+    <Content Include="Immagini\ERBACEE\Lupino\LUPINO.jpg" />
+    <Content Include="Immagini\ERBACEE\Malve da Fiore\MALVE DA FIORE.jpg" />
+    <Content Include="Immagini\ERBACEE\Nicotiana\NICOTIANA.jpg" />
+    <Content Include="Immagini\ERBACEE\Papavero Orientale\PAPAVERO ORIENTALE.jpg" />
+    <Content Include="Immagini\ERBACEE\Phlox\PHLOX.jpg" />
+    <Content Include="Immagini\ERBACEE\Pulsatilla\PULSATILLA.jpg" />
+    <Content Include="Immagini\ERBACEE\Rudbeckia\RUDBECKIA.jpg" />
+    <Content Include="Immagini\ERBACEE\Santolina\SANTOLINA.jpg" />
+    <Content Include="Immagini\ERBACEE\Violaciocca\VIOLACCIOCCA.jpg" />
+    <Content Include="Immagini\ERBACEE\Viole\VIOLE.jpg" />
+    <Content Include="Immagini\ESOTICHE\Abutilon\ABUTILON.jpg" />
+    <Content Include="Immagini\ESOTICHE\Anigozanthos\ANIGOZANTHOS.jpg" />
+    <Content Include="Immagini\ESOTICHE\Aristolochia\ARISTOLOCHIA.jpg" />
+    <Content Include="Immagini\ESOTICHE\Asarina\ASARINA.jpg" />
+    <Content Include="Immagini\ESOTICHE\Bambu\BAMBU.jpg" />
+    <Content Include="Immagini\ESOTICHE\Banksia\BANKSIA.jpg" />
+    <Content Include="Immagini\ESOTICHE\Bauhinia\BAUHINIA.jpg" />
+    <Content Include="Immagini\ESOTICHE\Brahea\BRAHEA.jpg" />
+    <Content Include="Immagini\ESOTICHE\Butia\BUTIA.jpg" />
+    <Content Include="Immagini\ESOTICHE\Calliandra\CALLIANDRA.jpg" />
+    <Content Include="Immagini\ESOTICHE\Cassia\CASSIA.jpg" />
+    <Content Include="Immagini\ESOTICHE\Cesalpinia\CESALPINIA.jpg" />
+    <Content Include="Immagini\ESOTICHE\Cestrum\CESTRUM.jpg" />
+    <Content Include="Immagini\ESOTICHE\Chamaerops\CHAMAEROPS.jpg" />
+    <Content Include="Immagini\ESOTICHE\Choisya\CHOISYA.jpg" />
+    <Content Include="Immagini\ESOTICHE\Clianthus\CLIANTHUS.jpg" />
+    <Content Include="Immagini\ESOTICHE\Cuphea\CUPHEA.jpg" />
+    <Content Include="Immagini\ESOTICHE\Cycas\CYCAS.jpg" />
+    <Content Include="Immagini\ESOTICHE\Erythrina\ERYTHRINA.jpg" />
+    <Content Include="Immagini\ESOTICHE\Eugenia\EUGENIA.jpg" />
+    <Content Include="Immagini\ESOTICHE\Iochroma\IOCHROMA.jpg" />
+    <Content Include="Immagini\ESOTICHE\Jacaranda\JACARANDA.jpg" />
+    <Content Include="Immagini\ESOTICHE\Mandevillea\MANDEVILLEA.jpg" />
+    <Content Include="Immagini\ESOTICHE\Pandorea\PANDOREA.jpg" />
+    <Content Include="Immagini\ESOTICHE\Petrea\PETREA.jpg" />
+    <Content Include="Immagini\ESOTICHE\Phoenix\PHOENIX.jpg" />
+    <Content Include="Immagini\ESOTICHE\Plumeria\PLUMERIA.jpg" />
+    <Content Include="Immagini\ESOTICHE\Protea\PROTEA.jpg" />
+    <Content Include="Immagini\ESOTICHE\Sabal\SABAL.jpg" />
+    <Content Include="Immagini\ESOTICHE\Sesbania\SESBANIA.jpg" />
+    <Content Include="Immagini\ESOTICHE\Solandra\SOLANDRA.jpg" />
+    <Content Include="Immagini\ESOTICHE\Stephanotis\STEPHANOTIS.jpg" />
+    <Content Include="Immagini\ESOTICHE\Strelitzia\STRELITZIA.jpg" />
+    <Content Include="Immagini\ESOTICHE\Streptosolen\STREPTOSOLEN.jpg" />
+    <Content Include="Immagini\ESOTICHE\Thunbergia\THUNBERGIA.jpg" />
+    <Content Include="Immagini\ESOTICHE\Tibouchina\TIBOUCHINA.jpg" />
+    <Content Include="Immagini\ESOTICHE\Trachycarpus\TRACHYCARPUS.jpg" />
+    <Content Include="Immagini\FRUTTETO\Albicocco\ALBICOCCO.jpg" />
+    <Content Include="Immagini\FRUTTETO\Arancio\ARANCIO.jpg" />
+    <Content Include="Immagini\FRUTTETO\Ciliegio\CILIEGIO.jpg" />
+    <Content Include="Immagini\FRUTTETO\Fico\FICO.jpg" />
+    <Content Include="Immagini\FRUTTETO\Kaki\KAKI.jpg" />
+    <Content Include="Immagini\FRUTTETO\Kiwi\KIWI.jpg" />
+    <Content Include="Immagini\FRUTTETO\Limone\LIMONE.jpg" />
+    <Content Include="Immagini\FRUTTETO\Mandorlo\MANDORLO.jpg" />
+    <Content Include="Immagini\FRUTTETO\Melograno\MELOGRANO.jpg" />
+    <Content Include="Immagini\FRUTTETO\Melo\MELO.jpg" />
+    <Content Include="Immagini\FRUTTETO\Nocciolo\NOCCIOLO.jpg" />
+    <Content Include="Immagini\FRUTTETO\Olivo\OLIVO.jpg" />
+    <Content Include="Immagini\FRUTTETO\Pero\PERO.jpg" />
+    <Content Include="Immagini\FRUTTETO\Pesco\PESCO.jpg" />
+    <Content Include="Immagini\FRUTTETO\Susino Cinogiapponese\SUSINO CINOGIAPPONESE.jpg" />
+    <Content Include="Immagini\FRUTTETO\Susino Europeo\SUSINO EUROPEO.jpg" />
+    <Content Include="Immagini\FRUTTETO\Uva da Tavola\UVA DA TAVOLA.jpg" />
+    <Content Include="Immagini\GRASSE\Agave\AGAVE.jpg" />
+    <Content Include="Immagini\GRASSE\Aloe\ALOE.jpg" />
+    <Content Include="Immagini\GRASSE\Cactus di Natale\CACTUS DI NATALE.jpg" />
+    <Content Include="Immagini\GRASSE\Calancoe\CALANCOE.jpg" />
+    <Content Include="Immagini\GRASSE\Crassula\CRASSULA.jpg" />
+    <Content Include="Immagini\GRASSE\Cuscino della Suocera\CUSCINO DELLA SUOCERA.jpg" />
+    <Content Include="Immagini\GRASSE\Echeveria\ECHEVERIA.jpg" />
+    <Content Include="Immagini\GRASSE\Echinopsis\ECHINOPSIS.jpg" />
+    <Content Include="Immagini\GRASSE\Ferocactus\FEROCACTUS.jpg" />
+    <Content Include="Immagini\GRASSE\Lingua di Suocera\LINGUA DI SUOCERA.jpg" />
+    <Content Include="Immagini\GRASSE\Mammillaria\MAMMILLARIA.jpg" />
+    <Content Include="Immagini\GRASSE\Mesembriantemi\MESEMBRIANTEMI.jpg" />
+    <Content Include="Immagini\GRASSE\Sanseveria\SANSEVIERIA.jpg" />
+    <Content Include="Immagini\GRASSE\Sedum\SEDUM.jpg" />
+    <Content Include="Immagini\GRASSE\Sempervivum\SEMPERVIVUM.jpg" />
+    <Content Include="Immagini\ORTO\Aglio\AGLIO.jpg" />
+    <Content Include="Immagini\ORTO\Aglio\calendario_lavori_aglio.jpg" />
+    <Content Include="Immagini\ORTO\Anguria\ANGURIA.jpg" />
+    <Content Include="Immagini\ORTO\Anguria\calendario_lavori_anguria.jpg" />
+    <Content Include="Immagini\ORTO\Carota\calendario_lavori_carota.jpg" />
+    <Content Include="Immagini\ORTO\Carota\CAROTA.jpg" />
+    <Content Include="Immagini\ORTO\Cavoli\CAVOLI.jpg" />
+    <Content Include="Immagini\ORTO\Cetriolo\calendario_lavori_cetriolo.jpg" />
+    <Content Include="Immagini\ORTO\Cetriolo\CETRIOLO.jpg" />
+    <Content Include="Immagini\ORTO\Cicoria\CICORIA.jpg" />
+    <Content Include="Immagini\ORTO\Cipolla\calendario_lavori_cipolla.jpg" />
+    <Content Include="Immagini\ORTO\Cipolla\CIPOLLA.jpg" />
+    <Content Include="Immagini\ORTO\Cocomero\calendario_lavori_cocomero.jpg" />
+    <Content Include="Immagini\ORTO\Cocomero\COCOMERO.jpg" />
+    <Content Include="Immagini\ORTO\Fagiolini\calendario_lavori_fagiolini.jpg" />
+    <Content Include="Immagini\ORTO\Fagiolini\FAGIOLINI.jpg" />
+    <Content Include="Immagini\ORTO\Fagioli\calendario_lavori_fagioli.jpg" />
+    <Content Include="Immagini\ORTO\Fagioli\FAGIOLI.jpg" />
+    <Content Include="Immagini\ORTO\Finocchio\calendario_lavori_finocchio.jpg" />
+    <Content Include="Immagini\ORTO\Finocchio\FINOCCHIO.jpg" />
+    <Content Include="Immagini\ORTO\Fragola\calendario_lavori_fragola.jpg" />
+    <Content Include="Immagini\ORTO\Fragola\FRAGOLA.jpg" />
+    <Content Include="Immagini\ORTO\Indivie\calendario_lavori_indivie.jpg" />
+    <Content Include="Immagini\ORTO\Indivie\INDIVIE.jpg" />
+    <Content Include="Immagini\ORTO\Lattuga\calendario_lavori_lattuga.jpg" />
+    <Content Include="Immagini\ORTO\Lattuga\LATTUGA.jpg" />
+    <Content Include="Immagini\ORTO\Melanzana\calendario_lavori_melanzana.jpg" />
+    <Content Include="Immagini\ORTO\Melanzana\MELANZANA.jpg" />
+    <Content Include="Immagini\ORTO\Melone\calendario_lavori_melone.jpg" />
+    <Content Include="Immagini\ORTO\Melone\MELONE.jpg" />
+    <Content Include="Immagini\ORTO\Patata\calendario_lavori_patata.jpg" />
+    <Content Include="Immagini\ORTO\Patata\PATATA.jpg" />
+    <Content Include="Immagini\ORTO\Peperone\calendario_lavori_peperone.jpg" />
+    <Content Include="Immagini\ORTO\Peperone\PEPERONE.jpg" />
+    <Content Include="Immagini\ORTO\Pisello\calendario_lavori_pisello.jpg" />
+    <Content Include="Immagini\ORTO\Pisello\PISELLO.jpg" />
+    <Content Include="Immagini\ORTO\Pomodoro\calendario_lavori_pomodoro.jpg" />
+    <Content Include="Immagini\ORTO\Pomodoro\POMODORO.jpg" />
+    <Content Include="Immagini\ORTO\Porro\calendario_lavori_porro.jpg" />
+    <Content Include="Immagini\ORTO\Porro\PORRO.jpg" />
+    <Content Include="Immagini\ORTO\Radicchio\RADICCHIO.jpg" />
+    <Content Include="Immagini\ORTO\Rapanello\RAPANELLO.jpg" />
+    <Content Include="Immagini\ORTO\Rapa\RAPA.jpg" />
+    <Content Include="Immagini\ORTO\Sedano\SEDANO.jpg" />
+    <Content Include="Immagini\ORTO\Spinacio\calendario_lavori_spinacio.jpg" />
+    <Content Include="Immagini\ORTO\Spinacio\SPINACIO.jpg" />
+    <Content Include="Immagini\ORTO\Valeriana\calendario_lavori_valerianella.jpg" />
+    <Content Include="Immagini\ORTO\Valeriana\VALERIANA.jpg" />
+    <Content Include="Immagini\ORTO\Zucche\calendario_lavori_zucche.jpg" />
+    <Content Include="Immagini\ORTO\Zucche\ZUCCHE.jpg" />
+    <Content Include="Immagini\ORTO\Zucchino\calendario_lavori_zucchino.jpg" />
+    <Content Include="Immagini\ORTO\Zucchino\ZUCCHINO.jpg" />
+    <Content Include="Immagini\RAMPICANTI\Actinidia Kolomikta\ACTINIDIA KOLOMIKTA.jpg" />
+    <Content Include="Immagini\RAMPICANTI\Akebia\AKEBIA.jpg" />
+    <Content Include="Immagini\RAMPICANTI\Bignonia\BIGNONIA.jpg" />
+    <Content Include="Immagini\RAMPICANTI\Buganvillea\BUGANVILLEA.jpg" />
+    <Content Include="Immagini\RAMPICANTI\Clematide\CLEMATIDE.jpg" />
+    <Content Include="Immagini\RAMPICANTI\Cobea\COBEA.jpg" />
+    <Content Include="Immagini\RAMPICANTI\Edera\EDERA.jpg" />
+    <Content Include="Immagini\RAMPICANTI\Falso Gelsomino\FALSO GELSOMINO.jpg" />
+    <Content Include="Immagini\RAMPICANTI\Gelsomino\GELSOMINO.jpg" />
+    <Content Include="Immagini\RAMPICANTI\Glicine\GLICINE.jpg" />
+    <Content Include="Immagini\RAMPICANTI\Hardenbergia\HARDENBERGIA.jpg" />
+    <Content Include="Immagini\RAMPICANTI\Ipomea\IPOMEA.jpg" />
+    <Content Include="Immagini\RAMPICANTI\Lonicera\LONICERA.jpg" />
+    <Content Include="Immagini\RAMPICANTI\Nasturzio Rampicante\NASTURZIO RAMPICANTE.jpg" />
+    <Content Include="Immagini\RAMPICANTI\Ortensia Rampicante\ORTENSIA RAMPICANTE.jpg" />
+    <Content Include="Immagini\RAMPICANTI\Passiflora\PASSIFLORA.jpg" />
+    <Content Include="Immagini\RAMPICANTI\Pisello Odoroso\PISELLO ODOROSO.jpg" />
+    <Content Include="Immagini\RAMPICANTI\Vite Americana\VITE AMERICANA.jpg" />
+    <Content Include="Immagini\RAMPICANTI\Vite Canadese\VITE CANADESE.jpg" />
+    <Content Include="Immagini\ROSAI\BARON GIROD DE LAIN.jpg" />
+    <Content Include="Immagini\ROSAI\BONICA 82.jpg" />
+    <Content Include="Immagini\ROSAI\CECILE BRUNNER.jpg" />
+    <Content Include="Immagini\ROSAI\CHAPEAU DE NAPOLEON.jpg" />
+    <Content Include="Immagini\ROSAI\DOROTHY PERKINS.jpg" />
+    <Content Include="Immagini\ROSAI\GERTRUDE JEKYLL.jpg" />
+    <Content Include="Immagini\ROSAI\GLOIRE DE DIJOM.jpg" />
+    <Content Include="Immagini\ROSAI\HEIDETRAUM.jpg" />
+    <Content Include="Immagini\ROSAI\ICEBERG.jpg" />
+    <Content Include="Immagini\ROSAI\M.ME ISAAC PEREIRE.jpg" />
+    <Content Include="Immagini\ROSAI\NEW DAWN.jpg" />
+    <Content Include="Immagini\ROSAI\PAT AUSTIN.jpg" />
+    <Content Include="Immagini\ROSAI\PATIO.jpg" />
+    <Content Include="Immagini\ROSAI\PAUL NEYRON.jpg" />
+    <Content Include="Immagini\ROSAI\PEACE.jpg" />
+    <Content Include="Immagini\ROSAI\PIERRE DE RONSARD.jpg" />
+    <Content Include="Immagini\ROSAI\ROSA BANKSIAE.jpg" />
+    <Content Include="Immagini\ROSAI\ROSA CENTIFOLIA.jpg" />
+    <Content Include="Immagini\ROSAI\ROSA CHINENSIS.jpg" />
+    <Content Include="Immagini\ROSAI\ROSA FILIPES KIFTSGATE.jpg" />
+    <Content Include="Immagini\ROSAI\ROSA GALLICA.jpg" />
+    <Content Include="Immagini\ROSAI\ROSA MOSCHATA.jpg" />
+    <Content Include="Immagini\ROSAI\ROSA PIMPINELLIFOLIA.jpg" />
+    <Content Include="Immagini\ROSAI\ROSA ROXBURGHII.jpg" />
+    <Content Include="Immagini\ROSAI\ROSA SERICEA PTERACANTHA.jpg" />
+    <Content Include="Immagini\ROSAI\THE FAIRY.jpg" />
+    <Content Include="Immagini\Targhette\Alberi.jpg" />
+    <Content Include="Immagini\Targhette\Altrifrutti.jpg" />
+    <Content Include="Immagini\Targhette\Appartamento.jpg" />
+    <Content Include="Immagini\Targhette\Arbusti.jpg" />
+    <Content Include="Immagini\Targhette\Aromatiche.jpg" />
+    <Content Include="Immagini\Targhette\Bulbose.jpg" />
+    <Content Include="Immagini\Targhette\Frutteto.jpg" />
+    <Content Include="Immagini\Targhette\giphy.gif" />
+    <Content Include="Immagini\Targhette\Grasse.jpg" />
+    <Content Include="Immagini\Targhette\logo.jpg" />
+    <Content Include="Immagini\Targhette\Orto.jpg" />
+    <Content Include="Immagini\Targhette\Piante acquatiche.jpg" />
+    <Content Include="Immagini\Targhette\Piante annuali.jpg" />
+    <Content Include="Immagini\Targhette\piante-perenni.jpg" />
+    <Content Include="Immagini\Targhette\piante-tropicali.jpg" />
+    <Content Include="Immagini\Targhette\Rampicanti.jpg" />
+    <Content Include="Immagini\Targhette\Rosai.jpg" />
+    <Content Include="Immagini\Targhette\under_construction-512.png" />
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <PRIResource Include="Strings\it-it\Resources.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".editorconfig" />
+    <None Include="Assets\3dlogo.glb" />
+    <None Include="Piante_e_Fiori_StoreKey.pfx" />
+    <None Include="Piante_e_Fiori_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

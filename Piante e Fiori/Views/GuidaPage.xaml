@@ -1,0 +1,73 @@
+﻿<Page
+    x:Class="Piante_e_Fiori.Views.GuidaPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    Style="{StaticResource PageStyle}"
+    mc:Ignorable="d">
+    <Grid x:Name="ContentArea">
+        <Grid Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
+            <!--The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
+                Place your content here.-->
+            <Grid x:Name="MyHeaderGrid" Height="100" Background="{ThemeResource SystemControlAcrylicWindowBrush}" VerticalAlignment="Top" >
+                <StackPanel Orientation="Horizontal"  VerticalAlignment="Center" HorizontalAlignment="Center" >
+                    <TextBlock Text="&#xE11B;"  FontSize="80" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center" Margin="10,0,10,0"/>
+                    <TextBlock Margin="6,0,0,0" FontSize="25" VerticalAlignment="Center" TextWrapping="WrapWholeWords" >
+                    <Run Text="GUIDA"/>
+                    <LineBreak/>
+                    <Run Text="RAPIDA"/>
+                    </TextBlock>
+                </StackPanel>
+
+            </Grid>
+
+            <StackPanel Margin="0,100,0,0">
+
+
+                <controls:Expander VerticalAlignment="Top" Margin="10"  HorizontalContentAlignment="Stretch" Header="PIANTE E FIORI" Foreground="White" Background="Black" IsExpanded="True"  ExpandDirection="Down">
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Style="{StaticResource BodyTextBlockStyle}" Margin="10">
+                            <Run Text="- L'applicazione Piante e Fiori per Windows 10 nasce comne progetto personale per consultare rapidamente (e offline) le schede botaniche di diverse piante."/><LineBreak/>
+                            <Run Text="- Attualmente sono disponibili più di 400 piante classificate per categorie (Alberi, Arbusti, Rampicanti, Rosai), ma con i futuri aggiornamenti saranno inserite nuove schede"/><LineBreak/>
+                            <Run Text="- E' possibile visualizzare o nascondere i diversi pannelli presenti nelle schede botaniche"/><LineBreak/>
+                            <Run Text=""/><LineBreak/>
+                            <Run Text="- L'applicazione è pubblicata sul Microsoft Store ed è disponibile per i dispositivi Windows 10 versione 1803 (build SO 17134.xy)"/><LineBreak/>
+
+                    </TextBlock>
+                </controls:Expander>
+
+                <controls:Expander VerticalAlignment="Top" Margin="10"  HorizontalContentAlignment="Stretch" Header="HOME PAGE" Foreground="White" Background="Black" IsExpanded="True"  ExpandDirection="Down">
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Style="{StaticResource BodyTextBlockStyle}" Margin="10">
+                        <Run Text="- Nella Home è possibile personalizzare il pannello di benvenuto utente impostando il proprio nome e scegliendo un livello. Al termine premere il pulsante Salva"/><LineBreak/>
+                        <Run Text="- Nota: il campo del nome/cognome non si aggiorna subito: è necessario cambiare pagina e sucessivamente tornare nella home."/><LineBreak/>
+                        <Run Text="- I campi inseriti sono salvati dall'app nel dispositivo in uso e non vengono condivisi."/><LineBreak/>
+                    </TextBlock>
+                </controls:Expander>
+
+                <controls:Expander VerticalAlignment="Top" Margin="10"  HorizontalContentAlignment="Stretch" Header="SCHEDE BOTANICHE" Foreground="White" Background="Black" IsExpanded="True"  ExpandDirection="Down">
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Style="{StaticResource BodyTextBlockStyle}" Margin="10">
+                        <Run Text="- Tutte le schede botaniche sono organizzate indicando  il nome comune, la famiglia, il nome scientifico e una foto descrittiva della pianta/fiore in questione."/><LineBreak/>
+                        <Run Text="- È possibile ingrandire (e successivamente rimpicciolire) l'immagine principale della pianta con un click sulla stessa. "/><LineBreak/>
+                        <Run Text="- È possibile aprire/chiudere i pannelli "/><LineBreak/><LineBreak/>
+                        <Run Text="USO DEL SINTETIZZATORE VOCALE "/><LineBreak/>
+                        <Run Text="- Cliccando l'icona del volume (posta sotto la foto principale della pianta) si apre il pannello del sintetizzatore vocale."/><LineBreak/>
+                        <Run Text="- Per avviare la riproduzione selezionare una categoria (es: Descrizione). Durante l'ascolto è possibile chiudere il pannello del sintetizzatore. "/><LineBreak/>
+                        <Run Text="- Nota: se si cambia la scheda botanica visualizzata mentre il sintetizzatore è attivo, questo continuerà a riprodurre le informazioni per la pianta precedentemente scelta. Per 'allineare' nuovamente il sintetizzatore alla scheda botanica della pianta visualizzata basta cambiare la categoria di riproduzione (es: da 'descrizione botanica'  a 'coltivazione')."/><LineBreak/><LineBreak/>
+                        <Run Text="FINESTRE MULTIPLE"/><LineBreak/>
+                        <Run Text="- Cliccando l'icona della finestra multipla la sezione corrente (es: Alberi) sarà aperta in una nuova finestra."/><LineBreak/>
+                        <Run Text="- Le finestre secondarie si distinguono da quella principale per l'assenza del menù hamburger."/><LineBreak/>
+                    </TextBlock>
+                </controls:Expander>
+
+
+
+
+            </StackPanel>
+
+
+
+        </Grid>
+    </Grid>
+</Page>
+
