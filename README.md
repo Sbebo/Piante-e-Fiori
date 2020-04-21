@@ -14,7 +14,6 @@ In short:
 App generated with Windows Template Studio using Masterdetails for each category (trees, shrubs, aromatic plants, bulbs ...).
 photos of each plant are saved in the app package.
 
-<img src="Files/Assets/FilesHome.png" width="600px">
 
 <img src="StoreAPPIMAGE.jpg" width="600px">
 
