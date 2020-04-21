@@ -14,6 +14,12 @@ In short:
 App generated with Windows Template Studio using Masterdetails for each category (trees, shrubs, aromatic plants, bulbs ...).
 photos of each plant are saved in the app package.
 
+<img src="Files/Assets/FilesHome.png" width="600px">
+
+<img src="StoreAPPIMAGE.jpg" width="600px">
+
+<img src="1.png" width="600px">
+
 ## Road map:
 ## 1. Add also GridContent view for each category (trees, shrubs, aromatic plants, bulbs ..).
 In this way, from the hamburger menu you navigate to the MasterDetails, and from the botanical cards on the homepage you navigate to the GridContent
