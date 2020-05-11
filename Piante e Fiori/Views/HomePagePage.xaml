@@ -16,8 +16,9 @@
             <!--The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
                 Place your content here.-->
 
+            
             <!--Barra di stato utente-->
-            <Grid Height="100" VerticalAlignment="Top" Background="SteelBlue"  x:Name="background_immagine_utente" Visibility="Visible">
+            <Grid Height="100" VerticalAlignment="Top" Background="{ThemeResource SystemControlAcrylicWindowBrush}"  x:Name="background_immagine_utente" Visibility="Visible">
 
                 <Grid Background="Transparent" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="90" Height="90" Margin="10">
                     <Image x:Name="immagine_utente_standard" Margin="5,5,5,5" HorizontalAlignment="Center" VerticalAlignment="Center" Source="ms-appx:///Assets/spa_flower-512.png" Visibility="Visible"/>
@@ -30,12 +31,18 @@
                     <TextBlock x:Name="nome_socio_txthome" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Text="NOME UTENTE" FontSize="18" Foreground="Green" FontWeight="Bold"/>
                     <TextBlock x:Name="tipo_socio_txthome" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Text="Livello"  Foreground="Green" />
                     <StackPanel Orientation="Horizontal">
-                    <ToggleButton Name="modifica_dati" ToolTipService.ToolTip="Modifica le tue info" Background="Green" Checked="modifica_dati_Checked" Unchecked="modifica_dati_UnCecked">
-                        <TextBlock Text="&#xE104;" FontFamily="Segoe MDL2 Assets"/>
-                    </ToggleButton>
+                    <Button Name="modifica_dati" ToolTipService.ToolTip="Modifica le tue info" Background="Green" Click="modifica_dati_Checked">
+                            <TextBlock Text="&#xEF58;" FontFamily="Segoe MDL2 Assets"/>
+                    </Button>
                     <Button  Name="duplica_finestra_btn"   Margin="10,5" ToolTipService.ToolTip="Apri in una nuova finestra" Background="Green" Click="duplica_finestra_btn_Click">
                         <TextBlock Text="" FontFamily="Segoe MDL2 Assets"/>
                     </Button>
+                        <Button  Name="invia_denaro_btn"   Margin="0,5" ToolTipService.ToolTip="Supporta lo sviluppatore" Background="Green" Click="invia_denaro_btn_Click">
+                            <TextBlock Text="&#xE14D;" FontFamily="Segoe MDL2 Assets"/>
+                        </Button>
+                        <Button  Margin="10,5" ToolTipService.ToolTip="Apri AlberiGridPage" Background="yellow" Click="Button_Click" Visibility="Collapsed">
+                            <TextBlock Text="&#xE154;" FontFamily="Segoe MDL2 Assets"/>
+                        </Button>
                     </StackPanel>
                 </StackPanel>
                 <Border BorderBrush="Green" BorderThickness="5" HorizontalAlignment="Left" Height="100" Margin="333,0,0,0" VerticalAlignment="Top" Width="3" Visibility="Collapsed"/>
@@ -44,6 +51,7 @@
 
             </Grid>
 
+            
 
             <ScrollViewer HorizontalAlignment="Center" Margin="0,100,0,0" VerticalAlignment="Top">
             <StackPanel>
@@ -53,11 +61,7 @@
 
 
 
-
-
-
-
-                            <Button x:Name="gestione_trattamenti_btn" Background="Green" Height="100" Width="100" VerticalAlignment="Top" Margin="10,0" Click="gestione_trattamenti_btn_Click" Visibility="Visible" >
+                            <Button x:Name="gestione_trattamenti_btn" Background="Green" Height="110" Width="110" VerticalAlignment="Top" Margin="10" Click="gestione_trattamenti_btn_Click" Visibility="Visible" >
                                 <StackPanel>
                                     <TextBlock Text="&#xEADF;"  Margin="0,5" FontSize="30" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Center"/>
                                     <TextBlock TextWrapping="Wrap"   Text="GESTIONE OPERAZIONI"   HorizontalAlignment="Center"  VerticalAlignment="Bottom" FontSize="13px"  TextAlignment="Center"/>
@@ -66,35 +70,35 @@
 
 
 
-                            <Button x:Name="calendario_lunare_btn" Background="Green" Height="100" Width="100" VerticalAlignment="Top" Margin="10,0" Click="calendario_lunare_btn_Click" Visibility="Visible" >
+                            <Button x:Name="calendario_lunare_btn" Background="Green" Height="110" Width="110" VerticalAlignment="Top" Margin="10" Click="calendario_lunare_btn_Click" Visibility="Visible" >
                                 <StackPanel>
                                     <TextBlock Text="&#xE909;"  Margin="0,5" FontSize="30" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Center"/>
                                     <TextBlock TextWrapping="Wrap"   Text="CALENDARIO LUNARE"   HorizontalAlignment="Center"  VerticalAlignment="Bottom" FontSize="13px"  TextAlignment="Center"/>
                                 </StackPanel>
                             </Button>
 
-                            <Button x:Name="riconoscimento_pianta_btn" Background="Green" Height="100" Width="100" VerticalAlignment="Top" Margin="10,0" Click="riconoscimento_pianta_btn_Click" Visibility="Visible" >
+                            <Button x:Name="riconoscimento_pianta_btn" Background="Green" Height="110" Width="110" VerticalAlignment="Top" Margin="10" Click="riconoscimento_pianta_btn_Click" Visibility="Visible" >
                                 <StackPanel>
                                     <TextBlock Text="&#xE960;"  Margin="0,5" FontSize="30" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Center"/>
                                     <TextBlock TextWrapping="Wrap"   Text="IDENTIFICA PIANTA"   HorizontalAlignment="Center"  VerticalAlignment="Bottom" FontSize="13px"  TextAlignment="Center"/>
                                 </StackPanel>
                             </Button>
 
-                            <Button x:Name="progettazione_giardino_btn" Background="Green" Height="100" Width="100" VerticalAlignment="Top" Margin="10,0" Click="progettazione_giardino_btn_Click" Visibility="Visible" >
+                            <Button x:Name="progettazione_giardino_btn" Background="Green" Height="110" Width="110" VerticalAlignment="Top" Margin="10" Click="progettazione_giardino_btn_Click" Visibility="Visible" >
                                 <StackPanel>
                                     <TextBlock Text="&#xEDC6;"  Margin="0,5" FontSize="30" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Center"/>
                                     <TextBlock TextWrapping="Wrap"   Text="DISEGNA IL GIARDINO"   HorizontalAlignment="Center"  VerticalAlignment="Bottom" FontSize="13px"  TextAlignment="Center"/>
                                 </StackPanel>
                             </Button>
 
-                            <Button x:Name="glossario_termini_btn" Background="Green" Height="100" Width="100" VerticalAlignment="Top" Margin="10,0" Click="glossario_termini_btn_Click" Visibility="Visible" >
+                            <Button x:Name="glossario_termini_btn" Background="Green" Height="110" Width="110" VerticalAlignment="Top" Margin="10" Click="glossario_termini_btn_Click" Visibility="Visible" >
                                 <StackPanel>
                                     <TextBlock Text=""  Margin="0,5" FontSize="30" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Center"/>
                                     <TextBlock TextWrapping="Wrap"   Text="TERMINI UTILI"   HorizontalAlignment="Center"  VerticalAlignment="Bottom" FontSize="13px"  TextAlignment="Center"/>
                                 </StackPanel>
                             </Button>
 
-                            <Button x:Name="guida_area_utente_btn" Background="Green" Height="100" Width="100" VerticalAlignment="Top" Margin="10,0" Click="guida_area_utente_btn_Click">
+                            <Button x:Name="guida_area_utente_btn" Background="Green" Height="110" Width="110" VerticalAlignment="Top" Margin="10" Click="guida_area_utente_btn_Click">
                                 <StackPanel>
                                     <TextBlock Text="&#xE897;"  Margin="0,5" FontSize="30" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Center" />
                                     <TextBlock TextWrapping="Wrap"   Text="CONSULTA LA GUIDA"   HorizontalAlignment="Center"  VerticalAlignment="Bottom" FontSize="13px"  TextAlignment="Center"/>
@@ -253,83 +257,78 @@
 
 
             <!--  BOX MODIFICA DATI  -->
-            <Grid Name="Dati_grid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,100,0,0" Visibility="Collapsed" HorizontalAlignment="Right" Width="360">
-                <Border Background="Green" Width="10" HorizontalAlignment="Left"></Border>
-                <ScrollViewer HorizontalContentAlignment="Left" VerticalScrollBarVisibility="Auto" Margin="10,0,0,0">
-                    <StackPanel>
-                        <StackPanel Orientation="Horizontal"  VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10" >
-                            <TextBlock Text="&#xE104;"  FontSize="22" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center"/>
-                            <TextBlock Margin="6,0,0,0" FontSize="16" Text="Modifica i tuoi dati" VerticalAlignment="Center"/>
+            <Grid Name="ContentDialog_ModificaDati" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"  Visibility="Collapsed" Width="400" Height="480">
+                <Border Background="Green">
+                    <Grid  Margin="5" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                        <StackPanel Margin="10" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                            <StackPanel Orientation="Horizontal"  VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10,0" >
+                                <TextBlock Text="&#xE104;"  FontSize="22" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center"/>
+                                <TextBlock Margin="6,0,0,0" FontSize="16" Text="Aggiorna le tue info di accesso" VerticalAlignment="Center"/>
+                            </StackPanel>
+
+                            <StackPanel>
+                                <TextBlock Text="Dati utente" Margin="0,10" FontSize="16" Foreground="Green"/>
+                                <TextBox x:Name="nome" PlaceholderText="Nome e Cognome"  Margin="0"/>
+
+
+                                <StackPanel Margin="0,10" x:Name="sesso_socio" Orientation="Horizontal">
+                                    <RadioButton x:Name="sesso_maschile" Content="Maschile" Checked="sesso_maschile_Checked"/>
+                                    <RadioButton x:Name="sesso_femminile" Content="Femminile" Checked="sesso_femminile_Checked" />
+                                    <RadioButton x:Name="sesso_indefinito" Content="Non specificato" Checked="sesso_indefinito_Checked" />
+                                </StackPanel>
+
+                                <StackPanel Margin="0,10" x:Name="tipologia_socio">
+                                    <TextBlock Text="Scegli un livello" Margin="0,0,0,10" FontSize="16" Foreground="Green"/>
+                                    <RadioButton x:Name="pollice_biancobtn" Content="Pollice Bianco" Checked="pollice_biancobtn_Checked"/>
+                                    <RadioButton x:Name="pollice_verde_basebtn" Content="Pollice Verde - Base" Checked="pollice_verde_basebtn_Checked"/>
+                                    <RadioButton x:Name="pollice_verde_mediobtn" Content="Pollice Verde - Medio" Checked="pollice_verde_mediobtn_Checked"/>
+                                    <RadioButton x:Name="pollice_verde_espertobtn" Content="Pollice - Esperto" Checked="pollice_verde_espertobtn_Checked"/>
+                                    <RadioButton x:Name="pollice_verde_avanzatobtn" Content="Pollice Verde - Avanzato" Checked="pollice_verde_avanzatobtn_Checked"/>
+                                </StackPanel>
+
+                                <StackPanel Margin="10,20,0,10" x:Name="pianta_preferita" Visibility="Collapsed">
+                                    <TextBlock Text="La tua pianta preferita" Margin="0,0,0,10" FontSize="16" Foreground="Green"/>
+                                    <TextBox x:Name="nome_pianta_preferita" PlaceholderText="Pianta preferita"  Margin="0,0,10,0"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <Button x:Name="New" Margin="0" VerticalAlignment="Top" Click="New_Click">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="&#xE74D;" FontSize="20"  FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            <TextBlock> Cancella dati inseriti</TextBlock>
+                                        </StackPanel>
+                                    </Button>
+
+                                    <TextBlock x:Name="StatusText" FontWeight="Bold"  Margin="10,0" TextWrapping="WrapWholeWords" Foreground="Green"/>
+                                </StackPanel>
+
+
+                                <StackPanel Orientation="Horizontal" Margin="0,15">
+                                    <Button x:Name="Save" Margin="0,10" VerticalAlignment="Top" Click="Save_Click" Width="175">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="&#xE105;" FontSize="20"  FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            <TextBlock Text="   Salva"/>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button x:Name="Chiudi" Margin="10,10,0,0" VerticalAlignment="Top" Click="Chiudi_ContentDialogModificaDati_Click" Width="175">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="&#xE106;" FontSize="20"  FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            <TextBlock Text="   Chiudi"/>
+                                        </StackPanel>
+                                    </Button>
+
+                                </StackPanel>
+
+                                <StackPanel Margin="0,10"  Orientation="Horizontal" Visibility="Collapsed">
+                                    <RadioButton x:Name="normali" Content="Normali" Checked="Riquadri_Normali_Checked" IsChecked="True"/>
+                                    <RadioButton x:Name="medi" Content="Medi" Checked="Riquadri_Medi_Checked" />
+                                    <RadioButton x:Name="grandi" Content="Grandi" Checked="Riquadri_Grandi_Checked"  />
+                                </StackPanel>
+                            </StackPanel>
+
                         </StackPanel>
-
-                        <StackPanel>
-
-                            <TextBox x:Name="nome" PlaceholderText="Nome e Cognome Utente"  Margin="10,10,10,0"/>
-
-                            <StackPanel Margin="10,20,0,0" x:Name="sesso_socio">
-                                <TextBlock Text="Sesso" Margin="0,0,0,10" FontSize="16" Foreground="Green"/>
-                                <RadioButton x:Name="sesso_maschile" Content="Maschile" Checked="sesso_maschile_Checked"/>
-                                <RadioButton x:Name="sesso_femminile" Content="Femminile" Checked="sesso_femminile_Checked" />
-                                <RadioButton x:Name="sesso_indefinito" Content="Non specificato" Checked="sesso_indefinito_Checked" />
-                            </StackPanel>
-
-                            <StackPanel Margin="10,20,0,10" x:Name="tipologia_socio">
-                                <TextBlock Text="Scegli un livello" Margin="0,0,0,10" FontSize="16" Foreground="Green"/>
-                                <RadioButton x:Name="pollice_biancobtn" Content="Pollice Bianco" Checked="pollice_biancobtn_Checked"/>
-                                <RadioButton x:Name="pollice_verde_basebtn" Content="Pollice Verde - Base" Checked="pollice_verde_basebtn_Checked"/>
-                                <RadioButton x:Name="pollice_verde_mediobtn" Content="Pollice Verde - Medio" Checked="pollice_verde_mediobtn_Checked"/>
-                                <RadioButton x:Name="pollice_verde_espertobtn" Content="Pollice - Esperto" Checked="pollice_verde_espertobtn_Checked"/>
-                                <RadioButton x:Name="pollice_verde_avanzatobtn" Content="Pollice Verde - Avanzato" Checked="pollice_verde_avanzatobtn_Checked"/>
-                            </StackPanel>
-
-                            <StackPanel Margin="10,20,0,10" x:Name="pianta_preferita" Visibility="Collapsed">
-                                <TextBlock Text="La tua pianta preferita" Margin="0,0,0,10" FontSize="16" Foreground="Green"/>
-                                <TextBox x:Name="nome_pianta_preferita" PlaceholderText="Pianta preferita"  Margin="0,0,10,0"/>
-                            </StackPanel>
-
-                            <StackPanel Orientation="Horizontal">
-
-                                <Button x:Name="New" Margin="10" Width="90" Height="50" VerticalAlignment="Top" Click="New_Click">
-                                    <StackPanel>
-                                        <TextBlock Text="&#xE74D;" FontSize="20"  FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                        <TextBlock>Cancella </TextBlock>
-                                    </StackPanel>
-                                </Button>
-
-                                <Button x:Name="Save"  Width="90" Margin="10" Height="50" VerticalAlignment="Top" Click="Save_Click">
-                                    <StackPanel>
-                                        <TextBlock Text="&#xE10B;"   FontFamily="Segoe MDL2 Assets" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                        <TextBlock Text="Salva"/>
-                                    </StackPanel>
-                                </Button>
-
-                            </StackPanel>
-
-                            <StackPanel x:Name="StatusPanel" Orientation="Vertical" Margin="10">
-                                <TextBlock x:Name="StatusLabel" Margin="10,0,0,10" TextWrapping="Wrap" Text="" />
-                                <Border x:Name="StatusBorder" Margin="0,0,0,0">
-                                    <ScrollViewer VerticalScrollMode="Auto"  VerticalScrollBarVisibility="Auto" MaxHeight="200">
-                                        <TextBlock x:Name="StatusBlock" FontWeight="Bold" 
-                            MaxWidth="{Binding ActualWidth, ElementName=Splitter}" Margin="10,10,10,20" TextWrapping="Wrap"  />
-                                    </ScrollViewer>
-                                </Border>
-                            </StackPanel>
-
-                        </StackPanel>
-
-
-
-
-
-
-
-
-
-
-
-
-                    </StackPanel>
-                </ScrollViewer>
+                    </Grid>
+                </Border>
             </Grid>
 
 

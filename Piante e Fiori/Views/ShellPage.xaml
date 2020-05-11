@@ -11,7 +11,7 @@
     <NavigationView
         x:Name="navigationView" 
         SelectedItem="{x:Bind Selected, Mode=OneWay}"
-        Header="{x:Bind Selected.Content, Mode=OneWay}"
+        
         ItemInvoked="OnItemInvoked"
         IsSettingsVisible="True"
         Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" OpenPaneLength="250" AlwaysShowHeader="False">
@@ -36,7 +36,8 @@
             <NavigationViewItem x:Uid="Shell_ControlloSanitario" Icon="Document" helpers:NavHelper.NavigateTo="views:ControlloSanitarioPage" />
             <NavigationViewItem x:Uid="Shell_ImageGallery" Icon="Document" helpers:NavHelper.NavigateTo="views:ImageGalleryPage" />-->
             <NavigationViewItem x:Uid="Shell_InkDraw" Icon="edit" helpers:NavHelper.NavigateTo="views:InkDrawPage" />
-            <NavigationViewItem x:Uid="Shell_Sintesi" Icon="ViewAll" helpers:NavHelper.NavigateTo="views:SintesiPage"  Visibility="Collapsed"/>
+            
+            
             
             <NavigationViewItemHeader x:Uid="Shell_Header_SchedeBotaniche"/>
 

@@ -61,7 +61,7 @@ namespace Piante_e_Fiori.Models
 
                    SimboloFogliame = "ms-appx:///Immagini/SimboliSchedeBotaniche/Sempreverde.png",
                    SimboloDurata = "ms-appx:///Immagini/SimboliSchedeBotaniche/Perenne.png",
-                   SimboloAcqua = "ms-appx:///Immagini/SimboliSchedeBotaniche/Acqua.png",
+                   SimboloAcqua = "ms-appx:///Immagini/SimboliSchedeBotaniche/moderate-rain.png",
                    SimboloPosizione = "ms-appx:///Immagini/SimboliSchedeBotaniche/Sun&Cloud.png",
 
                 },

@@ -11,7 +11,7 @@
         <Grid Name="Grid_principale">
             <ScrollViewer  HorizontalContentAlignment="Left" VerticalScrollBarVisibility="Auto" >
                 <Grid>
-                    <Grid x:Name="MyHeaderGrid" Height="100" Background="Olive" VerticalAlignment="Top">
+                    <Grid x:Name="MyHeaderGrid" Height="100" Background="{ThemeResource SystemControlAcrylicWindowBrush}" VerticalAlignment="Top">
                         <StackPanel Orientation="Horizontal"  VerticalAlignment="Center" HorizontalAlignment="Center" >
                             <TextBlock Text="&#xEE93;"  FontSize="80" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center" Margin="10,0,10,0"/>
                             <TextBlock TextWrapping="WrapWholeWords"   Text="GESTIONE OPERAZIONI" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="25px"  TextAlignment="Center" Width="200"/>

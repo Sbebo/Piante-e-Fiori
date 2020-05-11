@@ -63,6 +63,7 @@ namespace Piante_e_Fiori.Views
         private DataTransferManager dataTransferManager;
         private ElementTheme _elementTheme = ThemeSelectorService.Theme;
         Library1 library2 = new Library1();
+        Library1 library1 = new Library1();
 
         public ElementTheme ElementTheme
         {
@@ -83,6 +84,14 @@ namespace Piante_e_Fiori.Views
         public SettingsPage()
         {
             InitializeComponent();
+
+            //dimensione riquadri home
+            normali.IsChecked = library1.LoadSettingBool("Normali");
+            medi.IsChecked = library1.LoadSettingBool("Medi");
+            grandi.IsChecked = library1.LoadSettingBool("Grandi");
+            salva_dimensioni_riquadri_home_ok.Visibility = Visibility.Collapsed;
+
+           
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -479,6 +488,7 @@ namespace Piante_e_Fiori.Views
 
         }
 
+        //DONAZIONE SU PAYPAL
         private async void supportaci1_btn_Click(object sender, RoutedEventArgs e)
         {
             await Launcher.LaunchUriAsync(new Uri("https://www.paypal.me/devstudio649/1eur"));
@@ -493,6 +503,46 @@ namespace Piante_e_Fiori.Views
         {
             await Launcher.LaunchUriAsync(new Uri("https://www.paypal.me/devstudio649/5eur"));
         }
+
+
+        //PERSONALIZZAZIONE GRANDEZZA RIQUADRI SCHEDE BOTANICHE
+        private void Riquadri_Normali_Checked(object sender, RoutedEventArgs e)
+        {
+            //Anteprima_normali.Visibility = Visibility.Visible;
+            //Anteprima_medi.Visibility = Visibility.Collapsed;
+            //Anteprima_grandi.Visibility = Visibility.Collapsed;
+            library1.SaveSettingsBool("Normali", normali.IsChecked.Value);
+            //normali.IsChecked = library1.LoadSettingBool("Normali");
+        }
+
+        private void Riquadri_Medi_Checked(object sender, RoutedEventArgs e)
+        {
+            //Anteprima_normali.Visibility = Visibility.Collapsed;
+            //Anteprima_medi.Visibility = Visibility.Visible;
+            //Anteprima_grandi.Visibility = Visibility.Collapsed;
+            library1.SaveSettingsBool("Medi", medi.IsChecked.Value);
+            //medi.IsChecked = library1.LoadSettingBool("Medi");
+        }
+
+        private void Riquadri_Grandi_Checked(object sender, RoutedEventArgs e)
+        {
+            //Anteprima_normali.Visibility = Visibility.Collapsed;
+            //Anteprima_medi.Visibility = Visibility.Collapsed;
+            //Anteprima_grandi.Visibility = Visibility.Visible;
+
+            library1.SaveSettingsBool("Grandi", grandi.IsChecked.Value);
+            //grandi.IsChecked = library1.LoadSettingBool("Grandi");
+        }
+
+        private void Salvabtn_Click(object sender, RoutedEventArgs e)
+        {
+            library1.SaveSettingsBool("Grandi", grandi.IsChecked.Value);
+            library1.SaveSettingsBool("Medi", medi.IsChecked.Value);
+            library1.SaveSettingsBool("Normali", normali.IsChecked.Value);
+            salva_dimensioni_riquadri_home_ok.Visibility = Visibility.Visible;
+        }
+
+        
     }
 }
 

@@ -19,9 +19,15 @@
             </StackPanel>
         </Grid>
 
-        <ScrollViewer Margin="0,100" VerticalScrollBarVisibility="Auto">
+        <ScrollViewer Margin="0,100,0,0" VerticalScrollBarVisibility="Auto">
             <TextBlock Margin="10" LineHeight="24" TextWrapping="Wrap">
-                    
+                     <Run Foreground="Green" FontWeight="Bold" Text="VERSIONE 1.1.22.0 [GIUGNO 2020]"/>
+                    <LineBreak/>
+                    <Run Text="- Nuova grafica per la finestra del sintetizzatore vocale"/><LineBreak/>
+                    <Run Text="- Possibilità di personalizzare le dimensioni dei riquadri delle schede botaniche nella homepage"/><LineBreak/>
+                    <Run Text="- La lista delle piante ha l'immagine più grande. Il nomi comuni e scientifici non sono più tagliati"/><LineBreak/>
+                    <Run Text="- Nella sezione alberi sono state aggiunte icone per distinguere la tipologia di fogliame, di esposizione, di necessità irrigue e durata di vita dell'esemplare."/><LineBreak/>
+                    <Run Text="- Ottimizzazione delle prestazioni e correzioni varie"/><LineBreak/><LineBreak/>
                     <Run Foreground="Green" FontWeight="Bold" Text="VERSIONE 1.1.21.0 [MAGGIO 2020]"/>
                     <LineBreak/>
                     <Run Text="- Risolto un bug che impediva la corretta visualizzazione della homepage"/><LineBreak/>

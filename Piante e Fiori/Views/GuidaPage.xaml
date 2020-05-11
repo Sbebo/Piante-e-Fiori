@@ -8,7 +8,7 @@
     Style="{StaticResource PageStyle}"
     mc:Ignorable="d">
     <Grid x:Name="ContentArea">
-        <Grid Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
+        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
             <!--The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
                 Place your content here.-->
             <Grid x:Name="MyHeaderGrid" Height="100" Background="{ThemeResource SystemControlAcrylicWindowBrush}" VerticalAlignment="Top" >
@@ -23,10 +23,11 @@
 
             </Grid>
 
-            <StackPanel Margin="0,100,0,0">
+            <ScrollViewer Margin="0,100,0,0" VerticalScrollBarVisibility="Auto">
+            <StackPanel Margin="0" ScrollViewer.VerticalScrollBarVisibility="Auto">
 
 
-                <controls:Expander VerticalAlignment="Top" Margin="10"  HorizontalContentAlignment="Stretch" Header="PIANTE E FIORI" Foreground="White" Background="Black" IsExpanded="True"  ExpandDirection="Down">
+                <controls:Expander VerticalAlignment="Top" Margin="10"  HorizontalContentAlignment="Stretch" Header="PIANTE E FIORI"  IsExpanded="True"  ExpandDirection="Down">
                     <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Style="{StaticResource BodyTextBlockStyle}" Margin="10">
                             <Run Text="- L'applicazione Piante e Fiori per Windows 10 nasce comne progetto personale per consultare rapidamente (e offline) le schede botaniche di diverse piante."/><LineBreak/>
                             <Run Text="- Attualmente sono disponibili più di 400 piante classificate per categorie (Alberi, Arbusti, Rampicanti, Rosai), ma con i futuri aggiornamenti saranno inserite nuove schede"/><LineBreak/>
@@ -37,7 +38,7 @@
                     </TextBlock>
                 </controls:Expander>
 
-                <controls:Expander VerticalAlignment="Top" Margin="10"  HorizontalContentAlignment="Stretch" Header="HOME PAGE" Foreground="White" Background="Black" IsExpanded="True"  ExpandDirection="Down">
+                <controls:Expander VerticalAlignment="Top" Margin="10"  HorizontalContentAlignment="Stretch" Header="HOME PAGE" IsExpanded="True"  ExpandDirection="Down">
                     <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Style="{StaticResource BodyTextBlockStyle}" Margin="10">
                         <Run Text="- Nella Home è possibile personalizzare il pannello di benvenuto utente impostando il proprio nome e scegliendo un livello. Al termine premere il pulsante Salva"/><LineBreak/>
                         <Run Text="- Nota: il campo del nome/cognome non si aggiorna subito: è necessario cambiare pagina e sucessivamente tornare nella home."/><LineBreak/>
@@ -45,7 +46,8 @@
                     </TextBlock>
                 </controls:Expander>
 
-                <controls:Expander VerticalAlignment="Top" Margin="10"  HorizontalContentAlignment="Stretch" Header="SCHEDE BOTANICHE" Foreground="White" Background="Black" IsExpanded="True"  ExpandDirection="Down">
+                <controls:Expander VerticalAlignment="Top" Margin="10"  HorizontalContentAlignment="Stretch" Header="SCHEDE BOTANICHE" IsExpanded="True"  ExpandDirection="Down">
+
                     <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Style="{StaticResource BodyTextBlockStyle}" Margin="10">
                         <Run Text="- Tutte le schede botaniche sono organizzate indicando  il nome comune, la famiglia, il nome scientifico e una foto descrittiva della pianta/fiore in questione."/><LineBreak/>
                         <Run Text="- È possibile ingrandire (e successivamente rimpicciolire) l'immagine principale della pianta con un click sulla stessa. "/><LineBreak/>
@@ -56,16 +58,65 @@
                         <Run Text="- Nota: se si cambia la scheda botanica visualizzata mentre il sintetizzatore è attivo, questo continuerà a riprodurre le informazioni per la pianta precedentemente scelta. Per 'allineare' nuovamente il sintetizzatore alla scheda botanica della pianta visualizzata basta cambiare la categoria di riproduzione (es: da 'descrizione botanica'  a 'coltivazione')."/><LineBreak/><LineBreak/>
                         <Run Text="FINESTRE MULTIPLE"/><LineBreak/>
                         <Run Text="- Cliccando l'icona della finestra multipla la sezione corrente (es: Alberi) sarà aperta in una nuova finestra."/><LineBreak/>
-                        <Run Text="- Le finestre secondarie si distinguono da quella principale per l'assenza del menù hamburger."/><LineBreak/>
+                        <Run Text="- Le finestre secondarie si distinguono da quella principale per l'assenza del menù hamburger."/><LineBreak/><LineBreak/>
+                        
                     </TextBlock>
+                    
                 </controls:Expander>
 
-
+                <controls:Expander VerticalAlignment="Top" Margin="10"  HorizontalContentAlignment="Stretch" Header="ICONE E SIMBOLI"  IsExpanded="True"  ExpandDirection="Down">
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,5">
+                                <Image Source="ms-appx:///Immagini/SimboliSchedeBotaniche/Sempreverde.png" Height="30"/>
+                                <TextBlock Text="Fogliame sempreverde" Margin="10,0"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,5">
+                                <Image Source="ms-appx:///Immagini/SimboliSchedeBotaniche/Decidua.png" Height="30"/>
+                                <TextBlock Text="Fogliame caduco" Margin="10,0"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,5">
+                                <Image Source="ms-appx:///Immagini/SimboliSchedeBotaniche/Annuale.png" Height="30"/>
+                                <TextBlock Text="Esemplare annuale" Margin="10,0"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,5">
+                                <Image Source="ms-appx:///Immagini/SimboliSchedeBotaniche/Biennale.png" Height="30"/>
+                                <TextBlock Text="Esemplare biennale" Margin="10,0"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,5">
+                                <Image Source="ms-appx:///Immagini/SimboliSchedeBotaniche/Perenne.png" Height="30"/>
+                                <TextBlock Text="Esemplare perenne" Margin="10,0"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,5">
+                                <Image Source="/Immagini/SimboliSchedeBotaniche/Sun.png" Height="30"/>
+                                <TextBlock Text="Esposizione soleggiate" Margin="10,0"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,5">
+                                <Image Source="ms-appx:///Immagini/SimboliSchedeBotaniche/Sun&amp;Cloud.png" Height="30"/>
+                                <TextBlock Text="Esposizione parzialmente soleggiata" Margin="10,0"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,5">
+                                <Image Source="ms-appx:///Immagini/SimboliSchedeBotaniche/Ombreggiato.png" Height="30"/>
+                                <TextBlock Text="Esposizione ombreggiata" Margin="10,0"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,5">
+                                <Image Source="ms-appx:///Immagini/SimboliSchedeBotaniche/light-rain.png" Height="30"/>
+                                <TextBlock Text="Esigenza irrugua bassa" Margin="10,0"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,5">
+                                <Image Source="ms-appx:///Immagini/SimboliSchedeBotaniche/moderate-rain.png" Height="30"/>
+                                <TextBlock Text="Esigenza irrugua moderata" Margin="10,0"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,5">
+                                <Image Source="ms-appx:///Immagini/SimboliSchedeBotaniche/heavy-rain.png" Height="30"/>
+                                <TextBlock Text="Esigenza irrugua elevate" Margin="10,0"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </controls:Expander>
 
 
             </StackPanel>
 
-
+</ScrollViewer>
 
         </Grid>
     </Grid>

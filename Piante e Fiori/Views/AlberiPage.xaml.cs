@@ -20,6 +20,7 @@ namespace Piante_e_Fiori.Views
 {
     public sealed partial class AlberiPage : Page, INotifyPropertyChanged
     {
+        
         private Alberi _selected;
 
         public Alberi Selected
@@ -34,6 +35,8 @@ namespace Piante_e_Fiori.Views
         {
             InitializeComponent();
             Loaded += AlberiPage_Loaded;
+
+            
         }
 
         private async void AlberiPage_Loaded(object sender, RoutedEventArgs e)
@@ -68,8 +71,8 @@ namespace Piante_e_Fiori.Views
 
         private void OnPropertyChanged(string propertyName) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
-        
 
+       
 
         //FOSRE
 

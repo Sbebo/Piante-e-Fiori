@@ -26,7 +26,8 @@
                     </TextBlock>
                 </StackPanel>
             </Grid>
-           
+
+            <ScrollViewer Margin="0" VerticalScrollBarVisibility="Auto">
                 <Pivot x:Name="MyPivot"
                RelativePanel.AlignBottomWithPanel="True"
                RelativePanel.AlignLeftWithPanel="True"
@@ -135,6 +136,47 @@
                                             <xaml:ElementTheme>Default</xaml:ElementTheme>
                                         </RadioButton.CommandParameter>
                                     </RadioButton>
+                                </StackPanel>
+
+                                <StackPanel Visibility="Visible">
+                                    <Border  BorderBrush="Green" BorderThickness="1" Margin="0,10"/>
+                                    <TextBlock Text="RIQUADRI SCHEDE BOTANICHE IN HOME" FontSize="18" Margin="0,0,0,10" />
+                                    <TextBlock Text="Imposta la dimensione dei riquadri in homepage per l'accesso alle schede botaniche " TextWrapping="WrapWholeWords"/>
+                                    <StackPanel Margin="0,10"  Orientation="Vertical">
+                                        <RadioButton x:Name="normali" Content="Normali" Checked="Riquadri_Normali_Checked" IsChecked="True"/>
+                                        <RadioButton x:Name="medi" Content="Medi" Checked="Riquadri_Medi_Checked" />
+                                        <RadioButton x:Name="grandi" Content="Grandi" Checked="Riquadri_Grandi_Checked"  />
+                                        <StackPanel Orientation="Horizontal">
+                                            <Button  Content="Salva" Click="Salvabtn_Click"/>
+                                            <TextBlock x:Name="salva_dimensioni_riquadri_home_ok" HorizontalAlignment="Left" Visibility="Collapsed"  TextWrapping="Wrap" FontSize="30" FontFamily="Segoe MDL2 Assets" Text="&#xE73E;" VerticalAlignment="Top" FontWeight="Bold" Foreground="Green"/>
+                                        </StackPanel>
+
+                                        <TextBlock Text="Anteprima:" Margin="0,10" Visibility="Collapsed"/>
+                                        <Grid Name="Anteprima_normali" Height="116" Width="116" Margin="0,10" HorizontalAlignment="Left" Visibility="Collapsed">
+                                            <Grid.Background>
+                                                <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Immagini/Targhette/Rosai.jpg"/>
+                                            </Grid.Background>
+                                            <StackPanel Background="#FF9898" VerticalAlignment="Bottom">
+                                                <TextBlock TextWrapping="WrapWholeWords" Text="ROSAI"   HorizontalAlignment="Center"/>
+                                            </StackPanel>
+                                        </Grid>
+                                        <Grid Name="Anteprima_medi" Height="232" Width="232" Margin="0,10" HorizontalAlignment="Left" Visibility="Collapsed">
+                                            <Grid.Background>
+                                                <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Immagini/Targhette/Rosai.jpg"/>
+                                            </Grid.Background>
+                                            <StackPanel Background="#FF9898" VerticalAlignment="Bottom">
+                                                <TextBlock TextWrapping="WrapWholeWords" Text="ROSAI"   HorizontalAlignment="Center"/>
+                                            </StackPanel>
+                                        </Grid>
+                                        <Grid Name="Anteprima_grandi" Height="350" Width="350" Margin="0,10" HorizontalAlignment="Left" Visibility="Collapsed">
+                                            <Grid.Background>
+                                                <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Immagini/Targhette/Rosai.jpg"/>
+                                            </Grid.Background>
+                                            <StackPanel Background="#FF9898" VerticalAlignment="Bottom">
+                                                <TextBlock TextWrapping="WrapWholeWords" Text="ROSAI"   HorizontalAlignment="Center"/>
+                                            </StackPanel>
+                                        </Grid>
+                                    </StackPanel>
                                 </StackPanel>
 
 
@@ -327,7 +369,7 @@
                 </Pivot>
 
 
-            
+            </ScrollViewer>
         </StackPanel>
             
     </Grid>

@@ -39,7 +39,7 @@ namespace Piante_e_Fiori.Views
         public HomePagePage()
         {
             InitializeComponent();
-            
+
             //Visualizzazione con e senza immissione dei dati
             nome_socio_txthome.Text = library1.LoadSetting("Nome e Cognome Socio"); //pannello utente
             tipo_socio_txthome.Text = library1.LoadSetting("Tipologia di Socio");   // pannello utente
@@ -54,39 +54,23 @@ namespace Piante_e_Fiori.Views
             pollice_verde_mediobtn.IsChecked = library1.LoadSettingBool("Pollice Verde - Medio");
             pollice_verde_avanzatobtn.IsChecked = library1.LoadSettingBool("Pollice Verde - Avanzato");
             pollice_verde_espertobtn.IsChecked = library1.LoadSettingBool("Pollice Verde - Esperto");
-        }
 
+            normali.IsChecked = library1.LoadSettingBool("Normali");
+            medi.IsChecked = library1.LoadSettingBool("Medi");
+            grandi.IsChecked = library1.LoadSettingBool("Grandi");
+
+
+            
+
+           
+
+        }
         /// <summary>
         /// Used to display messages to the user
         /// </summary>
         /// <param name="strMessage"></param>
         /// <param name="type"></param>
-        public void NotifyUser(string strMessage, NotifyType type)
-        {
-            switch (type)
-            {
-                case NotifyType.StatusMessage:
-                    StatusBorder.Background = new SolidColorBrush(Windows.UI.Colors.Green);
-                    break;
-                case NotifyType.ErrorMessage:
-                    StatusBorder.Background = new SolidColorBrush(Windows.UI.Colors.Red);
-                    break;
-            }
-            StatusBlock.Text = strMessage;
 
-            // Collapse the StatusBlock if it has no text to conserve real estate.
-            StatusBorder.Visibility = (StatusBlock.Text != String.Empty) ? Visibility.Visible : Visibility.Collapsed;
-            if (StatusBlock.Text != String.Empty)
-            {
-                StatusBorder.Visibility = Visibility.Visible;
-                StatusPanel.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                StatusBorder.Visibility = Visibility.Collapsed;
-                StatusPanel.Visibility = Visibility.Collapsed;
-            }
-        }
 
         //Fa parte di Windows Template Studio
         public event PropertyChangedEventHandler PropertyChanged;
@@ -109,13 +93,12 @@ namespace Piante_e_Fiori.Views
 
         private void modifica_dati_Checked(object sender, RoutedEventArgs e)
         {
-            Dati_grid.Visibility = Visibility.Visible;
+            ContentDialog_ModificaDati.Visibility = Visibility.Visible;
+            //ContentArea.Opacity = 0.2;
+
         }
 
-        private void modifica_dati_UnCecked(object sender, RoutedEventArgs e)
-        {
-            Dati_grid.Visibility = Visibility.Collapsed;
-        }
+
 
         public enum NotifyType
         {
@@ -124,7 +107,7 @@ namespace Piante_e_Fiori.Views
         };
 
 
-        
+
 
         //MENU UTENTE
         private void botanica_agraria_btn_Click(object sender, RoutedEventArgs e)
@@ -178,66 +161,32 @@ namespace Piante_e_Fiori.Views
 
         //Pulsanti per la sezione "i miei dati"
 
+        private void modifica_dati_Click(object sender, RoutedEventArgs e)
+        {
+            //Dati_grid.Visibility = Visibility.Visible;
+
+            menu_utente.Visibility = Visibility.Collapsed;
+
+            this.New.Visibility = Visibility.Visible;
+
+
+        }
+
         private void New_Click(object sender, RoutedEventArgs e)
         {
             nome.Text = string.Empty;
-
             nome_socio_txthome.Text = string.Empty;
             tipo_socio_txthome.Text = string.Empty;
-            
 
-            StatusPanel.Visibility = Visibility.Visible;
-            NotifyUser("Cancellazione dati. Premere salva per confermare.", NotifyType.StatusMessage);
+            StatusText.Text = "Dati inseriti rimossi";
 
         }
 
-        private void Save_Click(object sender, RoutedEventArgs e)
-        {
 
-
-            library1.SaveSettings("Nome e Cognome Socio", nome.Text);
-            
-            //library1.SaveSettings("Tipologia di Socio", tipo_socio.Text);
-
-
-            library1.SaveSettingsBool("Sesso Maschile", sesso_maschile.IsChecked.Value);
-            library1.SaveSettingsBool("Socio Femminile", sesso_femminile.IsChecked.Value);
-            library1.SaveSettingsBool("Socio Indefinito", sesso_indefinito.IsChecked.Value);
-
-            library1.SaveSettingsBool("Pollice Bianco", pollice_biancobtn.IsChecked.Value);
-            library1.SaveSettingsBool("Pollice Verde - Base", pollice_verde_basebtn.IsChecked.Value);
-            library1.SaveSettingsBool("Pollice Verde - Medio", pollice_verde_mediobtn.IsChecked.Value);
-            library1.SaveSettingsBool("Pollice Verde - Avanzato", pollice_verde_espertobtn.IsChecked.Value);
-            library1.SaveSettingsBool("Pollice Verde - Esperto", pollice_verde_avanzatobtn.IsChecked.Value);
-
-            StatusPanel.Visibility = Visibility.Visible;
-            NotifyUser("Dati salvati", NotifyType.StatusMessage);
-
-            
-        }
 
 
         //load setting=sincronizza
-        private void Open_Click(object sender, RoutedEventArgs e)
-        {
-            nome.Text = library1.LoadSetting("Nome e Cognome Socio");
 
-
-            sesso_maschile.IsChecked = library1.LoadSettingBool("Sesso Maschile");
-            sesso_femminile.IsChecked = library1.LoadSettingBool("Sesso Femminile");
-            sesso_indefinito.IsChecked = library1.LoadSettingBool("Sesso Indefinito");
-
-
-            pollice_biancobtn.IsChecked = library1.LoadSettingBool("Pollice Bianco");
-            pollice_verde_basebtn.IsChecked = library1.LoadSettingBool("Pollice Verde - Base");
-            pollice_verde_mediobtn.IsChecked = library1.LoadSettingBool("Pollice Verde - Medio");
-            pollice_verde_espertobtn.IsChecked = library1.LoadSettingBool("Pollice Verde - Avanzato");
-            pollice_verde_avanzatobtn.IsChecked = library1.LoadSettingBool("Pollice Verde - Esperto");
-
-
-            StatusPanel.Visibility = Visibility.Visible;
-            NotifyUser("Sincronizzazione effettuata!", NotifyType.StatusMessage);
-        }
 
 
 
@@ -249,26 +198,17 @@ namespace Piante_e_Fiori.Views
             // else
             //this.menu_utente.Visibility = Visibility.Visible;
 
-            Dati_grid.Visibility = Visibility.Collapsed;
+            //Dati_grid.Visibility = Visibility.Collapsed;
 
             menu_utente.Visibility = Visibility.Visible;
-            StatusPanel.Visibility = Visibility.Collapsed;
+
             New.Visibility = Visibility.Collapsed;
-            Save.Visibility = Visibility.Collapsed;
+
 
         }
 
 
-        private void modifica_dati_Click(object sender, RoutedEventArgs e)
-        {
-            Dati_grid.Visibility = Visibility.Visible;
 
-            menu_utente.Visibility = Visibility.Collapsed;
-
-            this.New.Visibility = Visibility.Visible;
-            this.Save.Visibility = Visibility.Visible;
-
-        }
 
 
 
@@ -332,7 +272,6 @@ namespace Piante_e_Fiori.Views
         private void ALBERIbtn_Tapped(object sender, TappedRoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(AlberiPage));
-           
         }
 
 
@@ -422,6 +361,186 @@ namespace Piante_e_Fiori.Views
             });
             bool viewShown = await ApplicationViewSwitcher.TryShowAsStandaloneAsync(newViewId);
         }
+
+        private void Chiudi_ContentDialogModificaDati_Click(object sender, RoutedEventArgs e)
+        {
+            ContentDialog_ModificaDati.Visibility = Visibility.Collapsed;
+            //ContentArea.Opacity = 1;
+            //nome.Text = library1.LoadSetting("Nome e Cognome Socio");
+            StatusText.Text = "";
+            nome_socio_txthome.Text = library1.LoadSetting("Nome e Cognome Socio"); //pannello utente
+        }
+
+        private void Save_Click(object sender, RoutedEventArgs e)
+        {
+
+
+            library1.SaveSettings("Nome e Cognome Socio", nome.Text);
+
+            //library1.SaveSettings("Tipologia di Socio", tipo_socio.Text);
+
+
+            library1.SaveSettingsBool("Sesso Maschile", sesso_maschile.IsChecked.Value);
+            library1.SaveSettingsBool("Socio Femminile", sesso_femminile.IsChecked.Value);
+            library1.SaveSettingsBool("Socio Indefinito", sesso_indefinito.IsChecked.Value);
+
+            library1.SaveSettingsBool("Pollice Bianco", pollice_biancobtn.IsChecked.Value);
+            library1.SaveSettingsBool("Pollice Verde - Base", pollice_verde_basebtn.IsChecked.Value);
+            library1.SaveSettingsBool("Pollice Verde - Medio", pollice_verde_mediobtn.IsChecked.Value);
+            library1.SaveSettingsBool("Pollice Verde - Avanzato", pollice_verde_espertobtn.IsChecked.Value);
+            library1.SaveSettingsBool("Pollice Verde - Esperto", pollice_verde_avanzatobtn.IsChecked.Value);
+
+            StatusText.Text = "Ok. Chiudere per aggiornare.";
+
+        }
+
+        //PERSONALIZZAZIONE GRANDEZZA RIQUADRI SCHEDE BOTANICHE
+        private void Riquadri_Normali_Checked(object sender, RoutedEventArgs e)
+        {
+            ALBERIbtn.Width = 116;
+            ALBERIbtn.Height = 116;
+            ARBUSTIbtn.Width = 116;
+            ARBUSTIbtn.Height = 116;
+            PIANTE_ACQUATICHEbtn.Width = 116;
+            PIANTE_ACQUATICHEbtn.Height = 116;
+            PIANTE_ANNUALIIbtn.Width = 116;
+            PIANTE_ANNUALIIbtn.Height = 116;
+            PIANTE_APPARTAMENTObtn.Width = 116;
+            PIANTE_APPARTAMENTObtn.Height = 116;
+            PIANTE_AROMATICHEbtn.Width = 116;
+            PIANTE_AROMATICHEbtn.Height = 116;
+            PIANTE_BULBOSEbtn.Width = 116;
+            PIANTE_BULBOSEbtn.Height = 116;
+            PIANTE_ESOTICHEbtn.Width = 116;
+            PIANTE_ESOTICHEbtn.Height = 116;
+            PIANTE_FRUTTETObtn.Width = 116;
+            PIANTE_FRUTTETObtn.Height = 116;
+            PIANTE_GRASSEbtn.Width = 116;
+            PIANTE_GRASSEbtn.Height = 116;
+            PIANTE_ORTObtn.Width = 116;
+            PIANTE_ORTObtn.Height = 116;
+            PIANTE_PERENNIbtn.Width = 116;
+            PIANTE_PERENNIbtn.Height = 116;
+            RAMPICANTIbtn.Width = 116;
+            RAMPICANTIbtn.Height = 116;
+            ROSAIbtn.Width = 116;
+            ROSAIbtn.Height = 116;
+            ALTRI_FRUTTIbtn.Width = 116;
+            ALTRI_FRUTTIbtn.Height = 116;
+
+            library1.SaveSettingsBool("Normali", normali.IsChecked.Value);
+        }
+
+        private void Riquadri_Medi_Checked(object sender, RoutedEventArgs e)
+        {
+            ALBERIbtn.Width = 232;
+            ALBERIbtn.Height = 232;
+            ARBUSTIbtn.Width = 232;
+            ARBUSTIbtn.Height = 232;
+            PIANTE_ACQUATICHEbtn.Width = 232;
+            PIANTE_ACQUATICHEbtn.Height = 232;
+            PIANTE_ANNUALIIbtn.Width = 232;
+            PIANTE_ANNUALIIbtn.Height = 232;
+            PIANTE_APPARTAMENTObtn.Width = 232;
+            PIANTE_APPARTAMENTObtn.Height = 232;
+            PIANTE_AROMATICHEbtn.Width = 232;
+            PIANTE_AROMATICHEbtn.Height = 232;
+            PIANTE_BULBOSEbtn.Width = 232;
+            PIANTE_BULBOSEbtn.Height = 232;
+            PIANTE_ESOTICHEbtn.Width = 232;
+            PIANTE_ESOTICHEbtn.Height = 232;
+            PIANTE_FRUTTETObtn.Width = 232;
+            PIANTE_FRUTTETObtn.Height = 232;
+            PIANTE_GRASSEbtn.Width = 232;
+            PIANTE_GRASSEbtn.Height = 232;
+            PIANTE_ORTObtn.Width = 232;
+            PIANTE_ORTObtn.Height = 232;
+            PIANTE_PERENNIbtn.Width = 232;
+            PIANTE_PERENNIbtn.Height = 232;
+            RAMPICANTIbtn.Width = 232;
+            RAMPICANTIbtn.Height = 232;
+            ROSAIbtn.Width = 232;
+            ROSAIbtn.Height = 232;
+            ALTRI_FRUTTIbtn.Width = 232;
+            ALTRI_FRUTTIbtn.Height = 232;
+
+            library1.SaveSettingsBool("Medi", medi.IsChecked.Value);
+        }
+
+        private void Riquadri_Grandi_Checked(object sender, RoutedEventArgs e)
+        {
+            ALBERIbtn.Width = 350;
+            ALBERIbtn.Height = 350;
+            ARBUSTIbtn.Width = 350;
+            ARBUSTIbtn.Height = 350;
+            PIANTE_ACQUATICHEbtn.Width = 350;
+            PIANTE_ACQUATICHEbtn.Height = 350;
+            PIANTE_ANNUALIIbtn.Width = 350;
+            PIANTE_ANNUALIIbtn.Height = 350;
+            PIANTE_APPARTAMENTObtn.Width = 350;
+            PIANTE_APPARTAMENTObtn.Height = 350;
+            PIANTE_AROMATICHEbtn.Width = 350;
+            PIANTE_AROMATICHEbtn.Height = 350;
+            PIANTE_BULBOSEbtn.Width = 350;
+            PIANTE_BULBOSEbtn.Height = 350;
+            PIANTE_ESOTICHEbtn.Width = 350;
+            PIANTE_ESOTICHEbtn.Height = 350;
+            PIANTE_FRUTTETObtn.Width = 350;
+            PIANTE_FRUTTETObtn.Height = 350;
+            PIANTE_GRASSEbtn.Width = 350;
+            PIANTE_GRASSEbtn.Height = 350;
+            PIANTE_ORTObtn.Width = 350;
+            PIANTE_ORTObtn.Height = 350;
+            PIANTE_PERENNIbtn.Width = 350;
+            PIANTE_PERENNIbtn.Height = 350;
+            RAMPICANTIbtn.Width = 350;
+            RAMPICANTIbtn.Height = 350;
+            ROSAIbtn.Width = 350;
+            ROSAIbtn.Height = 350;
+            ALTRI_FRUTTIbtn.Width = 350;
+            ALTRI_FRUTTIbtn.Height = 350;
+
+            library1.SaveSettingsBool("Grandi", grandi.IsChecked.Value);
+        }
+
+        private void HomPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            nome.Text = library1.LoadSetting("Nome e Cognome Socio");
+
+
+            sesso_maschile.IsChecked = library1.LoadSettingBool("Sesso Maschile");
+            sesso_femminile.IsChecked = library1.LoadSettingBool("Sesso Femminile");
+            sesso_indefinito.IsChecked = library1.LoadSettingBool("Sesso Indefinito");
+
+
+            pollice_biancobtn.IsChecked = library1.LoadSettingBool("Pollice Bianco");
+            pollice_verde_basebtn.IsChecked = library1.LoadSettingBool("Pollice Verde - Base");
+            pollice_verde_mediobtn.IsChecked = library1.LoadSettingBool("Pollice Verde - Medio");
+            pollice_verde_espertobtn.IsChecked = library1.LoadSettingBool("Pollice Verde - Avanzato");
+            pollice_verde_avanzatobtn.IsChecked = library1.LoadSettingBool("Pollice Verde - Esperto");
+
+            normali.IsChecked = library1.LoadSettingBool("Normali");
+            medi.IsChecked = library1.LoadSettingBool("Medi");
+            grandi.IsChecked = library1.LoadSettingBool("Grandi");
+        }
+
+        private void HomePage_Loading(FrameworkElement sender, object args)
+        {
+            //normali.IsChecked = library1.LoadSettingBool("Normali");
+            //medi.IsChecked = library1.LoadSettingBool("Medi");
+            //grandi.IsChecked = library1.LoadSettingBool("Grandi");
+        }
+
+        private async void invia_denaro_btn_Click(object sender, RoutedEventArgs e)
+        {
+            await Launcher.LaunchUriAsync(new Uri("https://www.paypal.me/devstudio649/5eur"));
+        }
+        private void Button_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(AlberiGridPage));
+        }
+
+        
     }
 }
 

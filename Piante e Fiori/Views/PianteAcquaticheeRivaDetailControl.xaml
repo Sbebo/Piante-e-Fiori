@@ -95,50 +95,53 @@
 
 
         <!--SINTETIZZATORE VOCALE-->
-        <Grid Name="Sintetizzatore_vocale_grid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"  Visibility="Collapsed" HorizontalAlignment="Right" Width="360">
-            <Border Background="Green" Width="10" HorizontalAlignment="Left"></Border>
-            <ScrollViewer HorizontalContentAlignment="Left" VerticalScrollBarVisibility="Auto" Margin="10,0,0,0">
-                <StackPanel>
-                    <MediaElement x:Name="mediaplayer" MediaEnded="Mediaplayer_MediaEnded" />
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
-                        <Image Name="cortana_fiore"  Source="ms-appx:///Assets/spa_flower-512.png" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Top" Visibility="Visible"/>
-                        <ProgressRing Name="pr1" Height="50" Width="50" Foreground="Coral" HorizontalAlignment="Center" VerticalAlignment="Top" Visibility="Collapsed" IsActive="True"/>
-                    </StackPanel>
-                    <TextBlock Name="sintetizzatore_statustxt" HorizontalAlignment="Center" Foreground="Orange" TextWrapping="Wrap" Text="Leggerò per te le informazioni su questa pianta" VerticalAlignment="Top"/>
-                    <StackPanel Name="Play_pausa_stop_panel" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="20">
-                        <Button  Name="Play" Margin="5,10" Content="&#xE102;" FontFamily="Segoe MDL2 Assets" Click="PlayButton_Click" Width="40" Height="40" IsEnabled="False" ToolTipService.ToolTip="Play"/>
-                        <Button  Name="Pausa" Margin="5,10" Content="&#xE103;" FontFamily="Segoe MDL2 Assets" Click="PauseButton_Click" Width="40" Height="40" IsEnabled="False" ToolTipService.ToolTip="Pausa"/>
-                        <Button  Name="Stop" Margin="5,10" Content="&#xE003;" FontFamily="Segoe MDL2 Assets" Click="StopButton_Click" Width="40" Height="40" IsEnabled="False" ToolTipService.ToolTip="Stop"/>
-                        <ToggleButton  Name="BackgroundAudio" Margin="5,10" Content="&#xE142;" FontFamily="Segoe MDL2 Assets" Width="40" Height="40" Checked="BackAudio_Cecked" Unchecked="BackAudio_UnCecked" IsEnabled="False" ToolTipService.ToolTip="Musica di sottofondo"/>
-                    </StackPanel>
-                    <Border Background="Green" Height="3" Width="300"/>
-                    <StackPanel Name="argomenti_da_leggere" Margin="0,20,0,0">
-                        <TextBlock  Margin="0,10" Text="Seleziona una categoria:" HorizontalAlignment="Center"/>
-                        <RadioButton Name="informazioni_radiobutton" Margin="10,0" Content="Informazioni" Checked="informazioni_radiobutton_Checked"/>
-                        <RadioButton Name="descrizione_botanica_radiobutton" Margin="10,0" Content="Descrizione botanica" Checked="descrizione_botanica_radiobutton_Checked"/>
-                        <RadioButton Name="coltivazione_radiobutton" Margin="10,0" Content="Coltivazione" Checked="coltivazione_radiobutton_Checked"/>
-                        <RadioButton Name="propagazione_radiobutton" Margin="10,0" Content="Propagazione" Checked="propagazione_radiobutton_Checked"/>
-                        <RadioButton Name="potatura_radiobutton" Margin="10,0" Content="Potatura" Checked="potatura_radiobutton_Checked" Visibility="Collapsed"/>
-                        <RadioButton Name="malattie_radiobutton" Margin="10,0" Content="Malattie" Checked="malattie_radiobutton_Checked" Visibility="Collapsed"/>
-                    </StackPanel>
-                    <ToggleButton  Name="mostra_nascondi_opzioni_sintetizzatore_vocale" Margin="10,10" Checked="mostra_nascondi_opzioni_sintetizzatore_vocale_Checked" Unchecked="mostra_nascondi_opzioni_sintetizzatore_vocale_Unchecked">
-                        <StackPanel Orientation="Horizontal"  VerticalAlignment="Center">
-                            <TextBlock Text="&#xE115;"  FontSize="20" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center"/>
-                            <TextBlock Margin="6,0,0,0" FontSize="16" VerticalAlignment="Center" Text="Impostazioni sintetizzatore vocale"/>
+        <Grid Name="Sintetizzatore_vocale_grid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"  Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400" Height="210">
+
+            <Border Background="Green">
+                <Grid  Margin="5" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                    <ScrollViewer HorizontalContentAlignment="Left" VerticalScrollBarVisibility="Auto" Margin="5,0,0,0">
+                        <StackPanel>
+                            <MediaElement x:Name="mediaplayer" MediaEnded="Mediaplayer_MediaEnded" />
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,5,0,0">
+                                <Image Name="cortana_fiore"  Source="ms-appx:///Assets/spa_flower-512.png" Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0" Visibility="Visible"/>
+                                <ProgressRing Name="pr1" Height="20" Width="20" Foreground="LightBlue" HorizontalAlignment="Center" VerticalAlignment="Top" Visibility="Collapsed" IsActive="True" Margin="0" />
+                                <TextBlock Name="sintetizzatore_statustxt" HorizontalAlignment="Center" Foreground="LightBlue" TextWrapping="Wrap" Text="Leggerò per te le informazioni sulla pianta" VerticalAlignment="Top" Margin="5,0"/>
+                            </StackPanel>
+                            <StackPanel Name="argomenti_da_leggere" Margin="0,10,0,0">
+                                <RadioButton Name="informazioni_radiobutton" Margin="10,0" Content="Informazioni" Checked="informazioni_radiobutton_Checked"/>
+                                <RadioButton Name="descrizione_botanica_radiobutton" Margin="10,0" Content="Descrizione botanica" Checked="descrizione_botanica_radiobutton_Checked"/>
+                                <RadioButton Name="coltivazione_radiobutton" Margin="10,0" Content="Coltivazione" Checked="coltivazione_radiobutton_Checked"/>
+                                <RadioButton Name="propagazione_radiobutton" Margin="10,0" Content="Propagazione" Checked="propagazione_radiobutton_Checked" Visibility="Collapsed"/>
+                                <RadioButton Name="potatura_radiobutton" Margin="10,0" Content="Potatura" Checked="potatura_radiobutton_Checked" Visibility="Collapsed"/>
+                                <RadioButton Name="malattie_radiobutton" Margin="10,0" Content="Malattie" Checked="malattie_radiobutton_Checked" Visibility="Collapsed"/>
+                            </StackPanel>
+                            <StackPanel Name="Play_pausa_stop_panel" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0">
+                                <Button  Name="Play" Margin="5,10" Content="&#xE102;" FontFamily="Segoe MDL2 Assets" Click="PlayButton_Click" IsEnabled="False" ToolTipService.ToolTip="Play"/>
+                                <Button  Name="Pausa" Margin="5,10" Content="&#xE103;" FontFamily="Segoe MDL2 Assets" Click="PauseButton_Click"  IsEnabled="False" ToolTipService.ToolTip="Pausa"/>
+                                <Button  Name="Stop" Margin="5,10" Content="&#xE003;" FontFamily="Segoe MDL2 Assets" Click="StopButton_Click"  IsEnabled="False" ToolTipService.ToolTip="Stop"/>
+                                <ToggleButton  Name="BackgroundAudio" Margin="5,10" Content="&#xE142;" FontFamily="Segoe MDL2 Assets"  Checked="BackAudio_Cecked" Unchecked="BackAudio_UnCecked" IsEnabled="False" ToolTipService.ToolTip="Musica di sottofondo"/>
+                                <ToggleButton  Name="mostra_nascondi_opzioni_sintetizzatore_vocale" Margin="10,10" Checked="mostra_nascondi_opzioni_sintetizzatore_vocale_Checked" Unchecked="mostra_nascondi_opzioni_sintetizzatore_vocale_Unchecked" Content="&#xE115;" FontFamily="Segoe MDL2 Assets" ToolTipService.ToolTip="Opzioni sintetizzatore vocale"/>
+                                <TextBlock Text="&#xE946;" Foreground="Green" FontSize="20" FontFamily="Segoe MDL2 Assets" ToolTipService.ToolTip="Puoi chiudere questo pannello durante la riproduzione audio della categoria selezionata" VerticalAlignment="Center"/>
+                            </StackPanel>
+
+
+
+
+
+                            <StackPanel Name="opzioni_sintetizzatore_vocale" Visibility="Collapsed">
+                                <Slider x:Name="sldRate" Margin="10,0,10,0" Minimum="0.1" Maximum="3" SmallChange="0.1" LargeChange="0.1" Value="1" StepFrequency="0.1" Header="Velocità" />
+                                <ComboBox x:Name="lstVoices" Margin="10,0,10,0" HorizontalAlignment="Stretch" DisplayMemberPath="DisplayName" Header="Voce"/>
+                                <ComboBox x:Name="lstPitch" Visibility="Collapsed" Margin="10,0,10,10" HorizontalAlignment="Stretch" Header="RATE background"/>
+                            </StackPanel>
+                            <TextBlock Margin="10,00" TextWrapping="WrapWholeWords" Text="Puoi chiudere questo pannello durante la riproduzione audio della categoria selezionata." Foreground="Green" Visibility="Collapsed"/>
+
+
+
+
                         </StackPanel>
-                    </ToggleButton>
-                    <StackPanel Name="opzioni_sintetizzatore_vocale" Visibility="Collapsed">
-                        <Slider x:Name="sldRate" Margin="10,0,10,0" Minimum="0.1" Maximum="3" SmallChange="0.1" LargeChange="0.1" Value="1" StepFrequency="0.1" Header="Velocità" />
-                        <ComboBox x:Name="lstVoices" Margin="10,0,10,0" HorizontalAlignment="Stretch" DisplayMemberPath="DisplayName" Header="Voce"/>
-                        <ComboBox x:Name="lstPitch" Visibility="Collapsed" Margin="10,0,10,10" HorizontalAlignment="Stretch" Header="RATE background"/>
-                    </StackPanel>
-                    <TextBlock Margin="10,30" TextWrapping="WrapWholeWords" Text="Puoi chiudere questo pannello durante la riproduzione audio della categoria selezionata." Foreground="Green"/>
-
-
-
-
-                </StackPanel>
-            </ScrollViewer>
+                    </ScrollViewer>
+                </Grid>
+            </Border>
         </Grid>
 
         <!--LOGO PIANTA A SCHERMO INTERO-->
